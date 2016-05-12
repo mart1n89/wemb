@@ -1,8 +1,9 @@
 <?php
-    echo "Hello World";
-    echo "Mkoaskdas";
-    echo "Test";
-    
-    echo "Tecxld##gldsfkg";
-    echo 'i';
-?>
+
+// Use an auto loader!
+require 'libs/Bootstrap.php';
+require 'libs/Controller.php';
+require 'libs/View.php';
+require 'libs/Model.php';
+
+$app = new Bootstrap();
