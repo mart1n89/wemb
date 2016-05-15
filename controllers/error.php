@@ -4,8 +4,10 @@ class ErrorHandler extends Controller {
 
     function __construct() {
         parent::__construct();
-        echo 'this is an error';
-        
+    }
+    
+    function index(){
+        $this->view->msg = 'This page does not exist';
         $this->view->render('error/index');
     }
 

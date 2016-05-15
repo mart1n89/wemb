@@ -1,5 +1,9 @@
-<html>
-    <footer>
-        <title>Ich bin der Header</title>
-    </footer>
+</div>
+<div id="footer"> 
+    (C) Footer
+</div>  
+
+
+</body>
+
 </html>
