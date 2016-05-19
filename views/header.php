@@ -3,11 +3,14 @@
     <head>
         <title>Testimeter</title>
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
-        <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js">
-            $(function()) {
-                alert(1);
+        <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
+        <?php 
+            if (isset($this->js)){ 
+                foreach ($this->js as $js){
+                echo '<script type="text/javascript" src="'.URL.'views/'.$js.'"></script';
+                }
             }
-        </script>
+        ?>
     </head>
     <body>
         

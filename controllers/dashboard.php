@@ -10,6 +10,8 @@ class Dashboard extends Controller {
             header('location: ../login');
             exit;
         }
+        
+        $this->view->js = array('dashboard/js/default.js');
     }
     
     public function index(){
@@ -21,4 +23,16 @@ class Dashboard extends Controller {
         header('location: ../index');
         exit;
     } 
+    
+    function xhrInsert(){
+        $this->model->xhrInsert();
+    }
+    
+    function xhrGetListings(){
+        $this->model->xhrGetListings();
+    }
+    
+    function xhrDeleteListing(){
+        $this->model->xhrDeleteListing();
+    }
 }

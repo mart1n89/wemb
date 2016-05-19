@@ -4,7 +4,7 @@ class Login_Model extends Model {
     
     public function __construct() {
         parent::__construct();
-        echo md5('test');
+        //echo md5('test');
     }
     
     public function run(){
