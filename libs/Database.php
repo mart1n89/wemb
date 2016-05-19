@@ -1,9 +1,9 @@
 <?php
 
-class Database extends PDO
+class DB extends PDO
 {
     public function __construct() {
         //DB access parameters
-        parent::__construct('mysql:host=http://projekt.wi.fh-flensburg.de;dbname=projekt2015b', 'projekt2015b', 'P2016b4');
+        parent::__construct(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
     }
 }

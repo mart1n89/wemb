@@ -4,16 +4,22 @@ class Login_Model extends Model {
     
     public function __construct() {
         parent::__construct();
-        //echo md5('martin');
+        echo md5('test');
     }
     
     public function run(){
-        $sth = $this->db->prepare("SELECT id FROM users WHERE login = :login AND password = :password");
-        $sth->excecute(array(':login' => $_POST['login'],
-                                  ':password' => $_POST['password']
+        $st = $this->db->prepare("SELECT userid FROM users WHERE username = :login AND password = MD5(:password)");
+        $st->execute(array(':login' => $_POST['login'],
+                            ':password' => $_POST['password']
         ));
         
-        $data = $sth->fetchAll();
-        print_r($data);
+        $count = $st->rowCount();
+        if ($count > 0){
+            Session::init();
+            Session::set('loggedIn', true);
+            header('location: ../dashboard');
+        } else {
+            header('location: ../login');
+        }
     }
 }
