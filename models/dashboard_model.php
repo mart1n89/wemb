@@ -25,9 +25,10 @@ class Dashboard_Model extends Model {
     }
     
     function xhrDeleteListing(){
-        $_POST['id'];
+        $id = $_POST['id'];
         $st = $this->db->prepare('DELETE FROM data WHERE id = "'.$id.'"');
         $st->execute();
+        echo json_encode('isOk');
     }
     
 }
