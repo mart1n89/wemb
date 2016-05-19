@@ -16,8 +16,7 @@ $(function(){
             return false;
         });
         
-    }, 'json');
-    
+    }, 'json');  
     
     $('#randomInsert').submit(function() {
         var url = $(this).attr('action')
@@ -27,6 +26,4 @@ $(function(){
         }, 'json');
         return false;
     });
-    
-
 });
