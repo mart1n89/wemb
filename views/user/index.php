@@ -17,8 +17,8 @@
         echo '<td>' . $value['userid'] . '</td>';
         echo '<td>' . $value['username'] . '</td>';
         echo '<td>' . $value['role'] . '</td>';
-        echo '<td><a href="#">Edit</a></td>';
-        echo '<td><a href="#">Delete</a></td>';
+        echo '<td><a href="'.URL.'user/edit/'.$value['userid'].'">Edit</a></td>';
+        echo '<td><a href="'.URL.'user/delete/'.$value['userid'].'">Delete</a></td>';
         echo '</tr>';
     }
 ?>

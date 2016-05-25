@@ -7,8 +7,6 @@ class Bootstrap {
         $url = rtrim($url, '/');
         $url = explode('/', $url);
         
-        //print_r($url);
-        
         if(empty($url[0])) {
             require 'controllers/index.php';
             $controller = new Index();
@@ -20,7 +18,7 @@ class Bootstrap {
         if (file_exists($file)) {
             require $file;
         } else {
-            require 'controllers/error.php';
+            require 'controllers/errorhandler.php';
             $controller = new ErrorHandler();
             return false;
         }
@@ -35,7 +33,7 @@ class Bootstrap {
             $controller->{$url[1]}($url[2]);
             } else {
                 $this->error();
-            }
+                }
         } else {
             if (isset($url[1])) {
                 if (method_exists($controller, $url[1])) {
@@ -50,7 +48,7 @@ class Bootstrap {
         }
 
         function error() {
-            require 'controllers/error.php';
+            require 'controllers/errorhandler.php';
             $controller = new ErrorHandler();
             $controller->index();
             return false;

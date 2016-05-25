@@ -26,14 +26,22 @@ class User extends Controller {
         $data['role'] = $_POST['role'];
         
         $this->model->create($data);
-        //Do your error checks
+        header('location: '. URL . 'user');
     }
     
-     public function edit($id){
-        
+    public function edit($id){
+        // fetch user
+        $this->view->user = $this->model->userSingleList($id);
+        $this->view->render('user/edit');
     }
     
-     public function delete($id){
-        
+    public function editSave(){
+        header('location: '. URL . 'user');
+    }
+
+
+    public function delete($id){
+        $this->model->delete($id);
+        header('location: '. URL . 'user');
     }
 }
