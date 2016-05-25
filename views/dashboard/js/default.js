@@ -1,7 +1,6 @@
 $(function(){
     
     $.get('dashboard/xhrGetListings', function (o){
-        
         for (var i = 0; i < o.length; i++){
             $('#listInserts').append('<div>' + o[i].text + '<a class="del" rel="'+ o[i].id +'" href="#">X</a></div>');
         }
