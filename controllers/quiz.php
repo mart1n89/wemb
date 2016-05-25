@@ -13,6 +13,7 @@ class Quiz extends Controller {
     }
     
     public function index(){
+        $this->view->topicList = $this->model->topicList();
         $this->view->render('quiz/index');
     }
 }

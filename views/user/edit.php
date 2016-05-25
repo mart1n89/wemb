@@ -1,6 +1,6 @@
 <h1>User: Edit</h1>
-<form method="post" action="<?php echo URL; ?>userSave/edit/<?php echo $this->user['userid']; ?>">
-    <label>Username</label><input type="text" name="username" value="<?php echo $this->user['username'] ?>"/></br>
+<form method="post" action="<?php echo URL; ?>userSave/edit/<?php echo $this->user['userID']; ?>">
+    <label>Username</label><input type="text" name="userName" value="<?php echo $this->user['userName'] ?>"/></br>
     <label>Password</label><input type="text" name="password" value="<?php echo $this->user['password'] ?>"/></br>
     <label>Role</label>
     <select name="role">

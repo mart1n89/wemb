@@ -19,13 +19,13 @@
         <div id="header">
             
             <?php if (Session::get('loggedIn') == false): ?>
-                <a href="<?php echo URL; ?>index">Index</a>
+                <a href="<?php echo URL; ?>index">Main</a>
                 <a href="<?php echo URL; ?>help">Help</a>
                 <a href="<?php echo URL; ?>about">About</a>
             <?php endif; ?>  
             <?php if (Session::get('loggedIn') == true): ?>
                 <a href="<?php echo URL; ?>dashboard">Dashboard</a>
-                <a href="<?php echo URL; ?>quiz">Quizzes</a>
+                <a href="<?php echo URL; ?>quiz">Quiz</a>
                 <?php if (Session::get('role') == 'owner'): ?>
                     <a href="<?php echo URL; ?>user">Users</a>
                 <?php endif; ?>
