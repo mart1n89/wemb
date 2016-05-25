@@ -7,12 +7,23 @@ class Vote_Model extends Model {
     }
     
     public function voteList(){
-        $st = $this->db->prepare('SELECT * FROM SESSION AS s
+        $st = $this->db->prepare('SELECT * FROM session AS s
                                     JOIN topic AS t ON t.topicID = s.topicID
                                     JOIN quiz AS q ON q.quizID = t.quizID
-                                    JOIN question AS qs ON qs.questionID = q.questionID');
-        $st->execute();
-        print_r($st->fetchAll());
-        return $st->fetchAll();
+                                    JOIN question AS qs ON qs.questionID = q.questionID
+                                    JOIN answer AS a ON a.questionID = q.questionID
+                                  WHERE codeNo = :codeNo');
+        
+        $st->execute(array(':codeNo' => $_POST['codeNo']));            
+        $data = $st->fetchAll();
+        
+        $count = $st->rowCount();
+        if ($count > 0){
+            Session::init();
+            Session::set('code', $_POST['codeNo']);
+            return $data;
+        } else {
+            header('location: ../index');
+        }
     }
 }

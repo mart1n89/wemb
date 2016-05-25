@@ -3,6 +3,12 @@ body {
 	font: 14px 'trebuchet ms', arial, sans-serif;
 }
 
+
+div {
+    background-color: lightsteelblue;
+    margin: 2px 0px 2px 0px;
+}
+
 /** Structure */
 #header {
 	padding: 20px;
@@ -69,3 +75,4 @@ form input[type=submit]:hover {
 
 
 form br {clear: left;}
+
