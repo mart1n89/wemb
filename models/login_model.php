@@ -8,7 +8,7 @@ class Login_Model extends Model {
     }
     
     public function run(){
-        $st = $this->db->prepare("SELECT userid, role FROM users WHERE username = :login AND password = MD5(:password)");
+        $st = $this->db->prepare("SELECT userID, role FROM user WHERE username = :login AND password = MD5(:password)");
         $st->execute(array(':login' => $_POST['login'],
                            ':password' => $_POST['password']
         ));
@@ -21,6 +21,7 @@ class Login_Model extends Model {
             Session::init();
             Session::set('role', $data['role']);
             Session::set('loggedIn', true);
+            Session::set('user', $data['userID']);
             header('location: ../dashboard');
         } else {
             header('location: ../login');
