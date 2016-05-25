@@ -8,7 +8,6 @@ class User_Model extends Model {
     }
     
     public function userList(){
-        Session::get($key);
         $st = $this->db->prepare('SELECT userID, userName, role FROM user');
         $st->execute();
         return $st->fetchAll();
