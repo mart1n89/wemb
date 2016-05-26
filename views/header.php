@@ -31,7 +31,7 @@
                 <?php endif; ?>
                 <a href="<?php echo URL; ?>dashboard/logout" class="button">Logout</a>
             <?php else: ?>
-                <a href="<?php echo URL; ?>login" class="button" style="vertical-align:middle"><span>Login</span></a>
+                <a href="<?php echo URL; ?>login" class="button"><span>Login</span></a>
             <?php endif; ?>      
             <br />
         </div>
