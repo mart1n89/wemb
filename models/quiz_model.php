@@ -27,10 +27,8 @@ class Quiz_Model extends Model {
     
     public function getSingleQuiz($id){
         $st = $this->db->prepare('SELECT * FROM topic WHERE topicID = :id');
-        $st->execute(array(
-            ':id' => $id
-            ));
-        return $st->fetchAll();
+        $st->execute(array(':id' => $id));
+        return $st->fetch();
     }
 
 

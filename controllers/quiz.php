@@ -10,6 +10,8 @@ class Quiz extends Controller {
             header('location: ../login');
             exit;
         }
+        
+        $this->view->js = array('quiz/js/default.js');
     }
     
     public function index(){
@@ -26,10 +28,10 @@ class Quiz extends Controller {
     }
     
     public function edit($id){
-        $this->view->getSingleTopic = $this->model->getSingleQuiz($id);
+        $this->view->quiz = $this->model->getSingleQuiz($id);
         $this->view->render('quiz/edit');
     }
-
+   
     public function delete($id){
         $this->model->delete($id);
         header('location: '. URL . 'quiz');
