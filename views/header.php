@@ -17,21 +17,21 @@
         <?php Session::init(); ?>
         
         <div id="header">
-            
+            <h2>Testimeter</h2>
             <?php if (Session::get('loggedIn') == false): ?>
-                <a href="<?php echo URL; ?>index">Main</a>
-                <a href="<?php echo URL; ?>help">Help</a>
-                <a href="<?php echo URL; ?>about">About</a>
+            <a href="<?php echo URL; ?>index" class="button" >Main</a>
+                <a href="<?php echo URL; ?> help" class="button">Help</a>
+                <a href="<?php echo URL; ?>about" class="button">About</a>
             <?php endif; ?>  
             <?php if (Session::get('loggedIn') == true): ?>
-                <a href="<?php echo URL; ?>dashboard">Dashboard</a>
-                <a href="<?php echo URL; ?>quiz">Quiz</a>
+                <a href="<?php echo URL; ?>dashboard" class="button">Dashboard</a>
+                <a href="<?php echo URL; ?>quiz" class="button">Quiz</a>
                 <?php if (Session::get('role') == 'owner'): ?>
-                    <a href="<?php echo URL; ?>user">Users</a>
+                    <a href="<?php echo URL; ?>user" class="button">Users</a>
                 <?php endif; ?>
-                <a href="<?php echo URL; ?>dashboard/logout">Logout</a>
+                <a href="<?php echo URL; ?>dashboard/logout" class="button">Logout</a>
             <?php else: ?>
-                <a href="<?php echo URL; ?>login">Login</a>
+                <a href="<?php echo URL; ?>login" class="button" style="vertical-align:middle"><span>Login</span></a>
             <?php endif; ?>      
             <br />
         </div>
