@@ -11,12 +11,19 @@ div {
 
 /** Structure */
 #header {
-	padding: 20px;
-	background: #12407f;
+	padding: 10px;
 	color: #fff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	border-bottom: 4px solid #436fac;
+	border-bottom: 4px solid orange;
+        background: url(images/FL_förde3.jpg) center center; 
+        width: 98,4%;
+        height: 200px;
+        
+        
+        
+        
+        
 }
 
 #content {
@@ -32,6 +39,7 @@ div {
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+       
 }
 
 /* Links */
@@ -89,7 +97,8 @@ form br {clear: left;}
   width: 80px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin: 100px 5px 5px 5px;
+  
 }
 
 .button span {
@@ -115,5 +124,19 @@ form br {clear: left;}
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.logo
+{
+     
+     margin: 0px 0 0 0;
+     float: right;
+     
+     
+   
+     
+     
+    
+    
 }
 
