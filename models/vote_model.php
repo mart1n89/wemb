@@ -39,7 +39,7 @@ class Vote_Model extends Model {
             Session::set('code', $_POST['codeNo']);
             return $data;
         } else {
-            header('location: ../inex');
+            header('location: ../index');
         }
     }    
 }
