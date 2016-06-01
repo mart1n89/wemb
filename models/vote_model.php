@@ -26,4 +26,20 @@ class Vote_Model extends Model {
             header('location: ../index');
         }
     }
+    
+    public function getSessionByCode() {
+        $st = $this->db->prepare('SELECT * FROM session'
+                               . 'WHERE codeNo = :codeNo');
+        $st->execute(array(':codeNo' => $_POST['codeNo']));
+        $data = $st->fetchAll();
+        
+        $count = $st->rowCount();
+        if ($count > 0) {
+            Session::init();
+            Session::set('code', $_POST['codeNo']);
+            return $data;
+        } else {
+            header('location: ../inex');
+        }
+    }    
 }

@@ -6,7 +6,7 @@ class Vote extends Controller {
     }
     
     public function index(){
-        $this->view->voteList = $this->model->voteList();
+        $this->view->session = $this->model->getSessionByCode();
         $this->view->render('vote/index');        
     }
 }
