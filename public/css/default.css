@@ -18,7 +18,7 @@ div {
 	border-bottom: 4px solid orange;
         background: url(images/FL_förde3.jpg) ;
         background-position: 50% 62%;
-        width: 98,4%;
+        width: 98.4%;
         height: 200px;
         
         
@@ -54,7 +54,7 @@ div {
 }
 
 #header a:hover {
-	background: #4d8add
+	background: #4d8add;
 }
 
 /** Forms */
@@ -130,7 +130,7 @@ form br {clear: left;}
 .logo
 {
      
-     margin: 0px 0 0 0;
+     
      float: right;
      
      
