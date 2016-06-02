@@ -19,8 +19,14 @@
         
         <div id="header" >
             
-            <h2>Testimeter<img class="logo" src="public/css/images/HF_Logo.png" srcset="public/css/images/HF_Logo.png 2.5x"></h2>
-            
+            <!--<h2>Testimeter<img class="logo" src="public/css/images/HF_Logo.png" srcset="public/css/images/HF_Logo.png 2x"></h2>-->
+            <table width="100%">
+                <tr>
+                    <td><h2>Testimeter</h2></td>
+                    <td><img class="logo" src="public/css/images/HF_Logo.png " height="600vw" width="400vw"></td>
+                </tr>
+                
+            </table>
             <?php if (Session::get('loggedIn') == false): ?>
             <a href="<?php echo URL; ?>home" class="button" >Main</a>
                 <a href="<?php echo URL; ?>help" class="button">Help</a>
@@ -38,6 +44,7 @@
             <?php endif; ?>  
 
             <br />
+            
         </div>
         
         <div id="content"> 

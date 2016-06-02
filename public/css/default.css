@@ -108,7 +108,7 @@ form br {clear: left;}
         font-size: 1.3vw;
         transition: all 0.5s;
         cursor: pointer;
-        margin: 8vw 5px 5px 5px;
+        margin: 5vw 5px 5px 5px;
   
   
 }
@@ -138,10 +138,10 @@ form br {clear: left;}
         right: 0;
 }
 
-#logo
+.logo
 {      
         float: right; 
-        background: url(images/HF_Logo.png);
+        /*background: url(images/HF_Logo.png);*/
         background-size: 10vw 10vw;
         background-repeat: no-repeat;
         z-index: 3;
