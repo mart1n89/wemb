@@ -1,9 +1,11 @@
 <?php
 $session = $this->session;
+
+if ($session[0]['isActive'] == 1) {
+    $topic
+}
+else {
+    echo "Tut uns leid, das Quiz ist nicht mehr aktiv!";
+}
 ?>
 
-<h1><?php echo $session[0]['codeNo']; ?></h1>
-
-<?php 
-print_r($session);
-?>
