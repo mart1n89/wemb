@@ -19,8 +19,9 @@ div {
         background: url(images/FL_förde3.jpg) ;
         background-position: 50% 62%;
         /*background-size: 100% 100%;*/
-        width: 100vw;
+        width: 97.0vw;
         height: 16vw;
+        
         
         
         
@@ -94,14 +95,14 @@ form br {clear: left;}
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        padding: 0.4vw 0px 0px 0px;
+        padding: 0.4vh 0px 0px 0px;
         border-radius: 4px;
         background-color:blueviolet;
         color: #FFFFFF;
         font-size: 1.3vw;
         transition: all 0.5s;
         cursor: pointer;
-        margin: 100px 5px 5px 5px;
+        margin: 8vw 5px 5px 5px;
   
   
 }
@@ -132,8 +133,72 @@ form br {clear: left;}
 }
 
 .logo
-{
-        float: right;    
+{      
+        float: right; 
+        background-image: url(images/HF_Logo.png);
+        background-size: 10vw 10vw;
+        background-repeat: no-repeat;
+        
+       
+        
         
 }
+.button2{
+        width: 8vw;
+        height: 2.1vw;  
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.2vw 0px 0px 0px;
+        border-radius: 4px;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 0.8vw;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px 5px 5px 10px;
+}
 
+.button2 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.button2 span:after {
+        content: '+';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.button2:hover span {
+        padding-right: 30px;
+}
+
+.button2:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+h1{
+    font-size: 5vw;
+}
+h2{
+    font-size: 2vw;
+}
+h3{
+    
+}
+h4{
+    
+}
+h5{
+    
+}
+h6{
+    
+}
