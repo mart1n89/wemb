@@ -17,10 +17,10 @@
         
         <?php Session::init(); ?>
         
-        <div id="header">
+        <div id="header" >
             
-            <h2>Testimeter<img class="logo" src="public/css/images/HF_Logo.png" srcset="public/css/images/HF_Logo.png 2.5x"></h2>-->-->
-           
+            <h2>Testimeter<img class="logo" src="public/css/images/HF_Logo.png" srcset="public/css/images/HF_Logo.png 2.5x"></h2>
+            
             <?php if (Session::get('loggedIn') == false): ?>
             <a href="<?php echo URL; ?>home" class="button" >Main</a>
                 <a href="<?php echo URL; ?>help" class="button">Help</a>
