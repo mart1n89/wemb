@@ -1,6 +1,9 @@
 body {
-	background: silver;
+        padding: 10px;
+        background: silver;
 	font: 16px 'trebuchet ms', arial, sans-serif;
+        width: 98.5vw;
+        
 }
 
 
@@ -132,12 +135,13 @@ form br {clear: left;}
         right: 0;
 }
 
-.logo
+#logo
 {      
         float: right; 
-        background-image: url(images/HF_Logo.png);
+        background: url(images/HF_Logo.png);
         background-size: 10vw 10vw;
         background-repeat: no-repeat;
+        z-index: 3;
         
        
         
