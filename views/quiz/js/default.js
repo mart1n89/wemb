@@ -14,7 +14,6 @@ function addQuestion(){
     var length = questionList['length'];
     length++;
     questionList['length'] = length;
-    //alert(getQuestionListLength());
     $('#area').append('<div id="' + questionNo + '"></div>');
     $('#' + questionNo).append('<label>Frage:</label><input type="text" id="\'' + questionNo_TXT + '\'">');
     $('#' + questionNo).append('<input type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
@@ -26,13 +25,9 @@ function getQuestionListLength(){
 }
 
 function removeQuestion(questionNo){
-    //$('#' + questionNo).remove();
     for (var k in questionList) {  
         if (k === questionNo) {
             delete questionList[questionNo];
-            var length = questionList['length'];
-            length--;
-            questionList['length'] = length;
             $('#' + questionNo).remove();
         }
     }
@@ -46,7 +41,6 @@ function addAnswer(questionNo){
     var answerCount = answerList.length + 1;
     var answerNo = 'answer_' + answerCount;
     var answerNo_TXT = questionNo + answerNo + '_TXT';
-    //answerList.push(answerNo);
     answerList[answerNo] = questionNo + answerNo + '_TXT';
     questionList[questionNo] = answerList;
     $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
@@ -57,18 +51,9 @@ function addAnswer(questionNo){
 function removeAnswer(questionNo, answerNo){
     //$('#' + questionNo + answerNo).remove();
     var answerList = questionList[questionNo];
-//    for(var i = 0; i < answerList.length; i++) {
-//            if(answerList[i] === answerNo) {
-//               answerList.splice(i);
-//               $('#' + questionNo + answerNo).remove();
-//           }
-//    }
     for (var k in answerList) {  
         if (k === answerNo) {
             delete answerList[answerNo];
-            var length = answerList['length'];
-            length--;
-            answerList['length'] = length;
             $('#' + questionNo + answerNo).remove();
         }
     }
@@ -83,6 +68,9 @@ function saveTopic(){
         alertCounter++;
         document.getElementById('topic').style.borderColor="red";
     }
+    else{
+        document.getElementById('topic').style.borderColor="black";
+    }
     //alert(topic);
     for (var k in questionList) {  
         var answers = [];
@@ -93,24 +81,19 @@ function saveTopic(){
             alertCounter++;
             document.getElementById('\'' + questionID + '\'').style.borderColor="red";
         }
+        else{
+            document.getElementById('\'' + questionID + '\'').style.borderColor="black";
+        }
         //alert(question);
-//        for(var i = 0; i < answerList.length; i++) {
-//            
-//            answerID = k + answerList[i] + '_TXT';
-//            var answer = document.getElementById('\'' + answerID + '\'').value;
-//            if(answer === ''){
-//                alertCounter++;
-//                document.getElementById('\'' + answerID + '\'').style.borderColor="red";
-//            }
-//            answers.push(answer);
-//            //alert(answer);
-//        } 
         for (var t in answerList) {  
             answerID = answerList[t];
             var answer = document.getElementById('\'' + answerID + '\'').value;
             if(answer === ''){
                 alertCounter++;
                 document.getElementById('\'' + answerID + '\'').style.borderColor="red";
+            }
+            else{
+                document.getElementById('\'' + answerID + '\'').style.borderColor="black";
             }
             answers.push(answer);
         }
