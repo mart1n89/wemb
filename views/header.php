@@ -23,7 +23,7 @@
             <table width="100%">
                 <tr>
                     <td><h2>Testimeter</h2></td>
-                    <td><img class="logo" src="public/css/images/HF_Logo.png " height="600vw" width="400vw"></td>
+                    <td><img class="logo" srcset="public/css/images/HF_Logo.png 2x" ></td>
                 </tr>
                 
             </table>
