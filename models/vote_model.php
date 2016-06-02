@@ -28,9 +28,9 @@ class Vote_Model extends Model {
     }
     
     public function getSessionByCode() {
-        $st = $this->db->prepare('SELECT * FROM session'
-                               . 'WHERE codeNo = :codeNo');
+        $st = $this->db->prepare('SELECT * FROM session WHERE codeNo = :codeNo');
         $st->execute(array(':codeNo' => $_POST['codeNo']));
+        $st->setFetchMode(PDO::FETCH_ASSOC);
         $data = $st->fetchAll();
         
         $count = $st->rowCount();

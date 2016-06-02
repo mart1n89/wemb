@@ -1,15 +1,9 @@
-<html>
-    
-</html>
+<?php
+$session = $this->session;
+?>
 
-<h1>Welcome to Vote!</h1>
+<h1><?php echo $session[0]['codeNo']; ?></h1>
 
 <?php 
-
-print_r($this->session);
-
-foreach ($this->session as $key => $value){
-
-}
-
+print_r($session);
 ?>
