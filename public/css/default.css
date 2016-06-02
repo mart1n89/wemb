@@ -1,6 +1,6 @@
 body {
 	background: silver;
-	font: 14px 'trebuchet ms', arial, sans-serif;
+	font: 16px 'trebuchet ms', arial, sans-serif;
 }
 
 
@@ -18,8 +18,10 @@ div {
 	border-bottom: 4px solid orange;
         background: url(images/FL_förde3.jpg) ;
         background-position: 50% 62%;
-        width: 98.4%;
-        height: 200px;
+        /*background-size: 100% 100%;*/
+        width: 100vw;
+        height: 16vw;
+        
         
         
         
@@ -44,17 +46,17 @@ div {
 }
 
 /* Links */
-#header a {
+/*#header a {
 	color: #fff;
-	background: #436fac;
+	background: 
 	padding: 4px 15px;
 	text-decoration: none;
 	font-size: 15px;
 	font-weight: bolder;
-}
+}*/
 
 #header a:hover {
-	background: #4d8add;
+	background: gray;
 }
 
 /** Forms */
@@ -87,57 +89,51 @@ form input[type=submit]:hover {
 form br {clear: left;}
 
 .button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 80px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 100px 5px 5px 5px;
+        width: 8vw;
+        height: 2.1vw;  
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.4vw 0px 0px 0px;
+        border-radius: 4px;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 1.3vw;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 100px 5px 5px 5px;
+  
   
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
 }
 
 .button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 30px;
+        padding-right: 30px;
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
+        opacity: 1;
+        right: 0;
 }
 
 .logo
 {
-     
-     
-     float: right;
-     
-     
-   
-     
-     
-    
-    
+        float: right;    
+        
 }
 
