@@ -7,12 +7,12 @@ class Vote_Model extends Model {
     }
     
     public function voteList(){
-        $st = $this->db->prepare('SELECT * FROM session AS s
-                                    JOIN topic AS t ON t.topicID = s.topicID
-                                    JOIN quiz AS q ON q.quizID = t.quizID
-                                    JOIN question AS qs ON qs.questionID = q.questionID
-                                    JOIN answer AS a ON a.questionID = q.questionID
-                                  WHERE codeNo = :codeNo');
+        $st = $this->db->prepare('select * from session as s
+                                    join topic as t on t.topicID = s.topicID
+                                    join questionSet as qs on qs.topicID = t.topicID
+                                    join question as q on q.questionID = qs.questionID
+                                    join answer as a on a.questionID = q.questionID
+                                  where codeNo = :codeNo');
         
         $st->execute(array(':codeNo' => $_POST['codeNo']));            
         $data = $st->fetchAll();
@@ -26,4 +26,20 @@ class Vote_Model extends Model {
             header('location: ../index');
         }
     }
+    
+    public function getSessionByCode() {
+        $st = $this->db->prepare('SELECT * FROM session'
+                               . 'WHERE codeNo = :codeNo');
+        $st->execute(array(':codeNo' => $_POST['codeNo']));
+        $data = $st->fetchAll();
+        
+        $count = $st->rowCount();
+        if ($count > 0) {
+            Session::init();
+            Session::set('code', $_POST['codeNo']);
+            return $data;
+        } else {
+            header('location: ../index');
+        }
+    }    
 }

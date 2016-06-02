@@ -4,6 +4,7 @@
         <title>Testimeter</title>
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
         <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
+        
         <?php 
             if (isset($this->js)){ 
                 foreach ($this->js as $js){
@@ -17,7 +18,9 @@
         <?php Session::init(); ?>
         
         <div id="header">
-            <h2>Testimeter</h2>
+            
+            <h2>Testimeter<img class="logo" src="public/css/images/HF_Logo.png" srcset="public/css/images/HF_Logo.png 2.5x"></h2>-->-->
+           
             <?php if (Session::get('loggedIn') == false): ?>
             <a href="<?php echo URL; ?>index" class="button" >Main</a>
                 <a href="<?php echo URL; ?> help" class="button">Help</a>
@@ -32,7 +35,8 @@
                 <a href="<?php echo URL; ?>dashboard/logout" class="button">Logout</a>
             <?php else: ?>
                 <a href="<?php echo URL; ?>login" class="button"><span>Login</span></a>
-            <?php endif; ?>      
+            <?php endif; ?>  
+
             <br />
         </div>
         
