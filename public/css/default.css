@@ -29,7 +29,7 @@ div {
 	border-bottom: 0.5vh solid orange;
         background: url(images/FL_förde2.jpg);
         background-position: 50% 62%;
-        padding:3vh 3vw 3vh 3vw;
+        padding:3vh 3.5vw 3vh 3.5vw;
         width: 92.0vw;
         height: 11vmax;
         
@@ -38,7 +38,7 @@ div {
 
 #content {
 	background: white;
-	padding: 3vh 3vw 3vh 3vw;
+	padding: 3vh 3.5vw 3vh 3.5vw;
         width: 92vw;
         height: auto;
         
@@ -48,7 +48,7 @@ div {
 #footer {
 	background: #12407f;
 	color: #fff;
-	padding:3vh 3vw 3vh 3vw;
+	padding:3vh 3.5vw 3vh 3.5vw;
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
