@@ -1,51 +1,60 @@
 body {
-        padding: 10px;
+        /*padding: 10px;*/
         background: silver;
-	font: 16px 'trebuchet ms', arial, sans-serif;
-        width: 98.5vw;
-        
+	font: 1.5vh 'trebuchet ms', arial, sans-serif;
+        width: auto;
+        height: auto;
 }
 
 
 div {
     background-color: white;
-    margin: 2px 0px 2px 0px;
-}
+    margin: 1vh 0vw 1vh 0vw;
+    
+    }
+    
+.logo
+        {      
+        float: right;
+        width: 10vw;
+        height: auto;
+        }
 
 /** Structure */
 #header {
-	padding: 10px;
+	/*padding: 2vh;*/
 	color: #fff;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-bottom: 4px solid orange;
-        background: url(images/FL_förde3.jpg) ;
+        border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	border-bottom: 0.5vh solid orange;
+        background: url(images/FL_förde2.jpg);
         background-position: 50% 62%;
-        /*background-size: 100% 100%;*/
-        width: 97.0vw;
-        height: 16vw;
-        
-        
-        
-        
-        
+        padding:3vh 3vw 3vh 3vw;
+        width: 92.0vw;
+        height: 11vmax;
         
         
 }
 
 #content {
-	background: #fff;
-	padding: 20px;
+	background: white;
+	padding: 3vh 3vw 3vh 3vw;
+        width: 92vw;
+        height: auto;
         
+            
 }
 
 #footer {
 	background: #12407f;
 	color: #fff;
-	padding: 20px;
+	padding:3vh 3vw 3vh 3vw;
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+        width: 92vw;
+        height: 9vh;
+        
        
 }
 
@@ -72,108 +81,97 @@ form label {
 	display: block;
 	float: left; 
 	width: 10vw; 
-	padding: 0.3vw; 
-	margin: 9px 0 0;
 	text-align: right;
-        font-size: 1vw;
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.3vh;
         
 }
 
 form input, form select {
 	width: 20vw;
-        height: 1.5vw;
-	margin: 5px 0 0 10px;
-	border: 1px solid gray;
-	padding: 0.3px;
+        height: 3vh;
+	border: 1px solid gray;	
+        font-size: 1.5em
+        
+       
 }
 
-form input[type=submit]:hover {
+/*form input[type=submit]:hover {
 	cursor: pointer;
 	background: silver;
-}
+}*/
 
 
 form br {clear: left;}
 
-.button {
-        width: 8vw;
-        height: 2.1vw;  
+.buttonNav {
+        width: auto;
+        height: auto;
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        padding: 0.4vh 0px 0px 0px;
         border-radius: 0.5vw;
         background-color:blueviolet;
         color: #FFFFFF;
-        font-size: 1.3vw;
+        font-size: 0.8vw;      
         transition: all 0.5s;
         cursor: pointer;
-        margin: 5vw 5px 5px 5px;
-  
-  
+        margin: 4vh 0.5vw 0vh 0.5vw;
+        padding: 0.8vh 0.8vw 0.8vh 0.8vw;
 }
 
-.button span {
+.buttonNav span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
+        padding: 0;
 }
 
-.button span:after {
+.buttonNav span:after {
         content: '»';
         position: absolute;
         opacity: 0;
         top: 0;
-        right: -20px;
+        right: -0.5vw;
         transition: 0.5s;
 }
 
-.button:hover span {
-        padding-right: 30px;
+.buttonNav:hover span {
+        /*padding-right: 30px;*/
+        padding-right: 1.5vw;
 }
 
-.button:hover span:after {
+.buttonNav:hover span:after {
         opacity: 1;
         right: 0;
 }
 
-.logo
-{      
-        float: right; 
-        /*background: url(images/HF_Logo.png);*/
-        background-size: 10vw 10vw;
-        background-repeat: no-repeat;
-        z-index: 3;
-        
-       
-        
-        
-}
-.button2{
-        width: 8vw;
-        height: 2.1vw;  
+.buttonCont{
+        width: auto;
+        height: auto;  
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        padding: 0.2vw 0px 0px 0px;
-        border-radius: 4px;
+        padding: 0.6vh 0.6vw 0.6vh 0.6vw;
+        border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
         font-size: 0.8vw;
         transition: all 0.5s;
         cursor: pointer;
-        margin: 5px 5px 5px 10px;
+        
 }
 
-.button2 span {
+.buttonCont span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
 }
 
-.button2 span:after {
+.buttonCont span:after {
         content: '+';
         position: absolute;
         opacity: 0;
@@ -182,25 +180,25 @@ form br {clear: left;}
         transition: 0.5s;
 }
 
-.button2:hover span {
+.buttonCont:hover span {
         padding-right: 30px;
 }
 
-.button2:hover span:after {
+.buttonCont:hover span:after {
         opacity: 1;
         right: 0;
 }
 
 h1{
-    font-size: 5vw;
+    font-size: 3vw;
 }
 h2{
     font-size: 2vw;
 }
 h3{
-    
+    font-size: 1vw;
 }
-h4{
+h4{    
     
 }
 h5{
