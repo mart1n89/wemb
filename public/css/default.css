@@ -1,5 +1,4 @@
 body {
-        /*padding: 10px;*/
         background: silver;
 	font: 1.5vh 'trebuchet ms', arial, sans-serif;
         width: auto;
@@ -22,40 +21,33 @@ div {
 
 /** Structure */
 #header {
-	/*padding: 2vh;*/
 	color: #fff;
         border-top-left-radius: 1vh;
 	border-top-right-radius: 1vh;
 	border-bottom: 0.5vh solid orange;
         background: url(images/FL_förde2.jpg);
         background-position: 50% 62%;
-        padding:3vh 3vw 3vh 3vw;
+        padding:3vh 3.5vw 3vh 3.5vw;
         width: 92.0vw;
         height: 11vmax;
-        
-        
 }
 
 #content {
 	background: white;
-	padding: 3vh 3vw 3vh 3vw;
+	padding: 3vh 3.5vw 3vh 3.5vw;
         width: 92vw;
         height: auto;
-        
-            
 }
 
 #footer {
 	background: #12407f;
 	color: #fff;
-	padding:3vh 3vw 3vh 3vw;
+	padding:3vh 3.5vw 3vh 3.5vw;
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
         width: 92vw;
         height: 9vh;
-        
-       
 }
 
 /* Links */
@@ -85,7 +77,6 @@ form label {
         font-size: 1.5em;
         margin-right: 1vw;
         padding-top: 0.3vh;
-        
 }
 
 form input, form select {
@@ -93,8 +84,6 @@ form input, form select {
         height: 3vh;
 	border: 1px solid gray;	
         font-size: 1.5em
-        
-       
 }
 
 /*form input[type=submit]:hover {
@@ -161,7 +150,6 @@ form br {clear: left;}
         font-size: 0.8vw;
         transition: all 0.5s;
         cursor: pointer;
-        
 }
 
 .buttonCont span {
