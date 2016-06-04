@@ -18,10 +18,10 @@
         <?php Session::init(); ?>
         
         <div id="header" > 
-            <table width="100%">
+            <table width="90%">
                 <tr>
-                    <td><h2>Testimeter</h2></td>
-                    <td><img class="logo" src="public/css/images/HF_Logo.png"></td>
+                    <td ><h2>Testimeter</h2></td>
+                    <td ><img class="logo" src="public/css/images/HF_Logo.png"></td>
                 </tr>                
             </table>
             
