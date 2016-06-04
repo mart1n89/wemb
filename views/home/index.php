@@ -1,6 +1,10 @@
-<h1>Willkommen beim Testimeter!</h1>
+<h2>Willkommen beim Testimeter!</h2>
 <form method="post" action="<?php echo URL; ?>vote">
-    <label>Code</label><input type="text" name="codeNo" />
-    <input type="submit" value="aufrufen" class="button2"/></br>
+    <table>
+        <tr>
+            <td><label>Code</label><input type="text" name="codeNo" /></td>
+            <td><input type="submit" value="aufrufen" class="buttonCont"/></br></td>
+        </tr>
+    </table>
 </form>
 
