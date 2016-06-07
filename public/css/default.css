@@ -8,7 +8,7 @@ body {
 
 div {
     background-color: white;
-    margin: 1vh 0vw 1vh 0vw;
+    /*margin: 1vh 0vw 1vh 0vw;*/
     
     }
     
@@ -191,6 +191,17 @@ form br {clear: left;}
 {
     transition: 0.5s;
     font-weight: bold;
+}
+#wrapper {
+        width: 80vw;
+}
+#steuerung {
+        width:40vw;
+	float:left;
+}
+#zweite_spalte {
+	margin-left:41vw;
+	width: auto;
 }
 
 h1{
