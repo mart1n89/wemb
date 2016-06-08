@@ -64,7 +64,7 @@ function removeAnswer(questionNo, answerNo){
 function saveTopic(){
     alertCounter = 0;
     var questions = [];
-    var questionCount = 0;
+    //var questionCount = 0;
     var topic = document.getElementById('topic').value;
     if(topic === ''){
         alertCounter++;
@@ -101,11 +101,10 @@ function saveTopic(){
         }
         //questions[question] = answers;
         questions[question] = answers;
-        questionCount++;
+        //questionCount++;
     }
     if(alertCounter === 0){
-        var data;
-        if (questionCount > 0){
+        var data = '';
             for (var k in questions) {
                 data += k + '[';
                 var answers = questions[k];
@@ -114,7 +113,6 @@ function saveTopic(){
                 }
                 data += ']';
             }
-        }  
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
     }
 }

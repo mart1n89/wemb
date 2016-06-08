@@ -16,6 +16,7 @@ class Quiz extends Controller {
     
     public function index(){
         $this->view->topicList = $this->model->topicList();
+        $this->view->controller = $this;
         $this->view->render('quiz/index');
     }
     
@@ -38,8 +39,8 @@ class Quiz extends Controller {
     }
     
     public function xhrAddQuiz(){
-        
         $this->model->xhrAddQuiz();
-        //$this->view->render('quiz/index');
+        header('location: ' .URL. 'quiz');
+        exit;
     }
 }
