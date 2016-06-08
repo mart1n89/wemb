@@ -10,7 +10,7 @@ class Vote_Model extends Model {
         $st = $this->db->prepare('SELECT * FROM session WHERE codeNo = :codeNo');
         $st->execute(array(':codeNo' => $_POST['codeNo']));
         $st->setFetchMode(PDO::FETCH_ASSOC);
-        $data = $st->fetchAll();
+        $data = $st->fetch();
         
         $count = $st->rowCount();
         if ($count > 0) {            
@@ -18,13 +18,5 @@ class Vote_Model extends Model {
         } else {
             header('location: ../home');
         }
-    }
-
-    public function getTopicById($paramInt = 0) {
-        $st = $this->db->prepare('SELECT * FROM topic WHERE topicID = ' . $paramInt);
-        $st->execute();
-        $st->setFetchMode(PDO::FETCH_ASSOC);
-        $data = $st->fetchAll();
-        return $data;
     }
 }
