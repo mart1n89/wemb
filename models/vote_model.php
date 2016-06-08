@@ -50,10 +50,19 @@ class Vote_Model extends Model {
         }
     }
     
-    public function getQuestiosnSetById($id) {
-        $st = $this->db->prepare('SELECT * FROM questionSet as qs
-                                    join question as q on q.questionID = qs.questionID
-                                  WHERE topicID = '.$id);
+    public function getAnswerByID($ids) {   
+        
+        $searchString = "(";
+        foreach ($ids as $key => $value) {
+            if ($key != 0) {
+                $searchString .= "," . $value;
+            } else {
+                $searchString .= $value;
+            }
+        }
+        $searchString .= ")";
+        
+        $st = $this->db->prepare('SELECT * FROM answer WHERE questionID IN ' . $searchString);
         $st->execute();
         $st->setFetchMode(PDO::FETCH_ASSOC);
         $data = $st->fetchAll();

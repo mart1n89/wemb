@@ -18,4 +18,8 @@ class Vote extends Controller {
     public function requireQuestionSet($id) {
         $this->view->questions = $this->model->getQuestionSetById($id);
     }
+    
+    public function requireAnswers($ids) {
+        $this->view->answers = $this->model->getAnswerById($ids);
+    }
 }
