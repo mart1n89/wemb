@@ -36,4 +36,10 @@ class Quiz extends Controller {
         $this->model->delete($id);
         header('location: '. URL . 'quiz');
     }
+    
+    public function xhrAddQuiz(){
+        
+        $this->model->xhrAddQuiz();
+        //$this->view->render('quiz/index');
+    }
 }

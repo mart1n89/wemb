@@ -63,6 +63,8 @@ function removeAnswer(questionNo, answerNo){
 
 function saveTopic(){
     alertCounter = 0;
+    var questions = [];
+    var questionCount = 0;
     var topic = document.getElementById('topic').value;
     if(topic === ''){
         alertCounter++;
@@ -72,7 +74,7 @@ function saveTopic(){
         document.getElementById('topic').style.borderColor="black";
     }
     //alert(topic);
-    for (var k in questionList) {  
+    for (var k in questionList) {
         var answers = [];
         var answerList = questionList[k];
         questionID = k + '_TXT';
@@ -97,8 +99,22 @@ function saveTopic(){
             }
             answers.push(answer);
         }
+        //questions[question] = answers;
+        questions[question] = answers;
+        questionCount++;
     }
     if(alertCounter === 0){
-        
+        var data;
+        if (questionCount > 0){
+            for (var k in questions) {
+                data += k + '[';
+                var answers = questions[k];
+                for (var i = 0; i < answers.length; i++){
+                    data += answers[i] + ';';
+                }
+                data += ']';
+            }
+        }  
+        $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
     }
 }

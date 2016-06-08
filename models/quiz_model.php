@@ -18,11 +18,10 @@ class Quiz_Model extends Model {
     }
     
     public function delete($id){
-       //TODO: it should also remove every reference
-        $st = $this->db->prepare('DELETE FROM topic WHERE topicID = :id');
-        $st->execute(array(
-            ':id' => $id
-            ));
+        $st = $this->db->prepare('DELETE * FROM topic t INNER JOIN questionSet qs ON t.topicID = qs.topicID INNER JOIN question q ON q.questionID = qs.questionID INNER JOIN answer a ON a.questionID = q.questionID WHERE t.topicID = '.$id);
+        //$st->excecute(array(':id' => $id));
+        $st->excecute();
+        echo (json_encode(0));
     }
     
     public function getSingleQuiz($id){
@@ -30,7 +29,17 @@ class Quiz_Model extends Model {
         $st->execute(array(':id' => $id));
         return $st->fetch();
     }
-
+    
+    public function xhrAddQuiz(){
+        //$topic = $_POST['questions'];
+        
+//        foreach ($questions as $key => $wert){
+//            $answers = $questions[$wert];
+//            for ($i = 0; $i < count($answers); $i++){
+//                echo($answers[$i]);
+//            }
+//        }
+    }
 
     public function edit(){
         

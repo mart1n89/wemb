@@ -1,5 +1,5 @@
 <h1>Dashboard</h1>
-<br />
+<!--<br />
 
 <form id="randomInsert" action="<?php echo URL;?>dashboard/xhrInsert/" method="post"> 
     <input type="text" name="text" />
@@ -10,4 +10,4 @@
 
 <div id="listInserts">
     
-</div>
+</div>-->
