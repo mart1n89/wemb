@@ -1,15 +1,11 @@
-<html>
-    
-</html>
+<?php
+$session = $this->session;
 
-<h1>Welcome to Vote!</h1>
-
-<?php 
-
-print_r($this->session);
-
-foreach ($this->session as $key => $value){
-
+if ($session[0]['isActive'] == 1) {
+    $topic
 }
-
+else {
+    echo "Tut uns leid, das Quiz ist nicht mehr aktiv!";
+}
 ?>
+

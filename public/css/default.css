@@ -1,60 +1,67 @@
 body {
-	background: silver;
-	font: 14px 'trebuchet ms', arial, sans-serif;
+        background: silver;
+	font: 1.5vh 'trebuchet ms', arial, sans-serif;
+        width: auto;
+        height: auto;
 }
 
 
 div {
     background-color: white;
-    margin: 2px 0px 2px 0px;
-}
+    /*margin: 1vh 0vw 1vh 0vw;*/
+    
+    }
+    
+.logo
+        {      
+        float: right;
+        width: 8vw;
+        height: auto;
+        }
 
 /** Structure */
 #header {
-	padding: 10px;
 	color: #fff;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-bottom: 4px solid orange;
-        background: url(images/FL_förde3.jpg) ;
+        border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	border-bottom: 0.5vh solid orange;
+        background: url(images/FL_förde3.png);
         background-position: 50% 62%;
-        width: 98.4%;
-        height: 200px;
-        
-        
-        
-        
-        
+        padding:3vh 3.5vw 3vh 3.5vw;
+        width: 92.0vw;
+        height: 11vmax;
 }
 
 #content {
-	background: #fff;
-	padding: 20px;
-        
+	background: white;
+	padding: 3vh 3.5vw 3vh 3.5vw;
+        width: 92vw;
+        height: auto;
 }
 
 #footer {
 	background: #12407f;
 	color: #fff;
-	padding: 20px;
+	padding:3vh 3.5vw 3vh 3.5vw;
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-       
+        width: 92vw;
+        height: 9vh;
 }
 
 /* Links */
-#header a {
+/*#header a {
 	color: #fff;
-	background: #436fac;
+	background: 
 	padding: 4px 15px;
 	text-decoration: none;
 	font-size: 15px;
 	font-weight: bolder;
-}
+}*/
 
 #header a:hover {
-	background: #4d8add;
+	background: gray;
 }
 
 /** Forms */
@@ -65,79 +72,153 @@ form {
 form label { 
 	display: block;
 	float: left; 
-	width: 150px; 
-	padding: 0; 
-	margin: 9px 0 0;
-	text-align: right; 
+	width: 10vw; 
+	text-align: right;
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.3vh;
 }
 
 form input, form select {
-	width: auto;
-	margin: 5px 0 0 10px;
-	border: 1px solid gray;
-	padding: 4px;
+	width: 20vw;
+        height: 3vh;
+	border: 1px solid gray;	
+        font-size: 1.5em
 }
 
-form input[type=submit]:hover {
+/*form input[type=submit]:hover {
 	cursor: pointer;
 	background: silver;
-}
+}*/
 
 
 form br {clear: left;}
 
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 80px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 100px 5px 5px 5px;
-  
+.buttonNav {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 0.5vw;
+        background-color:blueviolet;
+        opacity: .8;
+        color: #FFFFFF;
+        font-size: 0.8vw;      
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 4vh 0.5vw 0vh 0.5vw;
+        padding: 0.8vh 0.8vw 0.8vh 0.8vw;
 }
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+.buttonNav span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        padding: 0;
 }
 
-.button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+.buttonNav span:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -0.5vw;
+        transition: 0.5s;
 }
 
-.button:hover span {
-  padding-right: 30px;
+.buttonNav:hover span {
+        /*padding-right: 30px;*/
+        padding-right: 1.5vw;
 }
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+.buttonNav:hover span:after {
+        opacity: 1;
+        right: 0;
 }
 
-.logo
+.buttonCont{
+        width: auto;
+        height: auto;  
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        border-radius: 0.2vw;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 0.8vw;
+        transition: all 0.5s;
+        cursor: pointer;        
+}
+
+.buttonCont span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.buttonCont span:after {
+        content: '+';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.buttonCont:hover span {
+        padding-right: 30px;
+}
+
+.buttonCont:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+.submitClass {
+        background: none;    
+        border: none;    
+        color: blueviolet;    
+        text-decoration: underline;    
+        cursor: pointer;
+        font-size: 1em;
+}
+
+.submitClass:hover
 {
-     
-     
-     float: right;
-     
-     
-   
-     
-     
-    
-    
+    transition: 0.5s;
+    font-weight: bold;
+}
+#wrapper {
+        width: 80vw;
+}
+#steuerung {
+        width:40vw;
+	float:left;
+}
+#zweite_spalte {
+	margin-left:41vw;
+	width: auto;
 }
 
+h1{
+    font-size: 3vw;
+}
+h2{
+    font-size: 2vw;
+}
+h3{
+    font-size: 1vw;
+}
+h4{    
+    
+}
+h5{
+    
+}
+h6{
+    
+}
