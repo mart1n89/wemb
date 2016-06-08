@@ -9,4 +9,8 @@ class Vote extends Controller {
         $this->view->session = $this->model->getSessionByCode();
         $this->view->render('vote/index');        
     }
+    
+    public function getTopic() {
+        return 'test';
+    }
 }
