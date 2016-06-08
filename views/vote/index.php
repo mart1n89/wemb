@@ -1,22 +1,38 @@
-
-<?php // $session = $this->session;
-
-if ($session[0]['isActive'] == 1) {
-    
-}
-else {
-    echo "Tut uns leid, das Quiz ist nicht mehr aktiv!";
-}
-
+<?php
     $session = $this->session;
-    print_r($session);
+    
+//    echo '<pre>';
+//    print_r($session);
+//    echo '</pre>';
+    
+        if ($session['isActive'] == 0) {
+            echo "Tut uns Leid: Die Sitzung ist nicht aktiv!";
+        }
+        else {
+            $this->controller->requireTopic($session['topicID']);
+            $topic = $this->topic;
+            $this->controller->requireQuestionSet($session['topicID']);
+            $questions = $this->questions;
+            
+//            echo "<pre>";
+//            print_r($questions);
+//            echo "</pre>";
+            
+            echo "<h2>Thema: " . $topic['topicName'] . "<br />" ." Start: " . $session['start'] . "</h2>";
+            echo "<form method=\"post\" action=\"<?php echo URL; ?>vote/send\">";
+            
+            foreach ($questions as $key => $value){
+                echo "<div id =\"question_" . $key ."\">";
+                echo "<h3>" . utf8_encode($value['questionText']) . "asas</h3>";
+                echo "</div>";
+            }
+            
+            echo "</form>";
 
-    if ($session['isActive'] == 0) {
-        echo 'Der eingegebene Code ist nicht aktiv!';
-    }
+        }       
 ?>
 
-<h2>Quiz</h2>
+<!--<h2>Quiz</h2>
 <form method="post" action="<?php echo URL; ?>vote/send">
     <div id ="question1">
         <h3>Sind wir ein cooles Team?</h3>
@@ -61,4 +77,4 @@ else {
         </tr>
     </table>
     
-</form>
+</form>-->

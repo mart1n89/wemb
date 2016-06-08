@@ -1,6 +1,7 @@
 body {
         background: silver;
-	font: 1.5vh 'trebuchet ms', arial, sans-serif;
+	/*font: 1.5vh 'trebuchet ms', arial, sans-serif;*/
+        font: 1.5vh 'verdana', arial, sans-serif;
         width: auto;
         height: auto;
 }
@@ -15,7 +16,7 @@ div {
 .logo
         {      
         float: right;
-        width: 8vw;
+        width: 10vw;
         height: auto;
         }
 
@@ -64,10 +65,20 @@ div {
 	background: gray;
 }
 
+.tableConf{
+ /*font: 'verdana',arial,sans-serif;*/
+ font-size: 1.5em;
+ width: 32vw;
+ text-align: center;
+ vertical-align: middle;
+ 
+}
 /** Forms */
 form {
-	font: 100% verdana,arial,sans-serif;
+	/*font: 100% 'verdana',arial,sans-serif;*/
 }
+
+
 
 form label { 
 	display: block;
@@ -192,17 +203,38 @@ form br {clear: left;}
     transition: 0.5s;
     font-weight: bold;
 }
+
+/*Vertikale Ausrichtung*/
 #wrapper {
-        width: 80vw;
+    background: lightblue;
+        width: auto;
+}
+#spalte_eins {
+    background-color: lightgreen;
+    margin-top:0px;    
+    width:40vw;
+	float:left;
+}
+#spalte_zwei {
+    background-color: lightcoral;
+    margin-top: 0px;
+	/*margin-left:41vw;*/
+	width: 80vw;
+        
+}
+
+/*Horizontal Ausrichtung*/
+/*#wrapper {
+        width: 45vw;
 }
 #steuerung {
-        width:40vw;
+        width:auto;
 	float:left;
 }
 #zweite_spalte {
 	margin-left:41vw;
 	width: auto;
-}
+}*/
 
 h1{
     font-size: 3vw;
