@@ -31,14 +31,7 @@ class Quiz_Model extends Model {
     }
     
     public function xhrAddQuiz(){
-        //$topic = $_POST['questions'];
         
-//        foreach ($questions as $key => $wert){
-//            $answers = $questions[$wert];
-//            for ($i = 0; $i < count($answers); $i++){
-//                echo($answers[$i]);
-//            }
-//        }
     }
 
     public function edit(){
