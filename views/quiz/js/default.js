@@ -115,4 +115,5 @@ function saveTopic(){
             }
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
     }
+    //window.location.href = "http://wemdb/quiz/index";
 }
