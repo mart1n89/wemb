@@ -235,7 +235,7 @@ form br {clear: left;}
         text-decoration: underline;    
         cursor: pointer;
         font-size: 1em; 
-        margin-right: 
+        
       
         
 }
@@ -286,7 +286,7 @@ h6{
     padding-top: auto;
     padding-bottom: auto;
     /*padding-left: 5vw;*/
-    padding-right: 3vw;
+    padding-left: 3vw;
     margin-bottom: 1vh;
     margin-right: 1vw;
     

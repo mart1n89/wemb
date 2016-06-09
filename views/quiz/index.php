@@ -1,5 +1,5 @@
-<h1>Quizübersicht</h1>
-<table border="1" style="padding-left:5vw; align-items: baseline; vertical-align">
+<h1>Quiz&uuml;bersicht</h1>
+<table border="0" style="padding-left:5vw;">
     <?php
         foreach ($this->topicList as $key => $value){
            
@@ -11,7 +11,7 @@
         echo '</tr>';            
         }
         echo '<tr width="100%">';
-        echo '<td colspan="4" align="right"><a class="buttonContBig" href="'.URL.'quiz/create">Create</a></td>';
+        echo '<td colspan="4" align="right" style="padding-top:2vh;"><a class="buttonContBig" href="'.URL.'quiz/create">Create</a></td>';
         echo '</tr>';
     ?>
 </table>

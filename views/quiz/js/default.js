@@ -2,7 +2,7 @@ var questionList = [];
 function init(){
     $('#area').append('<label>Thema:</label><input type="text" id="topic">');
     $('#area').append('<input type="button" onclick="addQuestion()" value="add Question">');
-    $('#area').append('<input type="button" onclick="saveTopic()" value="Save">');
+    $('#area').append('<input class="buttonCont" type="button" onclick="saveTopic()" value="Save">');
 }
 
 function addQuestion(){
@@ -41,10 +41,12 @@ function addAnswer(questionNo){
     var answerCount = answerList.length + 1;
     var answerNo = 'answer_' + answerCount;
     var answerNo_TXT = questionNo + answerNo + '_TXT';
+    var answerNo_RB = questionNo + answerNo + '_RB';
     answerList[answerNo] = questionNo + answerNo + '_TXT';
     questionList[questionNo] = answerList;
     $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
-    $('#' + questionNo + answerNo).append('<label>Antwort:</label><input type="text" id="\'' + answerNo_TXT + '\'">')
+    $('#' + questionNo + answerNo).append('<label>Antwort:</label><input type="text" id="\'' + answerNo_TXT + '\'">');
+    $('#' + questionNo + answerNo).append('<input type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked>');
     $('#' + questionNo + answerNo).append('<input type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="delete"></br>');
 }
 
@@ -57,7 +59,6 @@ function removeAnswer(questionNo, answerNo){
             $('#' + questionNo + answerNo).remove();
         }
     }
-    
     questionList[questionNo] = answerList;
 }
 
@@ -79,7 +80,7 @@ function saveTopic(){
         var answerList = questionList[k];
         questionID = k + '_TXT';
         var question = document.getElementById('\'' + questionID + '\'').value;
-        if(question === ''){
+        if(question === '' || question.indexOf("[") !== -1 || question.indexOf("]") !== -1){
             alertCounter++;
             document.getElementById('\'' + questionID + '\'').style.borderColor="red";
         }
@@ -90,14 +91,19 @@ function saveTopic(){
         for (var t in answerList) {  
             answerID = answerList[t];
             var answer = document.getElementById('\'' + answerID + '\'').value;
-            if(answer === ''){
+            var radioID = k + t + '_RB';
+            //alert(radioID);
+            var cb = document.getElementById('\'' + radioID +'\'').checked;
+            //alert(cb);
+            if(answer === '' || answer.indexOf(";") !== -1 || answer.indexOf("/") !== -1){
                 alertCounter++;
                 document.getElementById('\'' + answerID + '\'').style.borderColor="red";
             }
             else{
                 document.getElementById('\'' + answerID + '\'').style.borderColor="black";
             }
-            answers.push(answer);
+            var full_answer = answer + '/' + cb;
+            answers.push(full_answer);
         }
         //questions[question] = answers;
         questions[question] = answers;
@@ -110,10 +116,17 @@ function saveTopic(){
                 var answers = questions[k];
                 for (var i = 0; i < answers.length; i++){
                     data += answers[i] + ';';
+                    //alert(answers[i]);
                 }
                 data += ']';
             }
+        //alert(data);
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
+//        $.ajax({
+//            type: "POST",
+//            url: 'xhrAddQuiz',
+//            data: {'topic': topic ,'data' : data}
+//        });
+        //window.location.href = "http://wemdb/quiz/index";
     }
-    //window.location.href = "http://wemdb/quiz/index";
 }
