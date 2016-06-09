@@ -24,10 +24,6 @@ class Quiz extends Controller {
         $this->view->render('quiz/create');
     }
     
-    public function save(){
-        $this->model->save();
-    }
-    
     public function edit($id){
         $this->view->quiz = $this->model->getSingleQuiz($id);
         $this->view->render('quiz/edit');
@@ -40,11 +36,12 @@ class Quiz extends Controller {
     
     public function xhrAddQuiz(){
         $this->model->xhrAddQuiz();
-        exit;
-        header('location: ../quiz/index');
+        //header('location:../index');
+        //exit;
     }
     
-    public function start(){
-        
+    public function start($id){
+        $this->model->start($id);
+        $this->view->render('quiz/start');
     }
 }
