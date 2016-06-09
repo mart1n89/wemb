@@ -15,7 +15,7 @@
                          <option value="default">Default</option>
                          <option value="admin">Admin</option>
                              </select></br></td></tr>
-                    <tr><td align="right"><input type="submit" value="Speichern" class="buttonCont"/></br></td>
+                    <tr><td align="right"><input type="submit" value="Speichern" class="buttonContBig"/></br></td>
                 </table>
             </form>
     </div>
@@ -29,8 +29,8 @@
                     echo '<td font-size="2em">' . $value['userID'] . '</td>';
                     echo '<td>' . $value['userName'] . '</td>';
                     echo '<td>' . $value['role'] . '</td>';
-                    echo '<td><a href="#" class="buttonCont">Edit</a></td>';
-                    echo '<td><a href="#" class="buttonCont">Delete</a></td>';
+                    echo '<td><a href="#" class="buttonContSmall">Edit</a></td>';
+                    echo '<td><a href="#" class="buttonContSmall">Delete</a></td>';
                     echo '</tr>';
                 }
                 echo '</table>';
