@@ -1,7 +1,6 @@
 body {
         background: silver;
-	/*font: 1.5vh 'trebuchet ms', arial, sans-serif;*/
-        font: 16px 'verdana', arial, sans-serif;
+	font: 1.5vh 'trebuchet ms', arial, sans-serif;
         width: auto;
         height: auto;
 }
@@ -16,7 +15,7 @@ div {
 .logo
         {      
         float: right;
-        width: 10vw;
+        width: 8vw;
         height: auto;
         }
 
@@ -65,20 +64,10 @@ div {
 	background: gray;
 }
 
-.tableConf{
- /*font: 'verdana',arial,sans-serif;*/
- font-size: 1.5em;
- width: 32vw;
- text-align: center;
- vertical-align: middle;
- 
-}
 /** Forms */
 form {
-	/*font: 100% 'verdana',arial,sans-serif;*/
+	font: 100% verdana,arial,sans-serif;
 }
-
-
 
 form label { 
 	display: block;
@@ -87,12 +76,12 @@ form label {
 	text-align: right;
         font-size: 1.5em;
         margin-right: 1vw;
-        /*padding-top: 0.3vh;*/
+        padding-top: 0.3vh;
 }
 
 form input, form select {
 	width: 20vw;
-        height: auto;
+        height: 3vh;
 	border: 1px solid gray;	
         font-size: 1.5em
 }
@@ -115,7 +104,7 @@ form br {clear: left;}
         background-color:blueviolet;
         opacity: .8;
         color: #FFFFFF;
-        font-size: 1em;      
+        font-size: 0.8vw;      
         transition: all 0.5s;
         cursor: pointer;
         margin: 4vh 0.5vw 0vh 0.5vw;
@@ -131,7 +120,7 @@ form br {clear: left;}
 }
 
 .buttonNav span:after {
-        content: '»';
+        content: '>>';
         position: absolute;
         opacity: 0;
         top: 0;
@@ -155,11 +144,11 @@ form br {clear: left;}
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        /*padding: 0.5vh 0.7vw 0.55vh 0.7vw;*/
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
         border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
-        font-size: 1.5em;
+        font-size: 0.8vw;
         transition: all 0.5s;
         cursor: pointer;        
 }
@@ -203,44 +192,23 @@ form br {clear: left;}
     transition: 0.5s;
     font-weight: bold;
 }
-
-/*Vertikale Ausrichtung*/
 #wrapper {
-    background: lightblue;
-        width: auto;
-}
-#spalte_eins {
-    background-color: lightgreen;
-    margin-top:0px;    
-    width:40vw;
-	float:left;
-}
-#spalte_zwei {
-    background-color: lightcoral;
-    margin-top: 0px;
-	/*margin-left:41vw;*/
-	width: 80vw;
-        
-}
-
-/*Horizontal Ausrichtung*/
-/*#wrapper {
-        width: 45vw;
+        width: 80vw;
 }
 #steuerung {
-        width:auto;
+        width:40vw;
 	float:left;
 }
 #zweite_spalte {
 	margin-left:41vw;
 	width: auto;
-}*/
+}
 
 h1{
     font-size: 3vw;
 }
 h2{
-    font-size: 2em;
+    font-size: 2vw;
 }
 h3{
     font-size: 1vw;
