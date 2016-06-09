@@ -9,21 +9,32 @@
             echo "Tut uns Leid: Die Sitzung ist nicht aktiv!";
         }
         else {
+            
+            //Collect All Data
+            
             $this->controller->requireTopic($session['topicID']);
             $topic = $this->topic;
+            
             $this->controller->requireQuestionSet($session['topicID']);
             $questions = $this->questions;
             
-//            echo "<pre>";
-//            print_r($questions);
-//            echo "</pre>";
+            foreach ($questions as $key => $value) {
+                $questionIDs[$key] = $value['questionID'];
+            }
+            
+            $this->controller->requireAnswers($questionIDs);
+            $answers = $this->answers;
+            
+            echo "<pre>";
+            print_r($answers);
+            echo "</pre>";
             
             echo "<h2>Thema: " . $topic['topicName'] . "<br />" ." Start: " . $session['start'] . "</h2>";
             echo "<form method=\"post\" action=\"<?php echo URL; ?>vote/send\">";
             
             foreach ($questions as $key => $value){
                 echo "<div id =\"question_" . $key ."\">";
-                echo "<h3>" . utf8_encode($value['questionText']) . "asas</h3>";
+                echo "<h3>" . utf8_encode($value['questionText']) . "</h3>";
                 echo "</div>";
             }
             
