@@ -37,6 +37,8 @@ div {
 	padding: 3vh 3.5vw 3vh 3.5vw;
         width: 92vw;
         height: auto;
+        min-height: 15vw;
+        
 }
 
 #footer {
@@ -47,7 +49,7 @@ div {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
         width: 92vw;
-        height: 9vh;
+        height: auto;
 }
 
 /* Links */
@@ -144,11 +146,11 @@ form br {clear: left;}
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        /*padding: 0.5vh 0.7vw 0.55vh 0.7vw;*/
         border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
-        font-size: 0.8vw;
+        font-size: 1.3em;
         transition: all 0.5s;
         cursor: pointer;        
 }
@@ -205,20 +207,23 @@ form br {clear: left;}
 }
 
 h1{
-    font-size: 3vw;
-}
-h2{
     font-size: 2vw;
 }
+h2{
+    font-size: 1.8vw;
+}
 h3{
-    font-size: 1vw;
+    font-size: 1.5vw;
+  
 }
 h4{    
-    
+    font-size: 1.2vw;
 }
 h5{
-    
+    font-size: 0.9vw;
 }
 h6{
-    
+    font-size: 0.7vw;
+    padding: 0px;
+    margin: 0px;
 }

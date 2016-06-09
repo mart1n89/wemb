@@ -21,7 +21,7 @@
             <table width="90%">
                 <tr>
                     <td ><h2>Testimeter</h2></td>
-                    <td ><img class="logo" src="public/css/images/HF_Logo.png"></td>
+                    <td ><img class="logo" src="public/css/images/HF_Logo.png" alt="HS-Logo"></td>
                 </tr>                
             </table>
             
