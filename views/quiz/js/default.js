@@ -2,7 +2,7 @@ var questionList = [];
 function init(){
     $('#area').append('<label>Thema:</label><input type="text" id="topic">');
     $('#area').append('<input type="button" onclick="addQuestion()" value="add Question">');
-    $('#area').append('<input type="button" onclick="saveTopic()" value="Save">');
+    $('#area').append('<input class="buttonCont" type="button" onclick="saveTopic()" value="Save">');
 }
 
 function addQuestion(){

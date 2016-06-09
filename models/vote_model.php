@@ -74,4 +74,17 @@ class Vote_Model extends Model {
             header('location: ../home');
         }
     }
+    
+    public function writeBackResultsByAnswerID($data) {
+        $st = $this->db->prepare('INSERT into result (sessionID, questionID, answerID, clicks)');
+    }
+    
+    public function create($data){
+        $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:userame, :password, :role)');
+        $st->execute(array(
+            ':username' => $data['userName'],
+            ':password' => $data['password'],
+            ':role' => $data['role']
+            ));
+    }
 }

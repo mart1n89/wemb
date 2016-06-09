@@ -22,4 +22,17 @@ class Vote extends Controller {
     public function requireAnswers($ids) {
         $this->view->answers = $this->model->getAnswerById($ids);
     }
+    
+    public function send() {
+        
+        foreach ($_POST as $key => $value) {
+            if ($key == "sessionID") {
+                $data['sessionID'] = $value;
+            } else {
+                $data[$key] = $value;
+            }
+        }
+        $this->model->writeBackResultsByAnswerID($data);
+        $this->view->render('vote/send');
+    }
 }

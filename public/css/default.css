@@ -1,7 +1,6 @@
 body {
         background: silver;
-	/*font: 1.5vh 'trebuchet ms', arial, sans-serif;*/
-        font: 16px 'verdana', arial, sans-serif;
+	font: 1.5vh 'trebuchet ms', arial, sans-serif;
         width: auto;
         height: auto;
 }
@@ -16,7 +15,7 @@ div {
 .logo
         {      
         float: right;
-        width: 10vw;
+        width: 8vw;
         height: auto;
         }
 
@@ -38,6 +37,8 @@ div {
 	padding: 3vh 3.5vw 3vh 3.5vw;
         width: 92vw;
         height: auto;
+        min-height: 15vw;
+        
 }
 
 #footer {
@@ -48,7 +49,7 @@ div {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
         width: 92vw;
-        height: 9vh;
+        height: auto;
 }
 
 /* Links */
@@ -65,36 +66,28 @@ div {
 	background: gray;
 }
 
-.tableConf{
- /*font: 'verdana',arial,sans-serif;*/
- font-size: 1.5em;
- width: 32vw;
- text-align: center;
- vertical-align: middle;
- 
-}
 /** Forms */
 form {
-	/*font: 100% 'verdana',arial,sans-serif;*/
+	font: 100% verdana,arial,sans-serif;
 }
 
-
-
 form label { 
-	display: block;
+	display: inline-cell;
 	float: left; 
 	width: 10vw; 
 	text-align: right;
         font-size: 1.5em;
         margin-right: 1vw;
-        /*padding-top: 0.3vh;*/
+        padding-top: 0.3vh;
 }
 
 form input, form select {
+        display: inline-cell;
 	width: 20vw;
-        height: auto;
+        height: 3vh;
 	border: 1px solid gray;	
         font-size: 1.5em
+            
 }
 
 /*form input[type=submit]:hover {
@@ -115,7 +108,7 @@ form br {clear: left;}
         background-color:blueviolet;
         opacity: .8;
         color: #FFFFFF;
-        font-size: 1em;      
+        font-size: 0.8vw;      
         transition: all 0.5s;
         cursor: pointer;
         margin: 4vh 0.5vw 0vh 0.5vw;
@@ -131,7 +124,7 @@ form br {clear: left;}
 }
 
 .buttonNav span:after {
-        content: '»';
+        content: '>>';
         position: absolute;
         opacity: 0;
         top: 0;
@@ -149,29 +142,29 @@ form br {clear: left;}
         right: 0;
 }
 
-.buttonCont{
+.buttonContBig{
         width: auto;
         height: auto;  
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        /*padding: 0.5vh 0.7vw 0.55vh 0.7vw;*/
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
         border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
-        font-size: 1.5em;
+        font-size: 1.3em;
         transition: all 0.5s;
         cursor: pointer;        
 }
 
-.buttonCont span {
+.buttonContBig span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
 }
 
-.buttonCont span:after {
+.buttonContBig span:after {
         content: '+';
         position: absolute;
         opacity: 0;
@@ -180,11 +173,57 @@ form br {clear: left;}
         transition: 0.5s;
 }
 
-.buttonCont:hover span {
+.buttonContBig:hover span {
         padding-right: 30px;
 }
 
-.buttonCont:hover span:after {
+.buttonContBig:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+.buttonContSmall{
+        width: auto;
+        height: auto;  
+        display: table-cell;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        border-radius: 0.2vw;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 0.65em;
+        transition: all 0.5s;
+        cursor: pointer;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+        
+}
+
+.buttonContSmall span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.buttonContSmall span:after {
+        content: '+';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.buttonContSmall:hover span {
+        padding-right: 30px;
+}
+
+.buttonContSmnall:hover span:after {
         opacity: 1;
         right: 0;
 }
@@ -195,62 +234,61 @@ form br {clear: left;}
         color: blueviolet;    
         text-decoration: underline;    
         cursor: pointer;
-        font-size: 1em;
+        font-size: 1em; 
+        
+      
+        
 }
 
 .submitClass:hover
 {
     transition: 0.5s;
     font-weight: bold;
+  
+       
 }
-
-/*Vertikale Ausrichtung*/
 #wrapper {
-    background: lightblue;
-        width: auto;
-}
-#spalte_eins {
-    background-color: lightgreen;
-    margin-top:0px;    
-    width:40vw;
-	float:left;
-}
-#spalte_zwei {
-    background-color: lightcoral;
-    margin-top: 0px;
-	/*margin-left:41vw;*/
-	width: 80vw;
-        
-}
-
-/*Horizontal Ausrichtung*/
-/*#wrapper {
-        width: 45vw;
+        width: 80vw;
 }
 #steuerung {
-        width:auto;
+        width:40vw;
 	float:left;
 }
 #zweite_spalte {
 	margin-left:41vw;
 	width: auto;
-}*/
+}
 
 h1{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 h2{
-    font-size: 2em;
+    font-size: 1.8vw;
 }
 h3{
-    font-size: 1vw;
+    font-size: 1.5vw;
+  
 }
 h4{    
-    
+    font-size: 1.2vw;
 }
 h5{
-    
+    font-size: 0.9vw;
 }
 h6{
+    font-size: 0.7vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tdConf{
+    font-size: 1.5em;
+    padding-top: auto;
+    padding-bottom: auto;
+    /*padding-left: 5vw;*/
+    padding-left: 3vw;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    
     
 }
