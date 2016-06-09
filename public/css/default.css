@@ -72,7 +72,7 @@ form {
 }
 
 form label { 
-	display: block;
+	display: inline-cell;
 	float: left; 
 	width: 10vw; 
 	text-align: right;
@@ -82,6 +82,7 @@ form label {
 }
 
 form input, form select {
+        display: inline-cell;
 	width: 20vw;
         height: 3vh;
 	border: 1px solid gray;	
