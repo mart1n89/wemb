@@ -20,7 +20,7 @@ class Dashboard extends Controller {
     
     public function logout(){
         Session::destroy();
-        header('location: ' .URL. 'index');
+        header('location: ' .URL. 'home');
         exit;
     } 
     
