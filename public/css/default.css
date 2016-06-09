@@ -1,7 +1,7 @@
 body {
         background: silver;
 	/*font: 1.5vh 'trebuchet ms', arial, sans-serif;*/
-        font: 1.5vh 'verdana', arial, sans-serif;
+        font: 16px 'verdana', arial, sans-serif;
         width: auto;
         height: auto;
 }
@@ -87,12 +87,12 @@ form label {
 	text-align: right;
         font-size: 1.5em;
         margin-right: 1vw;
-        padding-top: 0.3vh;
+        /*padding-top: 0.3vh;*/
 }
 
 form input, form select {
 	width: 20vw;
-        height: 3vh;
+        height: auto;
 	border: 1px solid gray;	
         font-size: 1.5em
 }
@@ -115,7 +115,7 @@ form br {clear: left;}
         background-color:blueviolet;
         opacity: .8;
         color: #FFFFFF;
-        font-size: 0.8vw;      
+        font-size: 1em;      
         transition: all 0.5s;
         cursor: pointer;
         margin: 4vh 0.5vw 0vh 0.5vw;
@@ -155,11 +155,11 @@ form br {clear: left;}
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        /*padding: 0.5vh 0.7vw 0.55vh 0.7vw;*/
         border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
-        font-size: 0.8vw;
+        font-size: 1.5em;
         transition: all 0.5s;
         cursor: pointer;        
 }
@@ -240,7 +240,7 @@ h1{
     font-size: 3vw;
 }
 h2{
-    font-size: 2vw;
+    font-size: 2em;
 }
 h3{
     font-size: 1vw;
