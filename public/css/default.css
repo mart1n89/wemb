@@ -183,7 +183,7 @@ form br {clear: left;}
 .buttonContSmall{
         width: auto;
         height: auto;  
-        display: inline-block;
+        display: table-cell;
         text-decoration: none;
         text-align: center;
         padding: 0.5vh 0.7vw 0.55vh 0.7vw;
@@ -278,9 +278,10 @@ h6{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    /*padding-left: 5vw;*/
+    padding-right: 3vw;
     margin-bottom: 1vh;
     margin-right: 1vw;
+    
     
 }

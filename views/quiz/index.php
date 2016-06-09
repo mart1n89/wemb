@@ -1,5 +1,5 @@
 <h1>Quizübersicht</h1>
-<table>
+<table border="1" style="padding-left:5vw; align-items: baseline; vertical-align">
     <?php
         foreach ($this->topicList as $key => $value){
            
