@@ -140,13 +140,13 @@ form br {clear: left;}
         right: 0;
 }
 
-.buttonCont{
+.buttonContBig{
         width: auto;
         height: auto;  
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        /*padding: 0.5vh 0.7vw 0.55vh 0.7vw;*/
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
         border-radius: 0.2vw;
         background-color:blueviolet;
         color: #FFFFFF;
@@ -155,14 +155,14 @@ form br {clear: left;}
         cursor: pointer;        
 }
 
-.buttonCont span {
+.buttonContBig span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
 }
 
-.buttonCont span:after {
+.buttonContBig span:after {
         content: '+';
         position: absolute;
         opacity: 0;
@@ -171,11 +171,57 @@ form br {clear: left;}
         transition: 0.5s;
 }
 
-.buttonCont:hover span {
+.buttonContBig:hover span {
         padding-right: 30px;
 }
 
-.buttonCont:hover span:after {
+.buttonContBig:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+.buttonContSmall{
+        width: auto;
+        height: auto;  
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        border-radius: 0.2vw;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 0.65em;
+        transition: all 0.5s;
+        cursor: pointer;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+        
+}
+
+.buttonContSmall span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.buttonContSmall span:after {
+        content: '+';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.buttonContSmall:hover span {
+        padding-right: 30px;
+}
+
+.buttonContSmnall:hover span:after {
         opacity: 1;
         right: 0;
 }
@@ -226,4 +272,15 @@ h6{
     font-size: 0.7vw;
     padding: 0px;
     margin: 0px;
+}
+
+.tdConf{
+    font-size: 1.5em;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    
 }

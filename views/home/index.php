@@ -8,7 +8,7 @@
     </table>-->
     
     <label>Code</label><input type="text" name="codeNo"/>
-    <input type="submit" value="aufrufen" class="buttonCont"/></br>
+    <input type="submit" value="aufrufen" class="buttonContBig"/></br>
 
 </form>
 

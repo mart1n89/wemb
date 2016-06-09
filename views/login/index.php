@@ -9,10 +9,10 @@
             <td><label>Password</label><input type="password" name="password"/></br></td>
         </tr>
         <tr>
-            <td><label></label><input type="submit" value="Anmmelden" class="buttonCont"/></br></td>
+            <td><label></label><input type="submit" value="Anmmelden" class="buttonContBig"/></br></td>
         </tr>
         <tr>
-            <td><label></label><input type="submit" value="Registrieren" class="buttonCont"/></br></td>
+            <td><label></label><input type="submit" value="Registrieren" class="buttonContBig"/></br></td>
         </tr>
         <tr >
             <td><label></label><input type="submit" value="Passwort vergessen" class="submitClass" style="text-align:right;"/></br></td>
