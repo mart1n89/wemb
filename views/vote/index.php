@@ -40,6 +40,7 @@
                 echo "</table>";
                 echo "</div>";
             }
+            
             echo "<br/><input type=\"submit\" value=\"Absenden\" class=\"buttonContBig\"/>";
             echo "</form>";
         }       
