@@ -28,9 +28,10 @@ class Quiz_Model extends Model {
     }
 
     public function getSingleQuiz($id) {
-        $st = $this->db->prepare('SELECT * FROM topic WHERE topicID = :id');
+        $st = $this->db->prepare('SELECT * FROM topic t INNER JOIN questionSet qs ON t.topicID = qs.topicID INNER JOIN question q ON q.questionID = qs.questionID INNER JOIN answer a ON a.questionID = q.questionID WHERE topicID = :id');
         $st->execute(array(':id' => $id));
-        return $st->fetch();
+        $st->setFetchMode(PDO::FETCH_ASSOC);
+        return $st->fetchAll();
     }
 
     public function xhrAddQuiz() {
@@ -72,20 +73,25 @@ class Quiz_Model extends Model {
                         if ($checked === "true") {
                             $st_answer->execute(array(':question' => $qid,
                                                       ':answer' => $utfansw,
-                                                      ':correct' => true));
+                                                      ':correct' => 1));
                         } else {
                             $st_answer->execute(array(':question' => $qid,
                                                       ':answer' => $utfansw,
-                                                      ':correct' => false));
+                                                      ':correct' => 0));
                         }
                     }
                 }
+                
+                $st_questionset = $this->db->prepare('INSERT INTO questionSet (topicID, orderNo, questionID) VALUES ( :topic1, (SELECT * FROM (SELECT coalesce(max(OrderNo), 0) + 1 FROM questionSet WHERE topicID = :topic2 ) AS _questionSet), :question)');
+                $st_questionset->execute(array(':topic1' => $topic_id,
+                                               ':topic2' => $topic_id,
+                                               ':question' => $qid));
             }
         }
         $this->db->commit();
     }
 
-    public function edit() {
+    public function edit($id) {
         
     }
 

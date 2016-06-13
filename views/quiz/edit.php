@@ -1,5 +1,5 @@
     <h1>Quiz anpassen</h1>
     <?php 
-        echo $this->quiz['topicName'].'<br/>';
+        print_r($this->quiz) .'<br/>';
         echo '<a class="buttonCont"href="'.URL.'quiz/create">Save</a>';
     ?>
