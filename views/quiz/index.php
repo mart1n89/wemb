@@ -5,9 +5,10 @@
            
         echo '<tr>';
         echo '<td class="tdConf">'.$value['topicName'].'</td>';
-        echo '<td class="tdConf"><a class="buttonContSmall" href="#">Start</a></td>';
-        echo '<td class="tdConf"><a class="buttonContSmall" href="'.URL.'quiz/edit/'.$value['topicID'].'">Edit</a></td>';
-        echo '<td class="tdConf"><a class="buttonContSmall" href="'.URL.'quiz/delete/'.$value['topicID'].'">Delete</a></td>';
+        echo '<td class="tdConf"><a class="buttonPlay" href="#">Start<input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a></td>';
+        echo '<td class="tdConf"><a class="buttonPlay" href="'.URL.'quiz/edit/'.$value['topicID'].'">Edit<input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a></td>';
+        echo '<td class="tdConf"><a class="buttonPlay" href="'.URL.'quiz/delete/'.$value['topicID'].'"><input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a>
+            </td>';
         echo '</tr>';            
         }
         echo '<tr width="100%">';
