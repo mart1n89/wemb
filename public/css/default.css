@@ -294,7 +294,7 @@ hr{
 }
 
 a.play{
-    display: inline-cell;
+    display: Block;
     width:2vw;
     height: auto;
     background: url(public/css/images/play.png) no-repeat;
