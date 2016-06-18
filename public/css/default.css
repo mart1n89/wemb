@@ -281,14 +281,23 @@ h6{
     margin: 0px;
 }
 
+hr{
+    border: solid silver 1px;
+}
+
 .tdConf{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
-    /*padding-left: 5vw;*/
-    padding-left: 3vw;
+    padding-left: 4.5vw;
+    /*padding-right: 2vw;*/
     margin-bottom: 1vh;
     margin-right: 1vw;
-    
-    
+}
+
+a.play{
+    display: block;
+    width:1vw;
+    height: auto;
+    background: url(public/css/images/play.png) no-repeat;
 }
