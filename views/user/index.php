@@ -1,15 +1,14 @@
 <div>
     <h2>Benutzer anlegen</h2>
     <form method="post" action="<?php echo URL; ?>user/create">
-            <table border="0">             
-                <tr><td><label>Username</label><input type="text" name="userName"/></br></td>
-                <tr><td><label>Password</label><input type="text" name="password"/></br></td>
-                <tr><td><label>Role</label>
+            <table border="0" Style="margin-left: 4.5vw">             
+                <tr><td><label id="editLabel">Username</label><input type="text" name="userName"/></br></td></tr>
+                <tr><td><label id="editLabel">Password</label><input type="text" name="password"/></br></td></tr>
+                <tr><td><label id="editLabel">Role</label>
                      <select font-size="2em" name="role">
                      <option value="default">Default</option>
-                     <option value="admin">Admin</option>
-                         </select></br></td></tr>
-                <tr><td><label></label><input type="submit" value="Speichern" class="buttonContBig"/></br></td>
+                     <option value="admin">Admin</option></select></br></td></tr>
+                <tr><td><label></label><input type="submit" value="Speichern" class="buttonContBig"/></td></br>
             </table>
         </form>
 </div>

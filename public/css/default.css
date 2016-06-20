@@ -71,7 +71,17 @@ form {
 	font: 100% verdana,arial,sans-serif;
 }
 
-form label { 
+/*form label { 
+	display: inline-cell;
+	float: left; 
+	width: 10vw; 
+	text-align: right;
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.3vh;
+}*/
+
+#defaultLabel{ 
 	display: inline-cell;
 	float: left; 
 	width: 10vw; 
@@ -88,6 +98,13 @@ form input, form select {
 	border: 1px solid gray;	
         font-size: 1.5em
             
+}
+#editLabel {        
+	display: block;	
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
 }
 
 /*form input[type=submit]:hover {
