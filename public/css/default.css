@@ -308,11 +308,12 @@ hr{
     /*padding-right: 2vw;*/
     margin-bottom: 1vh;
     margin-right: 1vw;
+    
 }
 
 #play{
     display: Block;
-    width:2vw;
+    width:35vw;
     height: auto;
     background: url(public/css/images/play.png) no-repeat;
 }
