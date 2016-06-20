@@ -310,7 +310,7 @@ hr{
     margin-right: 1vw;
 }
 
-a.play{
+#play{
     display: Block;
     width:2vw;
     height: auto;

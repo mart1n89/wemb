@@ -20,13 +20,20 @@
     <h2>Benutzer bearbeiten</h2>
     <?php
         echo '<table class="tdConf">';
+        echo '<thead>';
+        echo '<th>ID</th>';
+        echo '<th>Benutzer</th>';
+        echo '<th>Rolle</th>';
+        echo '<th>Bearbeiten</th>';
+        echo '<th>Löschen</th>';
+        echo '</thead>';
             foreach ($this->userList as $key => $value){
                 echo '<tr>';
                 echo '<td>' . $value['userID'] . '</td>';
                 echo '<td>' . $value['userName'] . '</td>';
                 echo '<td>' . $value['role'] . '</td>';
-                echo '<td><a href="#" class="buttonContSmall">Edit</a></td>';
-                echo '<td><a href="#" class="buttonContSmall">Delete</a></td>';
+                echo '<td style="content-align:center"><a href="#" class="buttonContSmall">Edit</a></td>';
+                echo '<td style="content-align:center"><a href="#" class="buttonContSmall">Delete</a></td>';
                 echo '</tr>';
             }
             echo '</table>';

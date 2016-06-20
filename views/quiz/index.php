@@ -11,9 +11,9 @@
                 {           
                     echo '<tr>';
                     echo '<td >'.$value['topicName'].'</td>';
-                    echo '<td ><a class="buttonPlay" href="#"><input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a></td>';
-                    echo '<td ><a class="buttonPlay" href="'.URL.'quiz/edit/'.$value['topicID'].'"><input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a></td>';
-                    echo '<td ><a class="buttonPlay" href="'.URL.'quiz/delete/'.$value['topicID'].'"><input type="image" src="public/css/images/play.png" height="25vh" width="auto"></a></td>';
+                    echo '<td ><a href="#"><input type="image" src="public/css/images/play.png" height="auto" width="35vw"></a></td>';
+                    echo '<td ><a href="'.URL.'quiz/edit/'.$value['topicID'].'"><input type="image" src="public/css/images/edit.png" height="auto" width="35vw"></a></td>';
+                    echo '<td ><a href="'.URL.'quiz/delete/'.$value['topicID'].'"><input type="image" src="public/css/images/edit.png" height="auto" width="35vw" ></a></td>';
                     echo '</tr>';
                 }
         echo '</table>';        
