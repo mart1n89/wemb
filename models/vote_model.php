@@ -76,15 +76,33 @@ class Vote_Model extends Model {
     }
     
     public function writeBackResultsByAnswerID($data) {
-        $st = $this->db->prepare('INSERT into result (sessionID, questionID, answerID, clicks)');
-    }
-    
-    public function create($data){
-        $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:userame, :password, :role)');
-        $st->execute(array(
-            ':username' => $data['userName'],
-            ':password' => $data['password'],
-            ':role' => $data['role']
+
+        foreach ($data as $key => $value) {
+            if ($key == 'sessionID') {
+                $sessionID = $value;
+            }
+            else {
+                $questions[$key] = $value;
+            }
+        }
+        
+        if (isset($questions) && isset($sessionID)) {
+            
+            $sqlString = 'SELECT clicks FROM result WHERE sessionID = :sessionID and questionID = :questionID and answerID = :answerID into @var;
+
+                          UPDATE result
+                          SET clicks = @var + 1
+                          WHERE sessionID = :sessionID and questionID = :questionID and answerID = :answerID;';
+            
+            foreach ($questions as $key => $value) {                
+                    $st = $this->db->prepare($sqlString);
+                    $st->execute(array(
+                        ':sessionID' => $sessionID,
+                        ':questionID' => $key,
+                        ':answerID' => $value
             ));
+                    
+            }
+        }
     }
 }
