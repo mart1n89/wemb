@@ -20,7 +20,7 @@ class User_Model extends Model {
     }
 
     public function create($data){
-        $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:userame, :password, :role)');
+        $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:username, :password, :role)');
         $st->execute(array(
             ':username' => $data['userName'],
             ':password' => $data['password'],

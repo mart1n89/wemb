@@ -51,7 +51,6 @@ function addAnswer(questionNo){
 }
 
 function removeAnswer(questionNo, answerNo){
-    //$('#' + questionNo + answerNo).remove();
     var answerList = questionList[questionNo];
     for (var k in answerList) {  
         if (k === answerNo) {
@@ -74,7 +73,6 @@ function saveTopic(){
     else{
         document.getElementById('topic').style.borderColor="black";
     }
-    //alert(topic);
     for (var k in questionList) {
         var answers = [];
         var answerList = questionList[k];
@@ -87,14 +85,11 @@ function saveTopic(){
         else{
             document.getElementById('\'' + questionID + '\'').style.borderColor="black";
         }
-        //alert(question);
         for (var t in answerList) {  
             answerID = answerList[t];
             var answer = document.getElementById('\'' + answerID + '\'').value;
             var radioID = k + t + '_RB';
-            //alert(radioID);
             var cb = document.getElementById('\'' + radioID +'\'').checked;
-            //alert(cb);
             if(answer === '' || answer.indexOf(";") !== -1 || answer.indexOf("/") !== -1){
                 alertCounter++;
                 document.getElementById('\'' + answerID + '\'').style.borderColor="red";
@@ -105,9 +100,7 @@ function saveTopic(){
             var full_answer = answer + '/' + cb;
             answers.push(full_answer);
         }
-        //questions[question] = answers;
         questions[question] = answers;
-        //questionCount++;
     }
     if(alertCounter === 0){
         var data = '';
@@ -120,13 +113,9 @@ function saveTopic(){
                 }
                 data += ']';
             }
-        //alert(data);
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
-//        $.ajax({
-//            type: "POST",
-//            url: 'xhrAddQuiz',
-//            data: {'topic': topic ,'data' : data}
-//        });
-        //window.location.href = "http://wemdb/quiz/index";
+        $('#area').empty();
+        $('#area').append('<h2>Erfolgreich hinzugefügt./h2>');
     }
+    //$('#area').append('<form action="quiz" method="get"><input type="submit" value="Back" name="Submit" id="frm1_submit" /></form>');
 }
