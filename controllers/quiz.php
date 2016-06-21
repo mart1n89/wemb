@@ -36,8 +36,10 @@ class Quiz extends Controller {
     
     public function xhrAddQuiz(){
         $this->model->xhrAddQuiz();
-        //header('location:../index');
-        //exit;
+    }
+    
+    public function xhrEditQuiz(){
+        $this->model->xhrEditQuiz();
     }
     
     public function start($id){
