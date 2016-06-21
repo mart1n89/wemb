@@ -23,16 +23,73 @@ class Vote extends Controller {
         $this->view->answers = $this->model->getAnswerById($ids);
     }
     
-    public function send() {
-        
-        foreach ($_POST as $key => $value) {
-            if ($key == "sessionID") {
-                $data['sessionID'] = $value;
-            } else {
-                $data[$key] = $value;
+    public function checkSessionAnswered($idToCheck) {
+        Session::init();   
+        if (Session::get('sessionIDs') != null) {
+            $allSessions = Session::get('sessionIDs');
+            $allSessionsArray = explode(',', $allSessions);
+            foreach ($allSessionsArray as $value) {
+                if (!($value == $idToCheck)) {
+                    $canAccessSession = true;
+                }
+                else {
+                    $canAccessSession = false;
+                    break;
+                }
             }
+            return $canAccessSession;
         }
-        $this->model->writeBackResultsByAnswerID($data);
-        $this->view->render('vote/send');
+        else {
+            return true;
+        }
     }
+    
+    private function refreshCookie($idToCheck) {
+        Session::init();            
+        if (Session::get('sessionIDs') != null) {
+            $allSessions = Session::get('sessionIDs');
+            $allSessionsArray = explode(',', $allSessions);
+            foreach ($allSessionsArray as $value) {
+                if (!($value == $idToCheck)) {
+                    $append = true;
+                }
+                else {
+                    $append = false;
+                    break;
+                }
+            }   
+            if ($append) {
+                Session::set('sessionIDs', Session::get('sessionIDs') . ","  . $idToCheck);     
+            }                   
+        }
+        else {
+            $append = true;
+            Session::set('sessionIDs', $idToCheck);
+        }        
+        Session::setCookie();
+        return $append;
+    }
+    
+    public function send($sessionID) {
+        
+        if ($this->refreshCookie($sessionID)) {
+            $this->view->render('vote/send');
+        }
+        else {
+            $this->view->msg = 'Sie haben das Quiz bereits beantwortet...';
+            $this->view->render('errorhandler/index');
+        }       
+        
+//        foreach ($_POST as $key => $value) {
+//            if ($key == "sessionID") {
+//                $data['sessionID'] = $value;
+//            } else {
+//                $data[$key] = $value;
+//            }
+//        }
+        //$this->model->writeBackResultsByAnswerID($data);
+        //$this->view->render('vote/send');
+    }
+    
+    
 }

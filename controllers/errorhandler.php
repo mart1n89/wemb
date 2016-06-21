@@ -10,5 +10,6 @@ class ErrorHandler extends Controller {
         $this->view->msg = 'This page does not exist';
         $this->view->render('errorhandler/index');
     }
-
 }
+
+?>

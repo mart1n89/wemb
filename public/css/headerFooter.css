@@ -1,0 +1,93 @@
+body{
+        background: silver;
+	/*font: 1.5vh 'trebuchet ms', arial, sans-serif;*/
+        font: 1em 'verdana', arial, sans-serif;
+        width: auto;
+        height: auto;
+}
+
+#header {
+	color: #fff;
+        border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	border-bottom: 0.5vh solid orange;
+        background: url(images/FL_förde3.png);
+        background-position: 50% 62%;
+        padding:3vh 3.5vw 3vh 3.5vw;
+        width: 92.0vw;
+        height: 11vmax;
+}
+
+.logo
+        {      
+        float: right;
+        width: 10vw;
+        height: auto;
+        }
+        
+#content {
+        background: white;
+        padding: 3vh 3.5vw 3vh 3.5vw;
+        width: 92vw;
+        height: auto;
+}
+
+#footer {
+	background: #12407f;
+	color: #fff;
+	padding:3vh 3.5vw 3vh 3.5vw;
+	border-top: 4px solid #436fac;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+        width: 92vw;
+        height: 9vh;
+}
+        
+.buttonNav {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 0.5vw;
+        background-color:blueviolet;
+        opacity: .8;
+        color: #FFFFFF;
+        /*font-size: 0.8vw;*/      
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 4vh 0.5vw 0vh 0.5vw;
+        padding: 0.8vh 0.8vw 0.8vh 0.8vw;
+        
+}
+
+.buttonNav span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        padding: 0;
+}
+
+.buttonNav span:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -0.5vw;
+        transition: 0.5s;
+}
+
+.buttonNav:hover span {
+        /*padding-right: 30px;*/
+        padding-right: 1.5vw;
+}
+
+.buttonNav:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+label{
+    float:left;
+}
