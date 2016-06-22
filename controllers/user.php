@@ -12,6 +12,8 @@ class User extends Controller {
             header('location: ../login');
             exit;
         }
+        
+        $this->view->js = array('user/js/default.js');
     }
     
     public function index(){
