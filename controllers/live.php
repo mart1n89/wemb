@@ -10,8 +10,9 @@ class Live extends Controller {
         $this->view->render('live/index');
     }
     
-    public function show(){
-        
+    public function show($id){
+        $this->view->currentCode = $id;
+        $this->view->render('live/show');
     }
 }
 

@@ -35,4 +35,8 @@ class User_Model extends Model {
             ':id' => $id
             ));
     }
+    
+    public function saveEdit(){
+        
+    }
 }
