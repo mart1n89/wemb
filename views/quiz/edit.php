@@ -125,6 +125,7 @@ $topic = json_encode($this->quiz);
                 }
                 data += ']';
             }
+            decodeURIComponent(data);
             $.post('../xhrEditQuiz', {'topic': topic, 'data': data, 'topicID' : topicID});
             $('#area').empty();
             //$('#area').append('<h2>Erfolgreich geändert.</h2>');

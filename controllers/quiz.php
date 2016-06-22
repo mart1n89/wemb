@@ -43,8 +43,7 @@ class Quiz extends Controller {
     }
     
     public function start($id){
-        //$this->view->start($id) = $this->model->start($id);
-        $this->model->start($id);
+        $this->view->currentCode = $this->model->start($id);
         $this->view->render('quiz/start');
     }
 }

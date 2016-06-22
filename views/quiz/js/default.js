@@ -113,6 +113,7 @@ function saveTopic(){
                 }
                 data += ']';
             }
+        decodeURIComponent(data);
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
         $('#area').empty();
         //$('#area').append('<h2>Erfolgreich hinzugefügt./h2>');

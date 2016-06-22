@@ -39,9 +39,14 @@ class Quiz_Model extends Model {
                                            ':currentCodeNo' => $currentCodeNo,
                                            ':currentUserID' => $user));
             $this->db->commit();
+            
+            $code[0] = $currentCodeNo;
+            $code[1] = false;
+        } else {
+            $code[0] = $currentCodeNo;
+            $code[1] = true;
         }
-        
-        return $currentCodeNo;
+        return $code;
     }
 
     public function delete($id) {
@@ -95,15 +100,15 @@ class Quiz_Model extends Model {
                     if ($answers[$k] != "") {
                         $answer = explode("/", $answers[$k]);
                         $answ = $answer['0'];
-                        $utfansw = utf8_encode($answ);
+                        utf8_decode($answ);
                         $checked = $answer['1'];
                         if ($checked === "true") {
                             $st_answer->execute(array(':question' => $qid,
-                                ':answer' => $utfansw,
+                                ':answer' => $answ,
                                 ':correct' => 1));
                         } else {
                             $st_answer->execute(array(':question' => $qid,
-                                ':answer' => $utfansw,
+                                ':answer' => $answ,
                                 ':correct' => 0));
                         }
                     }
@@ -135,6 +140,7 @@ class Quiz_Model extends Model {
 
         if ($succ == TRUE) {
             $l_data = explode("]", $data);
+            utf8_decode($topic);
             $st_topic = $this->db->prepare('INSERT INTO topic (userID, topicName) VALUES( :userID, :topic);');
             $st_topic->execute(array(':userID' => $user,
                 ':topic' => $topic));
@@ -145,6 +151,7 @@ class Quiz_Model extends Model {
                 if ($l_data[$i] != "") {
                     $question = explode("[", $l_data[$i]);
                     //add question
+                    utf8_decode($question[0]);
                     $st_question->execute(array(':question' => $question[0]));
                     $qid = $this->db->lastInsertId();
                     $answers = explode(";", $question[1]);
@@ -153,15 +160,15 @@ class Quiz_Model extends Model {
                         if ($answers[$k] != "") {
                             $answer = explode("/", $answers[$k]);
                             $answ = $answer['0'];
-                            $utfansw = utf8_encode($answ);
+                            utf8_decode($answ);
                             $checked = $answer['1'];
                             if ($checked === "true") {
                                 $st_answer->execute(array(':question' => $qid,
-                                    ':answer' => $utfansw,
+                                    ':answer' => $answ,
                                     ':correct' => 1));
                             } else {
                                 $st_answer->execute(array(':question' => $qid,
-                                    ':answer' => $utfansw,
+                                    ':answer' => $answ,
                                     ':correct' => 0));
                             }
                         }
