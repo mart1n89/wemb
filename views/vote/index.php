@@ -34,7 +34,7 @@
                     if ($value['questionID'] == $innerValue['questionID']) {
                         echo "<tr>";
                             echo "<td>" . utf8_encode($innerValue['answerText']) . "</td>";
-                            echo "<td>" . "<input type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\"/>" . "</td>";
+                            echo "<td>" . "<input type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . "</td>";
                         echo "</tr>";   
                     }
                 }               
