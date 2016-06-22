@@ -14,5 +14,14 @@ class Live extends Controller {
         $this->view->currentCode = $id;
         $this->view->render('live/show');
     }
+    
+    public function close($id){
+        $this->model->close($id);
+        $this->view->render('live/close');   
+    }
+    
+    public function xhrShow(){
+        $this->model->xhrShow();
+    }
 }
 

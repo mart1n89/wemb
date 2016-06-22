@@ -1,0 +1,2 @@
+Die Session wurde geschlossen!
+
