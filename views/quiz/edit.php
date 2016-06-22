@@ -17,8 +17,8 @@ $topic = json_encode($this->quiz);
             topicID = jsTopic[i].topicID;
             //console.log(jsTopic[i].topicName);
             $('#area').append('<label>Thema:</label><input type="text" id="topic" value="' + jsTopic[i].topicName + '">');
-            $('#area').append('<input type="button" onclick="addQuestion()" value="add Question">');
-            $('#area').append('<input class="buttonCont" type="button" onclick="editTopic()" value="Save">');
+            $('#area').append('<input class="buttonContBig" type="button" onclick="addQuestion()" value="add Question">');
+            $('#area').append('<input class="buttonContBig" type="button" onclick="editTopic()" value="Save">');
         }
         if (jsTopic[i].questionID !== _questionID) {
             _questionID = jsTopic[i].questionID;
@@ -44,8 +44,8 @@ $topic = json_encode($this->quiz);
         questionList['length'] = length;
         $('#area').append('<div id="' + questionNo + '"></div>');
         $('#' + questionNo).append('<label>Frage:</label><input type="text" id="\'' + questionNo_TXT + '\'" value="' + questionText + '">');
-        $('#' + questionNo).append('<input type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
-        $('#' + questionNo).append('<input type="button" onclick="addAnswer(\'' + questionNo + '\')" value="add answer"></br>');
+        $('#' + questionNo).append('<input class="buttonContBig" type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
+        $('#' + questionNo).append('<input class="buttonContBig" type="button" onclick="addAnswer(\'' + questionNo + '\')" value="add answer"></br>');
 
         return questionNo;
     }
@@ -67,7 +67,7 @@ $topic = json_encode($this->quiz);
         if (isCorrect === '1'){
             checkedButtons[answerNo_RB] = 0;
         }
-        $('#' + questionNo + answerNo).append('<input type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="delete"></br>');
+        $('#' + questionNo + answerNo).append('<input class="buttonContBig" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="delete"></br>');
     }
     
     function checkButtons(){
