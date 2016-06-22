@@ -1,9 +1,6 @@
 <!doctype html>
 <html>
-    <head
-        <!--LIVE !!! //projekt.wi.fh-flensburg.de/~projekt2015b/ -->
-        <base href="http://wemdb/" />
-        
+    <head>
         <title>Testimeter</title>
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
         <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
@@ -24,7 +21,7 @@
             <table width="90%">
                 <tr>
                     <td ><h2>Testimeter</h2></td>
-                    <td ><img class="logo" src="public/css/images/HF_Logo.png" alt="HS-Logo"></td>
+                    <td ><img class="logo" src="<?php echo URL ?>public/css/images/HF_Logo.png" alt="HS-Logo"></td>
                 </tr>                
             </table>
             

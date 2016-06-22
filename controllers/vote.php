@@ -72,6 +72,8 @@ class Vote extends Controller {
     
     public function send($sessionID) { 
         
+        //@ToDo: no Question answered...
+        
         if ($this->refreshCookie($sessionID)) {
             
             foreach ($_POST as $key => $value) {
