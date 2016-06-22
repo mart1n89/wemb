@@ -308,12 +308,41 @@ hr{
     /*padding-right: 2vw;*/
     margin-bottom: 1vh;
     margin-right: 1vw;
-    
 }
 
-#play{
-    display: Block;
-    width:35vw;
-    height: auto;
-    background: url(public/css/images/play.png) no-repeat;
+/*Icon Buttons*/
+.buttonPlay{
+    background: url(images/play.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonEdit{
+    background: url(images/edit_new.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonAdd{
+    background: url(images/add.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonDelete{
+    background: url(images/delet.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
 }

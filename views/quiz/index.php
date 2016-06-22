@@ -11,7 +11,7 @@
                 {           
                     echo '<tr>';
                     echo '<td >'.$value['topicName'].'</td>';
-                    echo '<td ><a href="#"><center><input type="image" src="public/css/images/play.png" height="auto" width="35vw"></center></a></td>';
+                    echo '<td ><a href="'.URL.'quiz/start/'.$value['topicID'].'"><center><input type="image" src="public/css/images/play.png" height="auto" width="35vw"></center></a></td>';
                     echo '<td ><a href="'.URL.'quiz/edit/'.$value['topicID'].'"><center><input type="image" src="public/css/images/edit_new.png" height="auto" width="35vw"></center></a></td>';
                     echo '<td ><a href="'.URL.'quiz/delete/'.$value['topicID'].'"><center><input type="image" src="public/css/images/delet.png" height="auto" width="35vw"></center></a></td>';
                     echo '</tr>';

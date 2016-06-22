@@ -32,8 +32,8 @@
                 echo '<td>' . $value['userID'] . '</td>';
                 echo '<td>' . $value['userName'] . '</td>';
                 echo '<td>' . $value['role'] . '</td>';
-                echo '<td style="content-align:center"><a href="#"><center><input type="image" src="public/css/images/edit_new.png" height="auto" width="35vw"></center></a></td>';
-                echo '<td style="content-align:center"><a href=""><center><input type="image" src="public/css/images/delet.png" height="auto" width="35vw"></center></a></td>';
+                echo '<td><a href="#"><center><input type="button" class="buttonEdit"></center></a></td>';
+                echo '<td><a href=""><center><input type="button" class="buttonDelete"></center></a></td>';
                 echo '</tr>';
             }
             echo '</table>';

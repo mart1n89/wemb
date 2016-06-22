@@ -16,8 +16,8 @@ function addQuestion(){
     questionList['length'] = length;
     $('#area').append('<div id="' + questionNo + '"></div>');
     $('#' + questionNo).append('<label>Frage:</label><input type="text" id="\'' + questionNo_TXT + '\'">');
-    $('#' + questionNo).append('<input type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
-    $('#' + questionNo).append('<input type="button" onclick="addAnswer(\'' + questionNo + '\')" value="add answer"></br>');
+    $('#' + questionNo).append('<input type="button" class="buttonContBig" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
+    $('#' + questionNo).append('<input type="button" class="buttonContBig" onclick="addAnswer(\'' + questionNo + '\')" value="add answer"></br>');
 }
 
 function getQuestionListLength(){
@@ -115,7 +115,7 @@ function saveTopic(){
             }
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
         $('#area').empty();
-        $('#area').append('<h2>Erfolgreich hinzugefügt./h2>');
+        //$('#area').append('<h2>Erfolgreich hinzugefügt./h2>');
     }
     //$('#area').append('<form action="quiz" method="get"><input type="submit" value="Back" name="Submit" id="frm1_submit" /></form>');
 }
