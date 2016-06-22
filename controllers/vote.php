@@ -70,29 +70,24 @@ class Vote extends Controller {
         return $append;
     }
     
-    public function send($sessionID) {
-        
-        //Set Cookie Only when results have written back...
+    public function send($sessionID) { 
         
         if ($this->refreshCookie($sessionID)) {
+            
+            foreach ($_POST as $key => $value) {
+                if ($key == "sessionID") {
+                    $data['sessionID'] = $value;
+                } else {
+                    $data[$key] = $value;
+                }
+            }
+        
+            $this->model->writeBackResultsByAnswerID($data);   
             $this->view->render('vote/send');
         }
         else {
             $this->view->msg = 'Sie haben das Quiz bereits beantwortet...';
             $this->view->render('errorhandler/index');
-        }       
-        
-        foreach ($_POST as $key => $value) {
-            if ($key == "sessionID") {
-                $data['sessionID'] = $value;
-            } else {
-                $data[$key] = $value;
-            }
-        }
-        
-        $this->model->writeBackResultsByAnswerID($data);
-        //$this->view->render('vote/send');
-    }
-    
-    
+        }            
+    }    
 }
