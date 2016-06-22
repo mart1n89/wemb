@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
-    <head>
+    <head
+        <!--LIVE !!! //projekt.wi.fh-flensburg.de/~projekt2015b/ -->
+        <base href="http://wemdb/" />
+        
         <title>Testimeter</title>
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
         <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
