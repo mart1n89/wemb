@@ -348,6 +348,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+     vertical-align: sub;
     
     
 }
@@ -359,7 +360,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-   
+    vertical-align: sub;
 }
 
 .buttonAdd{
@@ -369,7 +370,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    
+     vertical-align: sub;
 }
 
 .buttonDelete{
@@ -379,5 +380,5 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    
+    vertical-align: sub;
 }
