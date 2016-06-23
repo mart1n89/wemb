@@ -26,9 +26,9 @@
             </table>
             
             <?php if (Session::get('loggedIn') == false): ?>
-            <a href="<?php echo URL; ?>home" class="buttonNav"><span>Main</span></a>
-            <a href="<?php echo URL; ?>help" class="buttonNav"><span>Help</span></a>
-            <a href="<?php echo URL; ?>about" class="buttonNav"><span>About</span></a>
+            <a href="<?php echo URL; ?>home" class="buttonNav"><span>Start</span></a>
+            <a href="<?php echo URL; ?>help" class="buttonNav"><span>Hilfe</span></a>
+            <a href="<?php echo URL; ?>about" class="buttonNav"><span>FAQ</span></a>
             
             <?php endif; ?>  
             
@@ -38,7 +38,7 @@
             
                 <?php if (Session::get('role') == 'owner'): ?>
 
-            <a href="<?php echo URL; ?>user" class="buttonNav"><span>Users</span></a>
+            <a href="<?php echo URL; ?>user" class="buttonNav"><span>Benutzer</span></a>
                 <?php endif; ?>
             <a href="<?php echo URL; ?>dashboard/logout" class="buttonNav"><span>Logout</span></a>
             <?php else: ?>
