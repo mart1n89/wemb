@@ -16,7 +16,7 @@ function addQuestion(){
     questionList['length'] = length;
     $('#area').append('<div id="' + questionNo + '" ></div>');
     $('#' + questionNo).append('<label id="createLabel">Frage:</label><input class="createInput" type="text" id="\'' + questionNo_TXT + '\'">');
-    $('#' + questionNo).append('<input style="padding-top:0.5vh" type="button" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
+    $('#' + questionNo).append('<input type="button" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
     $('#' + questionNo).append('<input style="padding-top:0.5vh" type="button" class="buttonAdd" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
 }
 
