@@ -26,7 +26,7 @@ class User_Model extends Model {
     }
 
     public function create($data){
-        $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:username, :password, :role)');
+        $st = $this->db->prepare('INSERT into user (userName, password, role) VALUES (:username, :password, :role)');
         $st->execute(array(
             ':username' => $data['userName'],
             ':password' => $data['password'],
@@ -42,7 +42,13 @@ class User_Model extends Model {
             ));
     }
     
-    public function saveEdit(){
-        
+    public function saveEdit($user){
+        $st = $this->db->prepare('UPDATE user SET userName = :username, password = :password, role = :role WHERE userID = :userid');
+        $st->execute(array(
+            ':username' => $user['userName'],
+            ':password' => md5($user['password']),
+            ':role' => $user['role'],
+            ':userid' => $user['userID']
+        ));
     }
 }

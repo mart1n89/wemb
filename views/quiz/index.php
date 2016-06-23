@@ -5,7 +5,7 @@
         echo '<th>Thema</th>';
         echo '<th>Starten</th>';
         echo '<th>Bearbeiten</th>';
-        echo '<th>Löschen</th>';
+        echo '<th>L&ouml;schen</th>';
         echo '</thead>';
             foreach ($this->topicList as $key => $value)
                 {           

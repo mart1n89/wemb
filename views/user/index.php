@@ -2,7 +2,7 @@
     <h2>Benutzer anlegen</h2>
     <form method="post" action="<?php echo URL; ?>user/create">
             <table border="0" Style="margin-left: 4.5vw">             
-                <tr><td><label id="editLabel">Benutzer</label><input type="text" name="userName" required/></br></td></tr>
+                <tr><td><label id="editLabel">Benutzer</label><input type="text" name="username" required/></br></td></tr>
                 <tr><td><label id="editLabel">Passwort</label><input type="password" name="password" required/></br></td></tr>
                 <tr><td><label id="editLabel">Rolle</label>
                      <select font-size="2em" name="role">
@@ -26,7 +26,7 @@
         echo '<th>Benutzer</th>';
         echo '<th>Rolle</th>';
         echo '<th>Bearbeiten</th>';
-        echo '<th>Löschen</th>';
+        echo '<th>L&ouml;schen</th>';
         echo '</thead>';
             foreach ($this->userList as $key => $value){
                 echo '<tr>';

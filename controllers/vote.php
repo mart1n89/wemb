@@ -76,7 +76,7 @@ class Vote extends Controller {
         
         if ($this->refreshCookie($sessionID)) {
             
-            foreach ($_POST as $key => $value) {
+            foreach (filter_input_array(INPUT_POST) as $key => $value) {
                 if ($key == "sessionID") {
                     $data['sessionID'] = $value;
                 } else {

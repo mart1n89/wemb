@@ -67,8 +67,8 @@ class Quiz_Model extends Model {
     }
 
     public function xhrAddQuiz() {
-        $data = $_POST['data'];
-        $topic = $_POST['topic'];
+        $data = filter_input(INPUT_POST, 'data');
+        $topic = filter_input(INPUT_POST, 'topic');
         $user = Session::get('user');
 
         $this->db->beginTransaction();
@@ -124,9 +124,9 @@ class Quiz_Model extends Model {
     }
 
     public function xhrEditQuiz() {
-        $data = $_POST['data'];
-        $topic = $_POST['topic'];
-        $topicID = $_POST['topicID'];
+        $data = filter_input(INPUT_POST, 'data');
+        $topic = filter_input(INPUT_POST, 'topic');
+        $topicID = filter_input(INPUT_POST, 'topicID');
         $user = Session::get('user');
 
         $this->db->beginTransaction();

@@ -1,8 +1,8 @@
 var questionList = [];
 function init(){
     $('#area').append('<label>Thema:</label><input type="text" id="topic">');
-    $('#area').append('<input class="buttonContBig" type="button" onclick="addQuestion()" value="add Question">');
-    $('#area').append('<input type="button" onclick="saveTopic()" value="Save">');
+    $('#area').append('<input class="buttonAdd" type="button" onclick="addQuestion()" value="">');
+    $('#save').append('<input class="buttonContBig" type="button" onclick="saveTopic()" value="Save">');
 }
 
 function addQuestion(){
@@ -14,10 +14,10 @@ function addQuestion(){
     var length = questionList['length'];
     length++;
     questionList['length'] = length;
-    $('#area').append('<div id="' + questionNo + '"></div>');
+    $('#area').append('<div id="' + questionNo + '" ></div>');
     $('#' + questionNo).append('<label>Frage:</label><input type="text" id="\'' + questionNo_TXT + '\'">');
-    $('#' + questionNo).append('<input type="button" class="buttonContBig" onclick="removeQuestion(\'' + questionNo + '\')" value="delete">');
-    $('#' + questionNo).append('<input type="button" class="buttonContBig" onclick="addAnswer(\'' + questionNo + '\')" value="add answer"></br>');
+    $('#' + questionNo).append('<input type="button" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
+    $('#' + questionNo).append('<input type="button" class="buttonAdd" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
 }
 
 function getQuestionListLength(){
@@ -47,7 +47,7 @@ function addAnswer(questionNo){
     $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
     $('#' + questionNo + answerNo).append('<label>Antwort:</label><input type="text" id="\'' + answerNo_TXT + '\'">');
     $('#' + questionNo + answerNo).append('<input type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked>');
-    $('#' + questionNo + answerNo).append('<input type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="delete"></br>');
+    $('#' + questionNo + answerNo).append('<input class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value=""></br>');
 }
 
 function removeAnswer(questionNo, answerNo){
@@ -101,6 +101,7 @@ function saveTopic(){
             answers.push(full_answer);
         }
         questions[question] = answers;
+        
     }
     if(alertCounter === 0){
         var data = '';
