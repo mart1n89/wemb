@@ -3,7 +3,7 @@
     $session = $this->session;
     
     if ($session['isActive'] == 0) {
-        echo "Tut uns Leid: Die Sitzung ist nicht aktiv!";
+        echo "<h3>Tut uns Leid: Die Sitzung ist nicht aktiv!</h3>";
     }
 
     elseif ($session['isActive'] != 0 && $this->controller->checkSessionAnswered($session['sessionID'])) {
