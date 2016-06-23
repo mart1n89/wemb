@@ -8,7 +8,7 @@ body {
 
 div {
     background-color: white;
-    /*margin: 1vh 0vw 1vh 0vw;*/
+    margin: 1vh 0vw 1vh 0vw;
      
     
     
@@ -312,6 +312,16 @@ hr{
     margin-bottom: 1vh;
     margin-right: 1vw;
 }
+#div{
+    font-size: 1.5em;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 4.5vw;
+    /*padding-right: 2vw;*/
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+}
+
 
 /*Icon Buttons*/
 .buttonPlay{

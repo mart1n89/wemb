@@ -2,7 +2,7 @@ var questionList = [];
 function init(){
     $('#area').append('<label>Thema:</label><input type="text" id="topic">');
     $('#area').append('<input class="buttonAdd" type="button" onclick="addQuestion()" value="">');
-    $('#area').append('<input class="buttonContBig" type="button" onclick="saveTopic()" value="Save">');
+    $('#save').append('<input class="buttonContBig" type="button" onclick="saveTopic()" value="Save">');
 }
 
 function addQuestion(){
@@ -47,7 +47,7 @@ function addAnswer(questionNo){
     $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
     $('#' + questionNo + answerNo).append('<label>Antwort:</label><input type="text" id="\'' + answerNo_TXT + '\'">');
     $('#' + questionNo + answerNo).append('<input type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked>');
-    $('#' + questionNo + answerNo).append('<input class="buttonContBig" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="delete"></br>');
+    $('#' + questionNo + answerNo).append('<input class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value=""></br>');
 }
 
 function removeAnswer(questionNo, answerNo){
@@ -101,6 +101,7 @@ function saveTopic(){
             answers.push(full_answer);
         }
         questions[question] = answers;
+        
     }
     if(alertCounter === 0){
         var data = '';
