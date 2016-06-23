@@ -3,6 +3,8 @@
 class Live extends Controller {
     public function __construct() {
         parent::__construct();
+        
+        $this->view->js = array('live/js/default.js');
     }
     
     public function index(){
@@ -17,6 +19,7 @@ class Live extends Controller {
     
     public function close($id){
         $this->model->close($id);
+        $this->view->currentCode = $id;
         $this->view->render('live/close');   
     }
     

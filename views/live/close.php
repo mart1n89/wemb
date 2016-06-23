@@ -1,2 +1,3 @@
-Die Session wurde geschlossen!
-
+<?php 
+    echo 'Ihr Quiz mit dem Code '. $this->currentCode . ' wurde geschlossen!'; 
+?>
