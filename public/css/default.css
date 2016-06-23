@@ -9,6 +9,8 @@ body {
 div {
     background-color: white;
     /*margin: 1vh 0vw 1vh 0vw;*/
+     
+    
     
     }
     
@@ -25,7 +27,7 @@ div {
         border-top-left-radius: 1vh;
 	border-top-right-radius: 1vh;
 	border-bottom: 0.5vh solid orange;
-        background: url(images/FL_förde3.png);
+        background: url(images/FL_foerde3.png);
         background-position: 50% 62%;
         padding:3vh 3.5vw 3vh 3.5vw;
         width: 92.0vw;
@@ -171,7 +173,8 @@ form br {clear: left;}
         color: #FFFFFF;
         font-size: 1.3em;
         transition: all 0.5s;
-        cursor: pointer;        
+        cursor: pointer;  
+        border: 0;
 }
 
 .buttonContBig span {
@@ -318,6 +321,8 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+    vertical-align: sub;
+    
 }
 
 .buttonEdit{
@@ -327,6 +332,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+    vertical-align: sub;
 }
 
 .buttonAdd{
@@ -336,6 +342,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+    vertical-align:sub;
 }
 
 .buttonDelete{
@@ -345,4 +352,5 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+    vertical-align: sub;
 }
