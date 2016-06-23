@@ -9,6 +9,7 @@ class Live extends Controller {
     
     public function index(){
         $this->view->controller = $this;
+        $this->view->currents = $this->model->getCurrents();
         $this->view->render('live/index');
     }
     
@@ -24,7 +25,8 @@ class Live extends Controller {
     }
     
     public function xhrShow(){
-        $this->model->xhrShow();
+        $arr = $this->model->xhrShow();
+        echo json_encode($arr);
     }
 }
 
