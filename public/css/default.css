@@ -9,9 +9,6 @@ body {
 div {
     background-color: white;
     /*margin: 1vh 0vw 1vh 0vw;*/
-     
-    
-    
     }
     
 .logo
@@ -86,16 +83,17 @@ form {
 #createLabel{
         float: left; 
 	width: 5vw; 
-        /*display:inline;*/
+        display:inline;
 	text-align: left;
         font-size: 1.5em;
         margin-right: 1vw;
         padding-top: 0.4vh;
         /*vertical-align: middle;*/
+    
 }
 
 .createInput{
-        /*display: inline;*/
+        display: inline;
 	width: 20vw;
         height: 3vh;
 	border: 1px solid gray;	
@@ -367,21 +365,28 @@ hr{
 .buttonAdd{
     background: url(images/add.png) no-repeat;
     background-size: 100%;
-    /*display:inline;*/
+    display:inline;
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
     /*vertical-align: sub;*/
 }
+.buttonAdd:hover{
+    background: url(images/add_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+    
+}
 
 .buttonDelete{
     background: url(images/delet.png) no-repeat;
     background-size: 100%;
-    /*display: inline;*/
+    display: inline;
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-    /*vertical-align: sub;*/
+    vertical-align: sub;
 }
