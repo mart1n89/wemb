@@ -23,10 +23,10 @@ class User extends Controller {
     
     public function create(){
         $data = array();
-        $data['username'] = $_POST['username'];
-        $data['password'] = md5($_POST['password']);
-        $data['role'] = $_POST['role'];
-        
+        $data['userName'] = filter_input(INPUT_POST, 'username');
+        $data['password'] = md5(filter_input(INPUT_POST, 'password'));
+        $data['role'] = filter_input(INPUT_POST, 'role');
+
         $this->model->create($data);
         header('location: '. URL . 'user');
     }
@@ -37,6 +37,7 @@ class User extends Controller {
     }
     
     public function editSave(){
+        $this->model->saveEdit(filter_input_array(INPUT_POST));
         header('location: '. URL . 'user');
     }
 

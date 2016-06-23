@@ -7,7 +7,7 @@ class Dashboard_Model extends Model {
     }
     
     function xhrInsert(){
-        $text = $_POST['text'];
+        $text = filter_input(INPUT_POST, 'text');
         
         $st = $this->db->prepare('INSERT INTO data (text) VALUES (:text)');
         $st->execute(array(':text' => $text));
@@ -25,7 +25,7 @@ class Dashboard_Model extends Model {
     }
     
     function xhrDeleteListing(){
-        $id = $_POST['id'];
+        $id = filter_input(INPUT_POST, 'id');
         $st = $this->db->prepare('DELETE FROM data WHERE id = "'.$id.'"');
         $st->execute();
         echo json_encode('isOk');

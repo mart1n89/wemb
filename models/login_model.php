@@ -9,8 +9,8 @@ class Login_Model extends Model {
     
     public function run(){
         $st = $this->db->prepare("SELECT userID, role FROM user WHERE username = :login AND password = MD5(:password)");
-        $st->execute(array(':login' => $_POST['login'],
-                           ':password' => $_POST['password']
+        $st->execute(array(':login' => filter_input(INPUT_POST, 'login'),
+                           ':password' => filter_input(INPUT_POST, 'password')
         ));
         
         $data = $st->fetch();
