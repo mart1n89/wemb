@@ -8,7 +8,7 @@ body {
 
 div {
     background-color: white;
-    margin: 1vh 0vw 1vh 0vw;
+    /*margin: 1vh 0vw 1vh 0vw;*/
      
     
     
@@ -86,22 +86,25 @@ form {
 #createLabel{
         float: left; 
 	width: 5vw; 
+        /*display:inline;*/
 	text-align: left;
         font-size: 1.5em;
         margin-right: 1vw;
-        padding-top: 0.3vh;    
+        padding-top: 0.4vh;
+        /*vertical-align: middle;*/
 }
 
 .createInput{
-        display: inline-cell;
+        /*display: inline;*/
 	width: 20vw;
         height: 3vh;
 	border: 1px solid gray;	
-        font-size: 1.5em
+        font-size: 1.5em;
+        /*vertical-align: middle;*/
 }
 
 #defaultLabel{ 
-/*	display: inline-cell;*/
+	display: inline-cell;
 	float: left; 
 	width: 10vw; 
 	text-align: right;
@@ -348,9 +351,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-     vertical-align: sub;
-    
-    
+     /*vertical-align: sub;*/
 }
 
 .buttonEdit{
@@ -360,25 +361,27 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
 }
 
 .buttonAdd{
     background: url(images/add.png) no-repeat;
     background-size: 100%;
+    /*display:inline;*/
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-     vertical-align: sub;
+    /*vertical-align: sub;*/
 }
 
 .buttonDelete{
     background: url(images/delet.png) no-repeat;
     background-size: 100%;
+    /*display: inline;*/
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
 }
