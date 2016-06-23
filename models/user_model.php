@@ -18,6 +18,12 @@ class User_Model extends Model {
         $st->execute(array(':id' => $id));
         return $st->fetchAll();
     }
+    
+    public function getUserById($id){
+        $st = $this->db->prepare('SELECT userID, userName, role FROM user WHERE userID = :id');
+        $st->execute(array(':id' => $id));
+        return $st->fetch();
+    }
 
     public function create($data){
         $st = $this->db->prepare('INSERT into user (`userName`, `password`, `role`) VALUES (:username, :password, :role)');
@@ -29,10 +35,10 @@ class User_Model extends Model {
     }
     
     public function delete($id){
-        //TODO: the user shouldn't be able to delete the owner
-        $st = $this->db->prepare('DELETE FROM users WHERE userID = :id');
+        $st = $this->db->prepare('DELETE FROM user WHERE userID = :id AND role != :role');
         $st->execute(array(
-            ':id' => $id
+            ':id' => $id,
+            ':role' => 'owner'
             ));
     }
     

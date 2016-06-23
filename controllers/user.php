@@ -32,8 +32,7 @@ class User extends Controller {
     }
     
     public function edit($id){
-        // fetch user
-        $this->view->user = $this->model->userSingleList($id);
+        $this->view->user = $this->model->getUserById($id);
         $this->view->render('user/edit');
     }
     

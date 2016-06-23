@@ -2,12 +2,13 @@
     <h2>Benutzer anlegen</h2>
     <form method="post" action="<?php echo URL; ?>user/create">
             <table border="0" Style="margin-left: 4.5vw">             
-                <tr><td><label id="editLabel">Username</label><input type="text" name="userName" required/></br></td></tr>
-                <tr><td><label id="editLabel">Password</label><input type="password" name="password" required/></br></td></tr>
-                <tr><td><label id="editLabel">Role</label>
+                <tr><td><label id="editLabel">Benutzer</label><input type="text" name="userName" required/></br></td></tr>
+                <tr><td><label id="editLabel">Passwort</label><input type="password" name="password" required/></br></td></tr>
+                <tr><td><label id="editLabel">Rolle</label>
                      <select font-size="2em" name="role">
-                     <option value="default">Default</option>
-                     <option value="admin">Admin</option></select></br></td></tr>
+                     <option value="default">Standard</option>
+                     <option value="admin">Administrator</option>
+                     <option value="owner">Besitzer</option></select></br></td></tr>
                 <tr><td><label></label><input type="submit" value="Speichern" class="buttonContBig"/></td></br>
             </table>
         </form>
@@ -32,8 +33,8 @@
                 echo '<td>' . $value['userID'] . '</td>';
                 echo '<td>' . $value['userName'] . '</td>';
                 echo '<td>' . $value['role'] . '</td>';
-                echo '<td><a href="#"><center><input type="button" class="buttonEdit"></center></a></td>';
-                echo '<td><a href="#"><center><input type="button" id="' . $value['userName'] . '" onclick="return confirmDelete(this.id)" class="buttonDelete"></center></a></td>';
+                echo '<td><a href="user/edit/' . $value['userID'] . '"><center><input type="button" class="buttonEdit"></center></a></td>';
+                echo '<td><a href="user/delete/' . $value['userID'] . '"><center><input type="button" id="' . $value['userName'] . '" onclick="return confirmDelete(this.id)" class="buttonDelete"></center></a></td>';
                 echo '</tr>';
             }
             echo '</table>';
