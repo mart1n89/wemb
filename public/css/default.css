@@ -82,12 +82,14 @@ form {
 
 #createLabel{
         float: left; 
-	width: 5vw; 
+	width: 5vw;
+        height: auto;
         display:inline;
 	text-align: left;
         font-size: 1.5em;
         margin-right: 1vw;
         padding-top: 0.4vh;
+        margin-top: 1.5vh;
         /*vertical-align: middle;*/
     
 }
@@ -95,9 +97,11 @@ form {
 .createInput{
         display: inline;
 	width: 20vw;
-        height: 3vh;
+        height: auto;
 	border: 1px solid gray;	
         font-size: 1.5em;
+        margin-right:2vw;
+        margin-top: 1.5vh;
         /*vertical-align: middle;*/
 }
 
@@ -351,6 +355,12 @@ hr{
     height: 2vw;
      /*vertical-align: sub;*/
 }
+.buttonPlay:hover{
+    background: url(images/play_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
 
 .buttonEdit{
     background: url(images/edit_new.png) no-repeat;
@@ -360,6 +370,12 @@ hr{
     width: 2vw;
     height: 2vw;
     /*vertical-align: sub;*/
+}
+.buttonEdit:hover{
+    background: url(images/edit_new_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }
 
 .buttonAdd{
@@ -377,16 +393,21 @@ hr{
     background-size: 100%;
     width: 2vw;
     height: 2vw;
-    
 }
 
 .buttonDelete{
-    background: url(images/delet.png) no-repeat;
+    background: url(images/delete.png) no-repeat;
     background-size: 100%;
     display: inline;
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
+}
+.buttonDelete:hover{
+    background: url(images/delete_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }

@@ -1,7 +1,7 @@
 var questionList = [];
 function init(){
     $('#area').append('<label id="createLabel">Thema:</label><input class="createInput"  type="text" id="topic">');
-    $('#area').append('<input style="padding-top:0.5vh"class="buttonAdd" type="button" onclick="addQuestion()" value="">');
+    $('#area').append('<input style="padding-top: 0.5vh; margin-right:2vw" class="buttonAdd" type="button" onclick="addQuestion()" value=""></br>');
     $('#save').append('<input class="buttonContBig" type="button" onclick="saveTopic()" value="Save">');
 }
 
@@ -16,8 +16,8 @@ function addQuestion(){
     questionList['length'] = length;
     $('#area').append('<div id="' + questionNo + '" ></div>');
     $('#' + questionNo).append('<label id="createLabel">Frage:</label><input class="createInput" type="text" id="\'' + questionNo_TXT + '\'">');
-    $('#' + questionNo).append('<input type="button" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
-    $('#' + questionNo).append('<input style="padding-top:0.5vh" type="button" class="buttonAdd" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
+    $('#' + questionNo).append('<input type="button" style="padding-top:0.5vh; margin-right:2vw" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
+    $('#' + questionNo).append('<input type="button" class="buttonAdd" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
 }
 
 function getQuestionListLength(){
@@ -46,8 +46,8 @@ function addAnswer(questionNo){
     questionList[questionNo] = answerList;
     $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
     $('#' + questionNo + answerNo).append('<label id="createLabel">Antwort:</label><input class="createInput" type="text" id="\'' + answerNo_TXT + '\'">');
-    $('#' + questionNo + answerNo).append('<input style="padding-top:0.5vh" type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked>');
-    $('#' + questionNo + answerNo).append('<input style="padding-top:0.5vh" class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value=""></br>');
+    $('#' + questionNo + answerNo).append('<input style="padding-top:0.5vh" class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="">');
+    $('#' + questionNo + answerNo).append('<input type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked></br>');
 }
 
 function removeAnswer(questionNo, answerNo){
