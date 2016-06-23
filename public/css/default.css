@@ -83,8 +83,25 @@ form {
         padding-top: 0.3vh;
 }*/
 
+#createLabel{
+        float: left; 
+	width: 5vw; 
+	text-align: left;
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.3vh;    
+}
+
+.createInput{
+        display: inline-cell;
+	width: 20vw;
+        height: 3vh;
+	border: 1px solid gray;	
+        font-size: 1.5em
+}
+
 #defaultLabel{ 
-	display: inline-cell;
+/*	display: inline-cell;*/
 	float: left; 
 	width: 10vw; 
 	text-align: right;
@@ -331,7 +348,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    
     
 }
 
@@ -342,7 +359,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+   
 }
 
 .buttonAdd{
@@ -352,7 +369,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align:sub;
+    
 }
 
 .buttonDelete{
@@ -362,5 +379,5 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    
 }
