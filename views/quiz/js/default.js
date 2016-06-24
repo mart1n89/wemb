@@ -1,7 +1,7 @@
 var questionList = [];
 function init(){
     $('#area').append('<label id="createLabel">Thema:</label><input class="createInput"  type="text" id="topic">');
-    $('#area').append('<input style="padding-top: 0.5vh; margin-right:2vw" class="buttonAdd" type="button" onclick="addQuestion()" value=""></br>');
+    $('#area').append('<input style="padding-top: 0.5vh; margin-right:2vw" class="buttonAddQuest" type="button" onclick="addQuestion()" value=""></br>');
     $('#save').append('<input class="buttonContBig" type="button" onclick="saveTopic()" value="Save">');
 }
 
@@ -17,7 +17,7 @@ function addQuestion(){
     $('#area').append('<div id="' + questionNo + '" ></div>');
     $('#' + questionNo).append('<label id="createLabel">Frage:</label><input class="createInput" type="text" id="\'' + questionNo_TXT + '\'">');
     $('#' + questionNo).append('<input type="button" style="padding-top:0.5vh; margin-right:2vw" class="buttonDelete" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
-    $('#' + questionNo).append('<input type="button" class="buttonAdd" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
+    $('#' + questionNo).append('<input type="button" class="buttonAddExcl" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
 }
 
 function getQuestionListLength(){
