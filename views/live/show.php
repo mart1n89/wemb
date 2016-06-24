@@ -23,12 +23,24 @@ $codeNo = json_encode($this->currentCode);
         function buildHtml() {
             $('#area').empty();
             var questionID = 0;
+            var base = 100;
+            var rate;
             for (i = 0; i < results.length; i++){
                 if(questionID !== results[i].questionID){
+                    if (questionID !== 0)
+                        $('#area').append('</div></br>');
+                    
                     questionID = results[i].questionID;
-                    $('#area').append('<label>Frage: ' + results[i]['questionText'] + ' </label></br>');
+                    $('#area').append('Frage: ' + results[i]['questionText'] + '</br>');
+                    $('#area').append('<div class="chart">');
                 }
-                $('#area').append('<label>' + results[i].answerText + ': ' + results[i].clicks + '</br>');
+                if (results[i].clicks > 0){
+                    rate = base * results[i].clicks;
+                } else {
+                    rate = 0;
+                }
+                //$('#area').append('<label>' + results[i].answerText + ': ' + results[i].clicks + '</br>');
+                $('#area').append('<div style="width: '  + rate + 'px;">' + results[i].answerText + ':' + results[i].clicks + '</div>');
             }
         }
     </script>
