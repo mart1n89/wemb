@@ -8,10 +8,7 @@ body {
 
 div {
     background-color: white;
-    margin: 1vh 0vw 1vh 0vw;
-     
-    
-    
+    /*margin: 1vh 0vw 1vh 0vw;*/
     }
     
 .logo
@@ -82,6 +79,31 @@ form {
         margin-right: 1vw;
         padding-top: 0.3vh;
 }*/
+
+#createLabel{
+        float: left; 
+	width: 5vw;
+        height: auto;
+        display:inline;
+	text-align: left;
+        font-size: 1.5em;
+        margin-right: 1vw;
+        padding-top: 0.4vh;
+        margin-top: 1.5vh;
+        /*vertical-align: middle;*/
+    
+}
+
+.createInput{
+        display: inline;
+	width: 20vw;
+        height: auto;
+	border: 1px solid gray;	
+        font-size: 1.5em;
+        margin-right:2vw;
+        margin-top: 1.5vh;
+        /*vertical-align: middle;*/
+}
 
 #defaultLabel{ 
 	display: inline-cell;
@@ -331,8 +353,13 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
-    
+     /*vertical-align: sub;*/
+}
+.buttonPlay:hover{
+    background: url(images/play_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }
 
 .buttonEdit{
@@ -342,25 +369,45 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
+}
+.buttonEdit:hover{
+    background: url(images/edit_new_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }
 
 .buttonAdd{
     background: url(images/add.png) no-repeat;
     background-size: 100%;
+    display:inline;
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align:sub;
+    /*vertical-align: sub;*/
+}
+.buttonAdd:hover{
+    background: url(images/add_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }
 
 .buttonDelete{
-    background: url(images/delet.png) no-repeat;
+    background: url(images/delete.png) no-repeat;
     background-size: 100%;
+    display: inline;
     cursor: pointer;
     border: none;
     width: 2vw;
     height: 2vw;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
+}
+.buttonDelete:hover{
+    background: url(images/delete_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
 }
