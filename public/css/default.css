@@ -411,3 +411,31 @@ hr{
     width: 2vw;
     height: 2vw;
 }
+
+.buttonAddExcl{
+    background: url(images/add_exclamation.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonAddExcl:hover{
+    background: url(images/add_exclamation_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonAddQuest{
+    background: url(images/add_question.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonAddQuest:hover{
+    background: url(images/add_question_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
