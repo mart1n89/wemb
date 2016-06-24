@@ -16,7 +16,7 @@ $codeNo = json_encode($this->currentCode);
         }
         function getResults() {
             $.post('../xhrShow', {'currentCode': codeNo}, function(data){ 
-                results = data;
+                results = JSON.parse(data);
             });
             buildHtml();
         }
@@ -26,13 +26,10 @@ $codeNo = json_encode($this->currentCode);
             for (i = 0; i < results.length; i++){
                 if(questionID !== results[i].questionID){
                     questionID = results[i].questionID;
-                    $('#area').append('<label>Frage: ' + results[i].questionText + ' </label></br>');
+                    $('#area').append('<label>Frage: ' + results[i]['questionText'] + ' </label></br>');
                 }
-                //$('#area').append('<label>' + results[i].answerText + ': ' + results[i].clicks + '</br>');
+                $('#area').append('<label>' + results[i].answerText + ': ' + results[i].clicks + '</br>');
             }
-            //$('#area').append('<label>' + counter + '</label>');
-            //$('#area').append('<label>' + aCodeNo + '</label>');
-            //counter++;
         }
     </script>
 </body>
