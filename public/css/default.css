@@ -415,6 +415,9 @@ hr{
 .buttonAddExcl{
     background: url(images/add_exclamation.png) no-repeat;
     background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
     width: 2vw;
     height: 2vw;
 }
@@ -429,6 +432,9 @@ hr{
 .buttonAddQuest{
     background: url(images/add_question.png) no-repeat;
     background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
     width: 2vw;
     height: 2vw;
 }
