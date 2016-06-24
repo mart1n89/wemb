@@ -8,6 +8,7 @@ class Live extends Controller {
     }
     
     public function index(){
+        $this->view->currentLive = $this->model->currentLive();
         $this->view->controller = $this;
         $this->view->render('live/index');
     }
@@ -18,13 +19,14 @@ class Live extends Controller {
     }
     
     public function close($id){
+        $this->view->code = $this->model->getCode($id);
         $this->model->close($id);
-        $this->view->currentCode = $id;
         $this->view->render('live/close');   
     }
     
     public function xhrShow(){
-        $this->model->xhrShow();
+        $arr = $this->model->xhrShow();
+        echo json_encode($arr);
     }
 }
 

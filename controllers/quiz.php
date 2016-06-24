@@ -3,7 +3,7 @@
 class Quiz extends Controller {
     public function __construct() {
         parent::__construct();
-        Session::init();
+        //Session::init();
         $logged = Session::get('loggedIn');
         if ($logged == false){
             Session::destroy();
