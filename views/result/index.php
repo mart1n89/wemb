@@ -1,3 +1,4 @@
+<h1>Ergebnisse</h1>
 <?php     
     echo '<table class="tdConf">';
     foreach ($this->allResults as $key => $value) {

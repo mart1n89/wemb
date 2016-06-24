@@ -445,3 +445,12 @@ hr{
     width: 2vw;
     height: 2vw;
 }
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
