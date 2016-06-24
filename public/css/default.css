@@ -5,18 +5,26 @@ body {
         height: auto;
 }
 
-
 div {
     background-color: white;
     /*margin: 1vh 0vw 1vh 0vw;*/
     }
     
 .logo
-        {      
-        float: right;
-        width: 8vw;
-        height: auto;
-        }
+    {      
+    float: right;
+    width: 8vw;
+    height: auto;
+    }
+/*Funktioniert nicht!*/    
+/*#about{
+    font-size: 1.2em; 
+    text-align: justify; 
+    margin-left:4.5vw; 
+    width:40vw;
+}    */
+    
+
 
 /** Structure */
 #header {
