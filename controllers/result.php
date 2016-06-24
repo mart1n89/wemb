@@ -8,8 +8,14 @@ class Result extends Controller {
     }
     
     public function index(){
+        $this->view->allResults = $this->model->allResults();
         $this->view->controller = $this;
         $this->view->render('result/index');
+    }
+    
+    public function show($id){
+        $this->view->results = $this->model->show($id);
+        $this->view->render('result/show');
     }
     
 }

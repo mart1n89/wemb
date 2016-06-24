@@ -2,9 +2,8 @@
 <?php
 $topic = json_encode($this->quiz);
 ?>
-<div id="area">
-
-</div>
+<div id="area"> </div>
+<div id="save" style="margin-left:4.5vw"> </div>
 <script>
     var jsTopic = <?php echo $topic; ?>;
     var questionList = [];
@@ -18,7 +17,7 @@ $topic = json_encode($this->quiz);
             //console.log(jsTopic[i].topicName);
             $('#area').append('<label>Thema:</label><input type="text" id="topic" value="' + jsTopic[i].topicName + '">');
             $('#area').append('<input class="buttonAdd" type="button" onclick="addQuestion()" value="">');
-            $('#area').append('<input class="buttonContBig" type="button" onclick="editTopic()" value="Save">');
+            $('#save').append('<input class="buttonContBig" type="button" onclick="editTopic()" value="Save">');
             
         }
         if (jsTopic[i].questionID !== _questionID) {
@@ -130,6 +129,7 @@ $topic = json_encode($this->quiz);
             decodeURIComponent(data);
             $.post('../xhrEditQuiz', {'topic': topic, 'data': data, 'topicID' : topicID});
             $('#area').empty();
+            $('#save').empty();
             //$('#area').append('<h2>Erfolgreich ge&auml;ndert.</h2>');
         }
     }

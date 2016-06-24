@@ -117,6 +117,7 @@ function saveTopic(){
         decodeURIComponent(data);
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
         $('#area').empty();
+        $('#save').empty();
         //$('#area').append('<h2>Erfolgreich hinzugefügt./h2>');
     }
     //$('#area').append('<form action="quiz" method="get"><input type="submit" value="Back" name="Submit" id="frm1_submit" /></form>');

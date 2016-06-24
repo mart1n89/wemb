@@ -3,6 +3,7 @@
 class Quiz_Model extends Model {
 
     public function __construct() {
+        Session::init();
         parent::__construct();
     }
 
