@@ -13,6 +13,19 @@ class User_Model extends Model {
         return $st->fetchAll();
     }
     
+    public function userExists($username){
+        $st = $this->db->prepare('SELECT userName FROM user WHERE userName = :username');
+        $st->execute(array(':username' => $username));
+        $st->fetch();
+        
+        $count = $st->rowCount();
+        if ($count > 0) {            
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     public function userSingleList($id){
         $st = $this->db->prepare('SELECT userID, userName, role FROM user WHERE userID = :id');
         $st->execute(array(':id' => $id));
@@ -20,16 +33,20 @@ class User_Model extends Model {
     }
     
     public function getUserById($id){
-        $st = $this->db->prepare('SELECT userID, userName, role FROM user WHERE userID = :id');
+        $st = $this->db->prepare('SELECT * FROM user WHERE userID = :id');
         $st->execute(array(':id' => $id));
         return $st->fetch();
     }
 
     public function create($data){
-        $st = $this->db->prepare('INSERT into user (userName, password, role) VALUES (:username, :password, :role)');
+        $st = $this->db->prepare('INSERT into user (userName, lastName, firstName, email, password, defaultTimer, role) VALUES (:username, :lastname, :firstname, :email, :password, :defaulttimer, :role)');
         $st->execute(array(
             ':username' => $data['userName'],
+            'lastname' => $data['lastName'],
+            'firstname' => $data['firstName'],
+            'email' => $data['email'],
             ':password' => $data['password'],
+            ':defaulttimer' => $data['defaultTimer'],
             ':role' => $data['role']
             ));
     }
@@ -43,11 +60,29 @@ class User_Model extends Model {
     }
     
     public function saveEdit($user){
-        $st = $this->db->prepare('UPDATE user SET userName = :username, password = :password, role = :role WHERE userID = :userid');
+        
+        if (!isset($user['role'])) {
+            $role = "owner";
+        } else {
+            $role = $user['role'];
+        }
+        
+        if (null != ($user['password'])) {
+            $pass = md5($user['password']);
+        } else {
+            $pass = $user['oldpass'];
+        }
+        
+        $st = $this->db->prepare('UPDATE user SET userName = :username, lastName = :lastname, '
+                . 'firstName = :firstname, email = :email, password = :password, defaultTimer = :defaulttimer, role = :role WHERE userID = :userid');
         $st->execute(array(
             ':username' => $user['userName'],
-            ':password' => md5($user['password']),
-            ':role' => $user['role'],
+            'lastname' => $user['lastName'],
+            'firstname' => $user['firstName'],
+            'email' => $user['email'],
+            ':password' => $pass,
+            ':defaulttimer' => $user['defaultTimer'],
+            ':role' => $role,
             ':userid' => $user['userID']
         ));
     }
