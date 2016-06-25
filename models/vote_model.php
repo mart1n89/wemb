@@ -7,7 +7,7 @@ class Vote_Model extends Model {
     }
     
     public function getSessionByCode() {
-        $st = $this->db->prepare('SELECT * FROM session WHERE codeNo = :codeNo');
+        $st = $this->db->prepare('SELECT * FROM session WHERE codeNo = :codeNo AND isActive = 1');
         $st->execute(array(':codeNo' => filter_input(INPUT_POST, 'codeNo')));
         $st->setFetchMode(PDO::FETCH_ASSOC);
         $data = $st->fetch();
