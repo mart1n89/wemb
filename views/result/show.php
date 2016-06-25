@@ -1,7 +1,7 @@
 <h1>Resultat</h1>
 <?php
 $questionID = 0;
-$base = 100;
+$base = 10;
 foreach ($this->results as $key => $value) {
     if ($value['questionID'] !== $questionID) {
         if ($questionID != 0)
