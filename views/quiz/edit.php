@@ -79,6 +79,7 @@ $topic = json_encode($this->quiz);
 
     function editTopic() {
         alertCounter = 0;
+        var questionCount = 0;
         var questions = [];
         //var questionCount = 0;
         var topic = document.getElementById('topic').value;
@@ -89,6 +90,7 @@ $topic = json_encode($this->quiz);
             document.getElementById('topic').style.borderColor = "black";
         }
         for (var k in questionList) {
+            var answerCount;
             var answers = [];
             var answerList = questionList[k];
             questionID = k + '_TXT';
@@ -98,6 +100,7 @@ $topic = json_encode($this->quiz);
                 document.getElementById('\'' + questionID + '\'').style.borderColor = "red";
             } else {
                 document.getElementById('\'' + questionID + '\'').style.borderColor = "black";
+                questionCount++;
             }
             for (var t in answerList) {
                 answerID = answerList[t];
@@ -109,11 +112,20 @@ $topic = json_encode($this->quiz);
                     document.getElementById('\'' + answerID + '\'').style.borderColor = "red";
                 } else {
                     document.getElementById('\'' + answerID + '\'').style.borderColor = "black";
+                    answerCount++;
                 }
                 var full_answer = answer + '/' + cb;
                 answers.push(full_answer);
+                if (answerCount < 2){
+                    alertCounter++;
+                    alert('Es müssen mindestens 2 Antworten für eine Frage vorhanden sein.');
+                }
             }
             questions[question] = answers;
+        }
+        if (questionCount === 0){
+            alertCounter++;
+            alert('Es muss mindestens 1 Frage vorhanden sein.');
         }
         if (alertCounter === 0) {
             var data = '';

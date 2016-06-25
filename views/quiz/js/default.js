@@ -63,10 +63,11 @@ function removeAnswer(questionNo, answerNo){
 
 function saveTopic(){
     alertCounter = 0;
+    questionCount = 0; 
     var questions = [];
     //var questionCount = 0;
     var topic = document.getElementById('topic').value;
-    if(topic === ''){
+    if(topic === ''){ 
         alertCounter++;
         document.getElementById('topic').style.borderColor="red";
     }
@@ -74,8 +75,10 @@ function saveTopic(){
         document.getElementById('topic').style.borderColor="black";
     }
     for (var k in questionList) {
+        questionCount++;
         var answers = [];
         var answerList = questionList[k];
+        answerCount = 0;
         questionID = k + '_TXT';
         var question = document.getElementById('\'' + questionID + '\'').value;
         if(question === '' || question.indexOf("[") !== -1 || question.indexOf("]") !== -1){
@@ -86,6 +89,7 @@ function saveTopic(){
             document.getElementById('\'' + questionID + '\'').style.borderColor="black";
         }
         for (var t in answerList) {  
+            answerCount++;
             answerID = answerList[t];
             var answer = document.getElementById('\'' + answerID + '\'').value;
             var radioID = k + t + '_RB';
@@ -100,8 +104,15 @@ function saveTopic(){
             var full_answer = answer + '/' + cb;
             answers.push(full_answer);
         }
-        questions[question] = answers;
-        
+        if (answerCount < 2){
+            alertCounter++;
+            alert('Es müssen mindestens 2 Antworten für eine Frage vorhanden sein.');
+        }
+        questions[question] = answers;   
+    }
+    if (questionCount === 0){
+        alert('Es muss mindestens 1 Frage vorhanden sein.');
+        alertCounter++;
     }
     if(alertCounter === 0){
         var data = '';
