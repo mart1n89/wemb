@@ -2,8 +2,8 @@
 <?php
 $topic = json_encode($this->quiz);
 ?>
-<div id="area"> </div>
-<div id="save" style="margin-left:4.5vw"> </div>
+<div id="area" style="margin-left:4.5vw"> </div>
+<div id="save" style="margin-left:4.5vw; margin-top:2vh"> </div>
 <script>
     var jsTopic = <?php echo $topic; ?>;
     var questionList = [];
@@ -15,9 +15,9 @@ $topic = json_encode($this->quiz);
         if (jsTopic[i].topicID !== topicID) {
             topicID = jsTopic[i].topicID;
             //console.log(jsTopic[i].topicName);
-            $('#area').append('<label>Thema:</label><input type="text" id="topic" value="' + jsTopic[i].topicName + '">');
-            $('#area').append('<input class="buttonAdd" type="button" onclick="addQuestion()" value="">');
-            $('#save').append('<input class="buttonContBig" type="button" onclick="editTopic()" value="Save">');
+            $('#area').append('<label id="createLabel">Thema:</label><input class="createInput" type="text" id="topic" value="' + jsTopic[i].topicName + '">');
+            $('#area').append('<input class="buttonAddQuest" type="button" style="padding-top:0.5vh;" onclick="addQuestion()" value="">');
+            $('#save').append('<input class="buttonContBig" type="button" onclick="editTopic()" value="Speichern">');
             
         }
         if (jsTopic[i].questionID !== _questionID) {
@@ -43,9 +43,9 @@ $topic = json_encode($this->quiz);
         length++;
         questionList['length'] = length;
         $('#area').append('<div id="' + questionNo + '"></div>');
-        $('#' + questionNo).append('<label>Frage:</label><input type="text" id="\'' + questionNo_TXT + '\'" value="' + questionText + '">');
-        $('#' + questionNo).append('<input class="buttonDelete" type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
-        $('#' + questionNo).append('<input class="buttonAdd" type="button" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
+        $('#' + questionNo).append('<label id="createLabel">Frage:</label><input class="createInput" type="text" id="\'' + questionNo_TXT + '\'" value="' + questionText + '">');
+        $('#' + questionNo).append('<input style="padding-top:0.5vh; margin-right:2vw" class="buttonDelete" type="button" onclick="removeQuestion(\'' + questionNo + '\')" value="">');
+        $('#' + questionNo).append('<input style="padding-top:0.5vh;" class="buttonAddExcl" type="button" onclick="addAnswer(\'' + questionNo + '\')" value=""></br>');
 
         return questionNo;
     }
@@ -62,12 +62,12 @@ $topic = json_encode($this->quiz);
         answerList[answerNo] = questionNo + answerNo + '_TXT';
         questionList[questionNo] = answerList;
         $('#' + questionNo).append('<div id="' + questionNo + answerNo + '"></div>');
-        $('#' + questionNo + answerNo).append('<label>Antwort:</label><input type="text" id="\'' + answerNo_TXT + '\'" value="' + answerText + '" >');
+        $('#' + questionNo + answerNo).append('<label id="createLabel">Antwort:</label><input class="createInput" type="text" id="\'' + answerNo_TXT + '\'" value="' + answerText + '" >');
+        $('#' + questionNo + answerNo).append('<input style="padding-top:0.5vh;" class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value="">');
         $('#' + questionNo + answerNo).append('<input type="radio" name="\'' + questionNo + '\'" id="\'' + answerNo_RB + '\'" checked>');
         if (isCorrect === '1'){
             checkedButtons[answerNo_RB] = 0;
         }
-        $('#' + questionNo + answerNo).append('<input class="buttonDelete" type="button" onclick="removeAnswer(\'' + questionNo + '\' \ , \ \'' + answerNo + '\')" value=""></br>');
         
     }
     
