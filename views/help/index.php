@@ -1,5 +1,5 @@
 <h2>Häufig gestellte Fragen</h2>
-<div style="text-align: justify; margin-left:4.5vw; width:40vw;" >
+<div id="textBlock">
     
     <p><b>Für wen ist Testimeter nutzbar?</b></p>
     <p>Testimeter ist für alle Angehörigen der Hochschule Flensburg nach Beantragung eines Nutzeraccounts beim Administrator (aktuell Herr Prof. Müller) zugänglich.</p>

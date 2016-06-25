@@ -10,53 +10,55 @@ div {
     /*margin: 1vh 0vw 1vh 0vw;*/
     }
     
+div #textBlock{
+    font-size: 1em; 
+    text-align: justify; 
+    margin-left:4.5vw; 
+    width:40vw;
+    }
+    
 .logo
     {      
     float: right;
     width: 8vw;
     height: auto;
     }
-/*Funktioniert nicht!*/    
-/*#about{
-    font-size: 1.2em; 
-    text-align: justify; 
-    margin-left:4.5vw; 
-    width:40vw;
-}    */
+   
+    
     
 
 
 /** Structure */
 #header {
-	color: #fff;
-        border-top-left-radius: 1vh;
-	border-top-right-radius: 1vh;
-	border-bottom: 0.5vh solid orange;
-        background: url(images/FL_foerde3.png);
-        background-position: 50% 62%;
-        padding:3vh 3.5vw 3vh 3.5vw;
-        width: 92.0vw;
-        height: 11vmax;
+    color: #fff;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom: 0.5vh solid orange;
+    background: url(images/FL_foerde3.png);
+    background-position: 50% 62%;
+    padding:3vh 3.5vw 3vh 3.5vw;
+    width: 92.0vw;
+    height: 11vmax;
 }
 
 #content {
-	background: white;
-	padding: 3vh 3.5vw 3vh 3.5vw;
-        width: 92vw;
-        height: auto;
-        min-height: 15vw;
+    background: white;
+    padding: 3vh 3.5vw 3vh 3.5vw;
+    width: 92vw;
+    height: auto;
+    min-height: 15vw;
         
 }
 
 #footer {
-	background: #12407f;
-	color: #fff;
-	padding:3vh 3.5vw 3vh 3.5vw;
-	border-top: 4px solid #436fac;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-        width: 92vw;
-        height: auto;
+    background: #12407f;
+    color: #fff;
+    padding:3vh 3.5vw 3vh 3.5vw;
+    border-top: 4px solid #436fac;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 92vw;
+    height: auto;
 }
 
 /* Links */
