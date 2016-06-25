@@ -19,4 +19,5 @@ foreach ($this->results as $key => $value) {
     }
     echo '<div style="width: ' .$rate. 'px;">' .$value['answerText'].':'. $value['clicks'] . '</div>';
 } 
+echo '</div>';
 ?>
