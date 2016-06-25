@@ -21,7 +21,7 @@ $codeNo = json_encode($this->currentCode);
             buildHtml();
         }
         function buildHtml() {
-            alert(window.innerWidth);
+            //alert(window.innerWidth);
             $('#area').empty();
             var questionID = 0;
             var base = 100;
