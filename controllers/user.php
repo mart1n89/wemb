@@ -54,7 +54,6 @@ class User extends Controller {
     }
     
     public function editSave(){
-        //1. User existiert 2. User gleich geblieben
         if ($this->model->userExists(filter_input(INPUT_POST, 'userName')) && filter_input(INPUT_POST, 'userName') == Session::get('oldUser')) {
             $this->model->saveEdit(filter_input_array(INPUT_POST));
             $this->view->msg = filter_input(INPUT_POST, 'userName') . ' wurde bearbeitet.';        
@@ -62,7 +61,7 @@ class User extends Controller {
             $this->view->render('user/index');
         } elseif (!$this->model->userExists(filter_input(INPUT_POST, 'userName')) && filter_input(INPUT_POST, 'userName') != Session::get('oldUser')) {
             $this->model->saveEdit(filter_input_array(INPUT_POST));
-            $this->view->msg = filter_input(INPUT_POST, 'userName') . ' konnte nicht bearbeitet werden. Benutzer existiert bereits.';        
+            $this->view->msg = filter_input(INPUT_POST, 'userName') . ' wurde bearbeitet.';       
             $this->view->userList = $this->model->userList();
             $this->view->render('user/index');
         } else {
