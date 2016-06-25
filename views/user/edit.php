@@ -13,7 +13,7 @@
         <tr><td><label id="editLabel">E-Mail</label><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php if(isset($user['email'])) { echo $user['email']; } ?>" /></br></td></tr>
         <tr><td><input type="hidden" name="oldpass" value="<?php if(isset($user['password'])) { echo $user['password']; } ?>" /></td></tr>
         <tr><td><label id="editLabel">Neues Passwort (6-12 Zeichen)</label><input type="password" name="password" pattern=".{6,12}" value="" /></br></td></tr>
-        <tr><td><label id="editLabel">Timer (Minuten)</label><input type="text" name="defaultTimer" value="<?php if(isset($user['defaultTimer'])) { echo $user['defaultTimer']; } ?>" required/></br></td></tr>
+        <tr><td><label id="editLabel">Timer (Minuten)</label><input type="number" name="defaultTimer" pattern="[0-9]" min="5" value="<?php if(isset($user['defaultTimer'])) { echo $user['defaultTimer']; } ?>" required/></br></td></tr>
         <tr><td><label id="editLabel">Rolle</label>
                 <select font-size="2em" name="role" required <?php if($user['role']=='owner') echo 'disabled="disabled"'; ?>>
                     <option value="default" <?php if($user['role']=='default') echo 'selected="selected"'; ?>>Standard</option>
