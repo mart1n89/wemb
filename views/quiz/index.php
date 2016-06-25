@@ -18,6 +18,6 @@
                 }
         echo '</table>';        
         echo '<tr>';
-        echo '<a class="buttonContBig" style="margin-left:4.5vw; margin-top:1vh;" href="'.URL.'quiz/create">Create</a>';
+        echo '<a class="buttonContBig" style="margin-left:4.5vw; margin-top:1vh;" href="'.URL.'quiz/create">Erstellen</a>';
         echo '</tr>';
     ?>
