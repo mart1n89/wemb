@@ -22,19 +22,20 @@ $codeNo = json_encode($this->currentCode);
         }
         function buildHtml() {
             //alert(window.innerWidth);
+            wWidth = window.innerWidth;
             $('#area').empty();
             var questionID = 0;
-            var base = 100;
+            var base = 50;
             var rate;
             for (i = 0; i < results.length; i++){
                 if(questionID !== results[i].questionID){
                     if (questionID !== 0){
                     }
                     questionID = results[i].questionID;
-                    $('#area').append('Frage: ' + results[i]['questionText'] + '</br>');
+                    $('#area').append('</br><b>Frage: ' + results[i]['questionText'] + '</b>');
                 }
                 if (results[i].clicks > 0){
-                    rate = base * results[i].clicks;
+                    rate = wWidth / base *  results[i].clicks;
                 } else {
                     rate = 0;
                 }
