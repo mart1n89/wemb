@@ -3,7 +3,7 @@ echo '<h1>Live:' . $this->currentCode . '</h1>';
 $codeNo = json_encode($this->currentCode);
 ?>
 <body onload="init()">
-    <div id="area"> </div>
+    <div id="area" class="chart"> </div>
     <script>
         var codeNo = <?php echo $codeNo; ?>;
         var counter = 0;
@@ -27,19 +27,16 @@ $codeNo = json_encode($this->currentCode);
             var rate;
             for (i = 0; i < results.length; i++){
                 if(questionID !== results[i].questionID){
-                    if (questionID !== 0)
-                        $('#area').append('</div></br>');
-                    
+                    if (questionID !== 0){
+                    }
                     questionID = results[i].questionID;
                     $('#area').append('Frage: ' + results[i]['questionText'] + '</br>');
-                    $('#area').append('<div class="chart">');
                 }
                 if (results[i].clicks > 0){
                     rate = base * results[i].clicks;
                 } else {
                     rate = 0;
                 }
-                //$('#area').append('<label>' + results[i].answerText + ': ' + results[i].clicks + '</br>');
                 $('#area').append('<div style="width: '  + rate + 'px;">' + results[i].answerText + ':' + results[i].clicks + '</div>');
             }
         }
