@@ -12,7 +12,7 @@ if (sizeof($this->currentLive) == 0) {
         echo '<td>' . '<a href="live/close/'. $value['codeNo'] .'">Beenden</a>' . '</td>';
         echo '</tr>';
     }
-    echo '</table>';
+    echo '</table></br>';
 }
 ?>
 
