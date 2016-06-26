@@ -1,3 +1,6 @@
+<?php 
+    if(null != Session::get('dbError')) { echo '<b>Datenbankverbindung fehlgeschlagen:</b> </br>' . Session::get('dbError'); } 
+?>
 <h2>Anmelden</h2>
 <form action="login/run" method="post">
     <table style="vertical-align: middle;" border="0">

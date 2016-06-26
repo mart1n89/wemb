@@ -10,7 +10,7 @@
         <tr><td><label id="editLabel">Benutzer</label><input type="text" name="userName" value="<?php if(isset($user['userName'])) { echo $user['userName']; } ?>" required/></br></td></tr>
         <tr><td><label id="editLabel">Nachname</label><input type="text" name="lastName" value="<?php if(isset($user['lastName'])) { echo $user['lastName']; } ?>" /></br></td></tr>
         <tr><td><label id="editLabel">Vorname</label><input type="text" name="firstName" value="<?php if(isset($user['firstName'])) { echo $user['firstName']; } ?>" /></br></td></tr>
-        <tr><td><label id="editLabel">E-Mail</label><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php if(isset($user['email'])) { echo $user['email']; } ?>" /></br></td></tr>
+        <tr><td><label id="editLabel">E-Mail</label><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php if(isset($user['email'])) { echo $user['email']; } ?>" required /></br></td></tr>
         <tr><td><input type="hidden" name="oldpass" value="<?php if(isset($user['password'])) { echo $user['password']; } ?>" /></td></tr>
         <tr><td><label id="editLabel">Neues Passwort (6-12 Zeichen)</label><input type="password" name="password" pattern=".{6,12}" value="" /></br></td></tr>
         <tr><td><label id="editLabel">Timer (Minuten)</label><input type="number" name="defaultTimer" pattern="[0-9]" min="5" value="<?php if(isset($user['defaultTimer'])) { echo $user['defaultTimer']; } ?>" required/></br></td></tr>

@@ -8,7 +8,8 @@ class User_Model extends Model {
     }
     
     public function userList(){
-        $st = $this->db->prepare('SELECT userID, userName, role FROM user');
+        //$st = $this->db->prepare('SELECT userID, userName, role FROM user');
+        $st = $this->db->prepare('SELECT * from user');
         $st->execute();
         return $st->fetchAll();
     }

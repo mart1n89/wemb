@@ -17,14 +17,21 @@
         echo '<thead>';
         //echo '<th>ID</th>';
         echo '<th>Benutzer</th>';
+        echo '<th>Nachname</th>';
+        echo '<th>Vorname</th>';
+        echo '<th>E-Mail</th>';
+        echo '<th>Timer</th>';
         echo '<th>Rolle</th>';
         echo '<th>Bearbeiten</th>';
         echo '<th>L&ouml;schen</th>';
         echo '</thead>';
             foreach ($this->userList as $key => $value){
                 echo '<tr>';
-                //echo '<td>' . $value['userID'] . '</td>';
                 echo '<td>' . $value['userName'] . '</td>';
+                echo '<td>' . $value['lastName'] . '</td>';
+                echo '<td>' . $value['firstName'] . '</td>';
+                echo '<td>' . $value['email'] . '</td>';
+                echo '<td>' . $value['defaultTimer'] . '</td>';
                 echo '<td>';
                     if($value['role'] == "owner") { echo "Besitzer"; }
                     if($value['role'] == "default") { echo "Standard"; }

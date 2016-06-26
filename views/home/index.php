@@ -1,6 +1,3 @@
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <h2>Willkommen beim Testimeter!</h2>
 <form method="post" action="<?php echo URL; ?>vote">
    <table>
@@ -10,8 +7,7 @@
         </tr>
     </table>
     
-<!--    <label>Code</label><input type="text" name="codeNo"/>
-    <input type="submit" value="aufrufen" class="buttonContBig"/></br>-->
+
 
 </form>
 
