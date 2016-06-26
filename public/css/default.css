@@ -34,7 +34,7 @@ div #textBlock{
     border-top-left-radius: 1vh;
     border-top-right-radius: 1vh;
     border-bottom: 0.5vh solid orange;
-    background: url(images/FL_foerde3.png) no-repeat;
+    background: url(images/FL_foerde3_scaled.png);
     background-position: 50% 62%;
     padding:3vh 3.5vw 3vh 3.5vw;
     width: 92.0vw;
