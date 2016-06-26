@@ -38,15 +38,16 @@ div #textBlock{
     background-position: 50% 62%;
     padding:3vh 3.5vw 3vh 3.5vw;
     width: 92.0vw;
-    height: 11vmax;
+    height: 22vh;
+    /*height: 11vmin;*/
 }
 
 #content {
     background: white;
     padding: 3vh 3.5vw 3vh 3.5vw;
     width: 92vw;
-    height: auto;
-    min-height: 15vw;
+    height: 40vh;
+    /*min-height: 15vw;*/
         
 }
 
@@ -58,7 +59,7 @@ div #textBlock{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 92vw;
-    height: auto;
+    /*height: auto;*/
 }
 
 /* Links */
