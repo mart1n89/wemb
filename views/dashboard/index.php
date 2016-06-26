@@ -5,7 +5,7 @@
     <?php
     echo '<h3>Live</h3>';
     if (sizeof($this->currentLive) == 0) {
-        echo 'Es sind derzeit keine Sitzungen aktiv.';
+        echo 'Es sind derzeit keine Sitzungen aktiv.<hr/>';
     } else {
         echo '<table class="tdConf">';
         foreach ($this->currentLive as $key => $value) {
