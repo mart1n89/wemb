@@ -20,6 +20,6 @@
                     <option value="admin" <?php if($user['role']=='admin') echo 'selected="selected"'; ?>>Administrator</option>
                     <option value="owner" <?php if($user['role']=='owner') echo 'selected="selected"'; ?>>Besitzer</option>
                 </select></br></br></td></tr>
-        <tr><td><label></label><input type="submit" value="Speichern" class="buttonContBig"/></td></br>
+        <tr><td><input type="submit" value="Speichern" class="buttonContBig"/></td></tr></br>
     </table>
 </form>

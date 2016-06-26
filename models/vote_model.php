@@ -16,7 +16,7 @@ class Vote_Model extends Model {
         if ($count > 0) {            
             return $data;
         } else {
-            header('location: ../home');
+            return $data['isActive'] = 0;
         }
     }
     
