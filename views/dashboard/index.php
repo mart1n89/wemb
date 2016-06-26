@@ -41,6 +41,6 @@
         echo '</tr>';
     }
     echo '</table>';
-    echo '<a class="buttonContBig" href="result">Archiv</a>';
+    echo '<a class="buttonContBig" style="margin-left:4.5vw; margin-top:1vh;" href="result">Archiv</a>';
     ?> 
 <?php endif; ?> 
