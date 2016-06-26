@@ -30,5 +30,6 @@
         echo '</tr>';
     }
     echo '</table>';
+    echo '<a class="buttonContBig" href="result">Ergebnisse</a>';
     ?> 
 <?php endif; ?> 
