@@ -13,8 +13,8 @@
                      <option value="default">Standard</option>
                      <option value="admin">Administrator</option>
                      <option value="owner">Besitzer</option></select></br></br></td></tr>
-                <tr><td><label></label><input type="submit" value="Speichern" class="buttonContBig"/></td></br>
+                <tr><td><input type="submit" value="Speichern" class="buttonContBig"/></td></tr></br>
             </table>
-        </form>
+    </form>
 </div>
 
