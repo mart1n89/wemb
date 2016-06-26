@@ -10,10 +10,10 @@
             foreach ($this->topicList as $key => $value)
                 {           
                     echo '<tr>';
-                    echo '<td >'.$value['topicName'].'</td>';
-                    echo '<td ><a href="'.URL.'quiz/start/'.$value['topicID'].'"><center><input type="button" class="buttonPlay"></center></a></td>';
-                    echo '<td ><a href="'.URL.'quiz/edit/'.$value['topicID'].'"><center><input type="button" class="buttonEdit"></center></a></td>';
-                    echo '<td ><a href="'.URL.'quiz/delete/'.$value['topicID'].'"><center><input type="button" class="buttonDelete"></center></a></td>';
+                    echo '<td>'.$value['topicName'].'</td>';
+                    echo '<td><a href="'.URL.'quiz/start/'.$value['topicID'].'"><center><input type="button" class="buttonPlay"></center></a></td>';
+                    echo '<td><a href="'.URL.'quiz/edit/'.$value['topicID'].'"><center><input type="button" class="buttonEdit"></center></a></td>';
+                    echo '<td><a href="'.URL.'quiz/delete/'.$value['topicID'].'"><center><input type="button" class="buttonDelete"></center></a></td>';
                     echo '</tr>';
                 }
         echo '</table>';        

@@ -16,6 +16,14 @@ div #textBlock{
     margin-left:4.5vw; 
     width:40vw;
     }
+.chart div {
+      font: 10px sans-serif;
+      background-color: steelblue;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: black;
+}
     
 .logo
     {      
@@ -339,17 +347,16 @@ hr{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
-    padding-left: 4.5vw;
-    /*padding-right: 2vw;*/
-    margin-bottom: 1vh;
-    margin-right: 1vw;
+    padding-left: 2.5vw;    
+    text-align: left;
+    border-spacing: 2vw 0.7vh;
 }
+
 #div{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 4.5vw;
-    /*padding-right: 2vw;*/
     margin-bottom: 1vh;
     margin-right: 1vw;
 }
@@ -455,15 +462,25 @@ hr{
     width: 2vw;
     height: 2vw;
 }
-
-.chart div {
-  font: 10px sans-serif;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: black;
+.buttonResults{
+    background: url(images/results.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
 }
+
+.buttonResulst:hover{
+    background: url(images/results_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+
+
 
 
 /*body, html {
