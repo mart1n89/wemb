@@ -38,7 +38,7 @@ div #textBlock{
     background-position: 50% 62%;
     padding:3vh 3.5vw 3vh 3.5vw;
     width: 92.0vw;
-    height: 11vmin;
+    /*height: 11vmin;*/
 }
 
 #content {
