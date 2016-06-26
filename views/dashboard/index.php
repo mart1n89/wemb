@@ -16,7 +16,7 @@
             echo '<td>' . '<a href="live/close/' . $value['codeNo'] . '">Beenden</a>' . '</td>';
             echo '</tr>';
         }
-        echo '</table>';
+        echo '</table><hr/>';
     }
     ?>
     <?php
