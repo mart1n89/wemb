@@ -18,8 +18,8 @@
             echo '<tr>';
             echo '<td>' . $value['topicName'] . '</td>';
             echo '<td>' . $value['codeNo'] . '</td>';
-            echo '<td>' . '<a href="live/show/' . $value['codeNo'] . '"><center>Live</center></a>' . '</td>';
-            echo '<td>' . '<a href="live/close/' . $value['codeNo'] . '"><center>Beenden</center></a>' . '</td>';
+            echo '<td>' . '<a href="live/show/' . $value['codeNo'] . '"><input type="button" class="buttonLive"></center></a>' . '</td>';
+            echo '<td>' . '<a href="live/close/' . $value['codeNo'] . '"><center><input type="button" class="buttonStop"></center></a>' . '</td>';
             echo '</tr>';
         }
         echo '</table><hr/>';

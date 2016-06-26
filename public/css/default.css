@@ -472,14 +472,46 @@ hr{
     height: 2vw;
 }
 
-.buttonResulst:hover{
+.buttonResults:hover{
     background: url(images/results_hover.png) no-repeat;
     background-size: 100%;
     width: 2vw;
     height: 2vw;
 }
 
+.buttonStop{
+    background: url(images/stop.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
 
+.buttonStop:hover{
+    background: url(images/stop_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonLive{
+    background: url(images/live.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonLive:hover{
+    background: url(images/live_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
 
 
 
