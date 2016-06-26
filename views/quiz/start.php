@@ -2,13 +2,14 @@
     $code = $this->currentCode;
     if ($code[1] === true){
         echo 'Ihr Quiz wurde bereits gestartet!</br>';
-        echo 'Ihr Code lautet: '.$code[0].'</br>';
+        echo '<label>Ihr Code lautet: </label><b>'.$code[0].'</b></br>';
     }
     else {
         echo 'Ihr Quiz wurde gestartet!</br>';
-        echo 'Ihr Code lautet: '.$code[0].'</br>';
+        echo '<label>Ihr Code lautet: </label><b>'.$code[0].'</b></br>';
     }
-    echo '<td ><a href="'.URL.'live/show/'.$code[0].'">Live&nbsp;</a></td>';
-    echo '<td ><a href="'.URL.'live/close/'.$code[0].'">Beenden</a></td>';
+    echo '</br>';
+    echo '<td ><a href="'.URL.'live/show/'.$code[0].'" class="buttonContBig">Live</a></td><label> </label>';
+    echo '<td ><a href="'.URL.'live/close/'.$code[0].'" class="buttonContBig">Beenden</a></td>';
 ?>
 

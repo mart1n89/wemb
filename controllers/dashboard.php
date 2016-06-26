@@ -14,6 +14,8 @@ class Dashboard extends Controller {
     }
     
     public function index(){
+        $this->view->allResults = $this->model->allResults();
+        $this->view->currentLive = $this->model->currentLive();
         $this->view->render('dashboard/index');
     }
     
