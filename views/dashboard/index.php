@@ -5,7 +5,7 @@
     <?php
     echo '<h3>Live</h3>';
     if (sizeof($this->currentLive) == 0) {
-        echo 'Es sind derzeit keine Sitzungen aktiv.<hr/>';
+        echo '<div id="textBlock">Es sind derzeit keine Sitzungen aktiv.</div><hr/>';
     } else {
         echo '<table class="tdConf">';
         echo '<thead>';
