@@ -138,9 +138,9 @@ form input, form select {
 	width: 20vw;
         height: 3vh;
 	border: 1px solid gray;	
-        font-size: 1.5em
-            
+        font-size: 1.5em;
 }
+
 #editLabel {        
 	display: block;	
         font-size: 1.5em;
@@ -350,6 +350,7 @@ hr{
     padding-left: 2.5vw;    
     text-align: left;
     border-spacing: 2vw 0.7vh;
+    
 }
 
 #div{
@@ -470,6 +471,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
+    
 }
 
 .buttonResults:hover{

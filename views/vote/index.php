@@ -33,7 +33,7 @@
                 foreach ($answers as $innerKey => $innerValue) {
                     if ($value['questionID'] == $innerValue['questionID']) {
                         echo "<tr>";
-                        echo "<td>" . "<input type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . "</td>";    
+                        echo '<td>' . "<input style=\"width:auto\" type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . '</td>';    
                         echo "<td>" . utf8_encode($innerValue['answerText']) . "</td>";
                             
                         echo "</tr>";   
@@ -43,7 +43,7 @@
             echo "</div>";
         }
 
-        echo "<br/><input type=\"submit\" value=\"Absenden\" class=\"buttonContBig\"/>";
+        echo "<div id=\"textBlock\"><br/><input type=\"submit\" value=\"Absenden\" class=\"buttonContBig\"/></div>";
         echo "</form>";
     } 
     
