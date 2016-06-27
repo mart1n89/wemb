@@ -30,17 +30,19 @@ $codeNo = json_encode($this->currentCode);
             for (i = 0; i < results.length; i++){
                 if(questionID !== results[i].questionID){
                     if (questionID !== 0){
+                        $('#area').append('</table>');
                     }
                     questionID = results[i].questionID;
-                    $('#area').append('</br><p><b>Frage: ' + results[i]['questionText'] + '</b></p>');
+                    $('#area').append('</br><p><b>Frage: ' + results[i]['questionText'] + '</b></p><table>');
                 }
                 if (results[i].clicks > 0){
                     rate = wWidth / base *  results[i].clicks;
                 } else {
                     rate = 0;
                 }
-                $('#area').append('<div style="width: '  + rate + 'px;">' + results[i].answerText + ':' + results[i].clicks + '</div>');
+                $('#area').append('<tr><td>' + results[i].answerText + '<td><div style="width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
             }
+            $('#area').append('</table>');
         }
     </script>
 </body>
