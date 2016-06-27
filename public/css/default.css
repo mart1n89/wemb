@@ -16,9 +16,12 @@ div #textBlock{
     margin-left:4.5vw; 
     width:40vw;
     }
+    
 .chart div {
-      font: 10px sans-serif;
-      background-color: steelblue;
+/*    font: 10px sans-serif;*/
+      background-color: #12407f;
+      border: 1px solid;
+      border-color: orange;
       text-align: right;
       padding: 3px;
       margin: 1px;
