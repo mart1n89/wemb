@@ -17,6 +17,17 @@ div #textBlock{
     width:40vw;
     }
     
+.chart div {
+/*    font: 10px sans-serif;*/
+      background-color: #12407f;
+      border: 1px solid;
+      border-color: orange;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: black;
+}
+    
 .logo
     {      
     float: right;
@@ -130,9 +141,9 @@ form input, form select {
 	width: 20vw;
         height: 3vh;
 	border: 1px solid gray;	
-        font-size: 1.5em
-            
+        font-size: 1.5em;
 }
+
 #editLabel {        
 	display: block;	
         font-size: 1.5em;
@@ -339,17 +350,17 @@ hr{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
-    padding-left: 4.5vw;
-    /*padding-right: 2vw;*/
-    margin-bottom: 1vh;
-    margin-right: 1vw;
+    padding-left: 2.5vw;    
+    text-align: left;
+    border-spacing: 2vw 0.7vh;
+    
 }
+
 #div{
     font-size: 1.5em;
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 4.5vw;
-    /*padding-right: 2vw;*/
     margin-bottom: 1vh;
     margin-right: 1vw;
 }
@@ -455,15 +466,58 @@ hr{
     width: 2vw;
     height: 2vw;
 }
-
-.chart div {
-  font: 10px sans-serif;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: black;
+.buttonResults{
+    background: url(images/results.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+    
 }
+
+.buttonResults:hover{
+    background: url(images/results_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonStop{
+    background: url(images/stop.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonStop:hover{
+    background: url(images/stop_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonLive{
+    background: url(images/live.png) no-repeat;
+    background-size: 100%;
+    display:inline;
+    cursor: pointer;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.buttonLive:hover{
+    background: url(images/live_hover.png) no-repeat;
+    background-size: 100%;
+    width: 2vw;
+    height: 2vw;
+}
+
 
 
 /*body, html {

@@ -26,24 +26,24 @@
         echo "<input type=\"hidden\" name=\"sessionID\" value=\"" . $session['sessionID'] ."\">";
 
         foreach ($questions as $key => $value){
-            echo "<div id =\"question_" . $key ."\">";
+            echo '<div id =\"question_" . $key ."\">';
             echo "<h3>" . utf8_encode($value['questionText']) . "</h3>";
-            echo "<table>";
+            echo '<table style="margin-left:4.5vw">';
 
                 foreach ($answers as $innerKey => $innerValue) {
                     if ($value['questionID'] == $innerValue['questionID']) {
                         echo "<tr>";
-                            echo "<td>" . utf8_encode($innerValue['answerText']) . "</td>";
-                            echo "<td>" . "<input type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . "</td>";
+                        echo '<td>' . "<input style=\"width:auto\" type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . '</td>';    
+                        echo "<td>" . utf8_encode($innerValue['answerText']) . "</td>";
+                            
                         echo "</tr>";   
                     }
-                }               
-
+                }
             echo "</table>";
             echo "</div>";
         }
 
-        echo "<br/><input type=\"submit\" value=\"Absenden\" class=\"buttonContBig\"/>";
+        echo "<div id=\"textBlock\"><br/><input type=\"submit\" value=\"Absenden\" class=\"buttonContBig\"/></div>";
         echo "</form>";
     } 
     
