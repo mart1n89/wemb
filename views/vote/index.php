@@ -26,9 +26,9 @@
         echo "<input type=\"hidden\" name=\"sessionID\" value=\"" . $session['sessionID'] ."\">";
 
         foreach ($questions as $key => $value){
-            echo "<div id =\"question_" . $key ."\">";
+            echo '<div id =\"question_" . $key ."\">';
             echo "<h3>" . utf8_encode($value['questionText']) . "</h3>";
-            echo "<table>";
+            echo '<table style="margin-left:4.5vw">';
 
                 foreach ($answers as $innerKey => $innerValue) {
                     if ($value['questionID'] == $innerValue['questionID']) {
@@ -37,8 +37,7 @@
                             echo "<td>" . "<input type=\"radio\" value=\"" . $innerValue['answerID'] .  "\" name=\"" . $innerValue['questionID'] . "\" required/>" . "</td>";
                         echo "</tr>";   
                     }
-                }               
-
+                }
             echo "</table>";
             echo "</div>";
         }
