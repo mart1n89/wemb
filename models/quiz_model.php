@@ -27,7 +27,8 @@ class Quiz_Model extends Model {
                     
             $this->db->beginTransaction();
 
-            $st_code = $this->db->prepare('SELECT min(codeNo) FROM code WHERE isActive = 0');
+            //$st_code = $this->db->prepare('SELECT min(codeNo) FROM code WHERE isActive = 0');
+            $st_code = $this->db->prepare('SELECT codeNo FROM code WHERE isActive = 0 ORDER BY RAND() LIMIT 1');
             $st_code->execute();
             $currentCodeNoArr = $st_code->fetch();
             $currentCodeNo = $currentCodeNoArr[0];
