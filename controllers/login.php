@@ -40,7 +40,8 @@ class Login extends Controller {
         $mail = new PHPMailer();
         
         $mail->isSMTP();
-        $mail->Host = "mail.stud.fh-flensburg.de";
+        //$mail->Host = "mail.stud.fh-flensburg.de";
+        $mail->Host = "193.174.250.201";
         $mail->Port = 25;
         $mail->CharSet = 'UTF-8';
         
@@ -51,7 +52,7 @@ class Login extends Controller {
         $mail->addAddress('christoph-patrick.petersen@stud.fh-flensburg.de ', 'Christoph Patrick Petersen');
         $mail->addAddress('felix.ruhser@stud.fh-flensburg.de', 'Felix Ruhser');
         $mail->addAddress('daniel.stelzer@stud.fh-flensburg.de', 'Daniel Stelzer');
-        //$mail->addAddress('thomas.mueller@wi.fh-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
+        $mail->addAddress('thomas.mueller@wi.fh-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
         
         $mail->Subject = 'Testimeter Registrierung eingegangen (projekt2015b)';
         $mail->Body    = $stringHtml;
