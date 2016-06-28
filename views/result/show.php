@@ -4,9 +4,9 @@ $questionID = 0;
 $base = 10;
 foreach ($this->results as $key => $value) {
     if ($value['questionID'] !== $questionID) {
-        if ($questionID != 0)
+        if ($questionID != 0){
             echo '</table></div></br>';
-        
+        }
         $questionID = $value['questionID'];
         echo '<h3>Frage: ' . $value['questionText'].'</h3>';
         echo '<div class="chart"><table>';
@@ -17,7 +17,7 @@ foreach ($this->results as $key => $value) {
     } else {
         $rate = 0;
     }
-    echo '<tr><td style="width:20vw; text-align:right; display:table-cell; vertical-align:middle">'. $value['answerText']. '</td><td style="display:table-cell; vertical-align:middle"><div style="color:silver; width: ' .$rate. 'px;">' . $value['clicks'] . '</div></td></tr>';
+    echo '<tr><td class="tdResults" style="width:20vw">'. $value['answerText']. '</td><td class="tdResults"><div style="color:silver; width: ' .$rate. 'px;">' . $value['clicks'] . '</div></td></tr>';
 } 
 echo '</table></div>';
 ?>

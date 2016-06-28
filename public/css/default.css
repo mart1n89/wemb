@@ -356,6 +356,12 @@ hr{
     
 }
 
+.tdResults{
+    text-align:right; 
+    display:table-cell; 
+    vertical-align:middle;
+}
+
 #div{
     font-size: 1.5em;
     padding-top: auto;

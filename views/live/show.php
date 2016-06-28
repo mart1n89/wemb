@@ -33,7 +33,7 @@ $codeNo = json_encode($this->currentCode);
                         $('#area').append('</table>');
                     }
                     questionID = results[i].questionID;
-                    $('#area').append('</br><p><b>Frage: ' + results[i]['questionText'] + '</b></p><table>');
+                    $('#area').append('</br><h3>Frage: ' + results[i]['questionText'] + '</h3><table>');
                 }
                 if (results[i].clicks > 0){
                     rate = wWidth / base *  results[i].clicks;
