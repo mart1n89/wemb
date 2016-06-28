@@ -10,5 +10,6 @@ require 'libs/Session.php';
 
 require 'config/paths.php';
 require 'config/database.php';
+mb_internal_encoding("UTF-8");
 
 $app = new Bootstrap();

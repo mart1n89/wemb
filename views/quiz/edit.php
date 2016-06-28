@@ -1,5 +1,9 @@
-<h1>Quiz anpassen</h1>
-<?php
+<h2>Quiz anpassen</h2>
+<div style="font-size:1.2em">
+<p>Legen Sie hier ihr Quiz an. Stellen Sie beliebig viele Fragen zu einem vermittelten Thema und markieren mit dem Radio-Button die richtige Antwort.</p>
+<p>Sonderzeichen wie "[", ";" oder "<" sind nicht erlaubt. Bitte verwenden Sie keine Umlaute (ä, ö, ü). </p></br>
+</div>
+    <?php
 $topic = json_encode($this->quiz);
 ?>
 <div id="area" style="margin-left:4.5vw"> </div>
@@ -118,7 +122,7 @@ $topic = json_encode($this->quiz);
                 answers.push(full_answer);
                 if (answerCount < 2){
                     alertCounter++;
-                    alert('Es muessen mindestens 2 Antworten für eine Frage vorhanden sein.');
+                    alert('Es muessen mindestens 2 Antworten fuer eine Frage vorhanden sein.');
                 }
             }
             questions[question] = answers;
