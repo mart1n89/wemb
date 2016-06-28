@@ -33,14 +33,14 @@ $codeNo = json_encode($this->currentCode);
                         $('#area').append('</table>');
                     }
                     questionID = results[i].questionID;
-                    $('#area').append('</br><p><b>Frage: ' + results[i]['questionText'] + '</b></p><table>');
+                    $('#area').append('</br><h3>Frage: ' + results[i]['questionText'] + '</h3><table>');
                 }
                 if (results[i].clicks > 0){
                     rate = wWidth / base *  results[i].clicks;
                 } else {
                     rate = 0;
                 }
-                $('#area').append('<tr><td style="max-width:20vw">' + results[i].answerText + '<td style="display:table-cell; vertical-align:middle"><div style="color:silver; width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
+                $('#area').append('<tr><td style="width:20vw; text-align:right; display:table-cell; vertical-align:middle">' + results[i].answerText + '<td style="display:table-cell; vertical-align:middle"><div style="color:silver; width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
                 
             } 
             $('#area').append('</table>');
