@@ -40,13 +40,18 @@ class Login extends Controller {
         $mail = new PHPMailer();
         
         $mail->isSMTP();
-        $mail->Host = "mail.stud.fh-flensburg.de";
-        $mail->Username = "makl9851";
-        $mail->Password = "*";
+        //$mail->Host = "mail.stud.fh-flensburg.de";
+        $mail->Host = "193.174.250.201";
+        //$mail->Host = "tls://193.174.250.201:25";
+        //$mail->SMTPAuth = true;
+        //$mail->Username = "";
+        //$mail->Password = "";
         $mail->Port = 25;
+        //$mail->SMTPAutoTLS = true;
         $mail->CharSet = 'UTF-8';
         
-        $mail->setFrom('martin.kleinod@stud.fh-flensburg.de', 'Headcrash & Co');
+        //$mail->setFrom('martin.kleinod@stud.fh-flensburg.de', 'Headcrash & Co');
+        $mail->setFrom('helpdesk@wi.fh-flensburg.de', 'Headcrash & Co');
         $mail->addAddress('martin.kleinod@stud.fh-flensburg.de', 'Martin Kleinod');
         $mail->addAddress('moritz.heeg@stud.fh-flensburg.de', 'Moritz Heeg');
         $mail->addAddress('jan.conrad@stud.fh-flensburg.de ', 'Jan Conrad');
