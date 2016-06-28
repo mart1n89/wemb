@@ -14,6 +14,7 @@ class User extends Controller {
         }
         
         $this->view->js = array('user/js/default.js');
+        require 'controllers/login.php';
     }
     
     public function index(){
