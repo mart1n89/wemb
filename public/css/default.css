@@ -268,7 +268,8 @@ hr{
     text-align:right; 
     display:table-cell; 
     vertical-align:middle;
-    border-spacing: 2vw 0.7vh;
+    padding-right:2vw;
+
 }
 
 #div{
