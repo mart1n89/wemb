@@ -37,7 +37,7 @@
             <a href="<?php echo URL; ?>dashboard" class="buttonNav"><span>Dashboard</span></a>
             <a href="<?php echo URL; ?>quiz" class="buttonNav"><span>Quiz</span></a>
             
-                <?php if (Session::get('role') == 'owner'): ?>
+                <?php if (Session::get('role') == 'owner' or Session::get('role') == 'admin'): ?>
 
             <a href="<?php echo URL; ?>user" class="buttonNav"><span>Benutzer</span></a>
                 <?php endif; ?>
