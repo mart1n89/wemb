@@ -9,7 +9,7 @@ $codeNo = json_encode($this->currentCode);
         var counter = 0;
         var results = [];
         function init() {
-            setInterval(refreshValues, 1000);
+            setInterval(refreshValues, 500);
         }
         function refreshValues() {
             getResults();
