@@ -4,7 +4,7 @@ $codeNo = json_encode($this->currentCode);
 ?>
 <body onload="init()">
     <div id="area" class="chart"> </div>
-    <?php echo '<a href="../../live/close/' . $this->currentCode . '">Beenden</a>'; ?>
+    <?php echo '<a href="../../live/close/' . $this->currentCode . '"><input type="button" class="buttonContBig" value="Beenden"></input></a>'; ?>
     <script>
         var codeNo = <?php echo $codeNo; ?>;
         var counter = 0;
