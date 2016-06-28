@@ -40,7 +40,8 @@ class Login extends Controller {
         $mail = new PHPMailer();
         
         $mail->isSMTP();
-        $mail->Host = "mail.stud.fh-flensburg.de";
+        //$mail->Host = "mail.stud.fh-flensburg.de";
+        $mail->Host = "193.174.250.201";
         $mail->Port = 25;
         $mail->CharSet = 'UTF-8';
         
@@ -58,10 +59,11 @@ class Login extends Controller {
         $mail->AltBody = $string;
         
         if(!$mail->send()) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            $this->view->msg = 'Mailer Error: '  . $mail->ErrorInfo;
+            $this->view->render('login/register');
         } else {
-            echo 'Message has been sent';
+            $this->view->msg = 'Email wurde erfolgreich versendet.';
+            $this->view->render('login/register');
         }       
     }
 }

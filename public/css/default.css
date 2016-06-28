@@ -18,8 +18,7 @@ div #textBlock{
     }
     
 .chart div {
-/*    font: 10px sans-serif;*/
-      background-color: #12407f;
+      background-color: #436fac;
       font-size: 2em;
       border: 1px solid;
       border-color: orange;
@@ -362,6 +361,7 @@ hr{
     text-align:right; 
     display:table-cell; 
     vertical-align:middle;
+    border-spacing: 2vw 0.7vh;
 }
 
 #div{
