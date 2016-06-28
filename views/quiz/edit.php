@@ -1,7 +1,7 @@
 <h2>Quiz anpassen</h2>
 <div style="font-size:1.2em">
 <p>Legen Sie hier ihr Quiz an. Stellen Sie beliebig viele Fragen zu einem vermittelten Thema und markieren mit dem Radio-Button die richtige Antwort.</p>
-<p>Sonderzeichen wie "[", ";" oder "<" sind nicht erlaubt. Bitte verwenden Sie keine Umlaute (ä, ö, ü). </p></br>
+<p>Sonderzeichen wie "[", ";" oder "<" sind nicht erlaubt. </p></br>
 </div>
     <?php
 $topic = json_encode($this->quiz);
