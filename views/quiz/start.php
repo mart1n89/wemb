@@ -11,5 +11,6 @@
     echo '</br>';
     echo '<td ><a href="'.URL.'live/show/'.$code[0].'" class="buttonContBig">Live</a></td><label> </label>';
     echo '<td ><a href="'.URL.'live/close/'.$code[0].'" class="buttonContBig">Beenden</a></td>';
+    echo '<div style="font-size:10en">'. $code[0] .'</div>';
 ?>
 
