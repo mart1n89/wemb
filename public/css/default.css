@@ -7,8 +7,7 @@ body {
 
 div {
     background-color: white;
-    /*margin: 1vh 0vw 1vh 0vw;*/
-    }
+}
     
 div #textBlock{
     font-size: 1em; 
@@ -28,17 +27,12 @@ div #textBlock{
       color: black;
 }
     
-.logo
-    {      
+.logo {      
     float: right;
     width: 8vw;
     height: auto;
-    }
-   
+}
     
-    
-
-
 /** Structure */
 #header {
     color: #fff;
@@ -49,7 +43,6 @@ div #textBlock{
     background-position: 50% 62%;
     padding:3vh 3.5vw 3vh 3.5vw;
     width: 92.0vw;
-    /*height: 11vmin;*/
 }
 
 #content {
@@ -72,15 +65,6 @@ div #textBlock{
     height: auto;
 }
 
-/* Links */
-/*#header a {
-	color: #fff;
-	background: 
-	padding: 4px 15px;
-	text-decoration: none;
-	font-size: 15px;
-	font-weight: bolder;
-}*/
 
 #header a:hover {
 	background: gray;
@@ -90,16 +74,6 @@ div #textBlock{
 form {
 	font: 100% verdana,arial,sans-serif;
 }
-
-/*form label { 
-	display: inline-cell;
-	float: left; 
-	width: 10vw; 
-	text-align: right;
-        font-size: 1.5em;
-        margin-right: 1vw;
-        padding-top: 0.3vh;
-}*/
 
 #createLabel{
         float: left; 
@@ -111,8 +85,6 @@ form {
         margin-right: 1vw;
         padding-top: 0.4vh;
         margin-top: 1.5vh;
-        /*vertical-align: middle;*/
-    
 }
 
 .createInput{
@@ -123,7 +95,6 @@ form {
         font-size: 1.5em;
         margin-right:2vw;
         margin-top: 1.5vh;
-        /*vertical-align: middle;*/
 }
 
 #defaultLabel{ 
@@ -152,14 +123,9 @@ form input, form select {
         padding-bottom: 0.5vh;
 }
 
-/*form input[type=submit]:hover {
-	cursor: pointer;
-	background: silver;
-}*/
-
-
 form br {clear: left;}
 
+/*Button der Navigation*/
 .buttonNav {
         width: auto;
         height: auto;
@@ -195,7 +161,6 @@ form br {clear: left;}
 }
 
 .buttonNav:hover span {
-        /*padding-right: 30px;*/
         padding-right: 1.5vw;
 }
 
@@ -203,7 +168,7 @@ form br {clear: left;}
         opacity: 1;
         right: 0;
 }
-
+/*Button Für den Contentbereich*/
 .buttonContBig{
         width: auto;
         height: auto;  
@@ -245,52 +210,7 @@ form br {clear: left;}
         right: 0;
 }
 
-.buttonContSmall{
-        width: auto;
-        height: auto;  
-        display: table-cell;
-        text-decoration: none;
-        text-align: center;
-        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
-        border-radius: 0.2vw;
-        background-color:blueviolet;
-        color: #FFFFFF;
-        font-size: 0.65em;
-        transition: all 0.5s;
-        cursor: pointer;  
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        
-        
-}
-
-.buttonContSmall span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-}
-
-.buttonContSmall span:after {
-        content: '+';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-}
-
-.buttonContSmall:hover span {
-        padding-right: 30px;
-}
-
-.buttonContSmnall:hover span:after {
-        opacity: 1;
-        right: 0;
-}
-
+/*hyprlinks als Button*/
 .submitClass {
         background: none;    
         border: none;    
@@ -306,20 +226,7 @@ form br {clear: left;}
     font-weight: bold;
 }
 
-#wrapper {
-        width: 80vw;
-}
-
-#steuerung {
-        width:40vw;
-	float:left;
-}
-
-#zweite_spalte {
-	margin-left:41vw;
-	width: auto;
-}
-
+/*Überschriften*/
 h1{
     font-size: 2vw;
 }
@@ -382,7 +289,6 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-     /*vertical-align: sub;*/
 }
 .buttonPlay:hover{
     background: url(images/play_hover.png) no-repeat;
@@ -398,7 +304,6 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    /*vertical-align: sub;*/
 }
 .buttonEdit:hover{
     background: url(images/edit_new_hover.png) no-repeat;
@@ -415,8 +320,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    /*vertical-align: sub;*/
-}
+   }
 .buttonAdd:hover{
     background: url(images/add_hover.png) no-repeat;
     background-size: 100%;
@@ -432,8 +336,7 @@ hr{
     border: none;
     width: 2vw;
     height: 2vw;
-    /*vertical-align: sub;*/
-}
+    }
 .buttonDelete:hover{
     background: url(images/delete_hover.png) no-repeat;
     background-size: 100%;
@@ -526,141 +429,49 @@ hr{
     height: 2vw;
 }
 
-
-
-/*body, html {
-  height: 100%;
+/*Unbenutze CSS Elemte*/
+/*.buttonContSmall{
+        width: auto;
+        height: auto;  
+        display: table-cell;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5vh 0.7vw 0.55vh 0.7vw;
+        border-radius: 0.2vw;
+        background-color:blueviolet;
+        color: #FFFFFF;
+        font-size: 0.65em;
+        transition: all 0.5s;
+        cursor: pointer;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+        
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "fira-sans-2", Verdana, sans-serif;
+.buttonContSmall span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
 }
 
-#q-graph {
-  display: block;  fixes layout wonkiness in FF1.5 
-  position: relative; 
-  width: 600px; 
-  height: 300px;
-  margin: 1.1em 0 0; 
-  padding: 0;
-  background: transparent;
-  font-size: 11px;
+.buttonContSmall span:after {
+        content: '+';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
 }
 
-#q-graph caption {
-  caption-side: top; 
-  width: 600px;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  top: -40px;
-  position: relative; 
-  z-index: 10;
-  font-weight: bold;
+.buttonContSmall:hover span {
+        padding-right: 30px;
 }
 
-#q-graph tr, #q-graph th, #q-graph td { 
-  position: absolute;
-  bottom: 0; 
-  width: 150px; 
-  z-index: 2;
-  margin: 0; 
-  padding: 0;
-  text-align: center;
-}
-
-#q-graph td {
-  transition: all .3s ease;
-  
-  &:hover {
-    background-color: desaturate(#85144b, 100);
-    opacity: .9;
-    color: white;
-  }
-}
-  
-#q-graph thead tr {
-  left: 100%; 
-  top: 50%; 
-  bottom: auto;
-  margin: -2.5em 0 0 5em;}
-#q-graph thead th {
-  width: 7.5em; 
-  height: auto; 
-  padding: 0.5em 1em;
-}
-#q-graph thead th.sent {
-  top: 0; 
-  left: 0; 
-  line-height: 2;
-}
-#q-graph thead th.paid {
-  top: 2.75em; 
-  line-height: 2;
-  left: 0; 
-}
-
-#q-graph tbody tr {
-  height: 296px;
-  padding-top: 2px;
-  border-right: 1px dotted #C4C4C4; 
-  color: #AAA;
-}
-#q-graph #q1 {
-  left: 0;
-}
-#q-graph #q2 {left: 150px;}
-#q-graph #q3 {left: 300px;}
-#q-graph #q4 {left: 450px; border-right: none;}
-#q-graph tbody th {bottom: -1.75em; vertical-align: top;
-font-weight: normal; color: #333;}
-#q-graph .bar {
-  width: 60px; 
-  border: 1px solid; 
-  border-bottom: none; 
-  color: #000;
-}
-#q-graph .bar p {
-  margin: 5px 0 0; 
-  padding: 0;
-  opacity: .4;
-}
-#q-graph .sent {
-  left: 13px; 
-  background-color: #7fdbff;
-  border-color: transparent;
-}
-#q-graph .paid {
-  left: 77px; 
-  background-color: #39cccc;
-  border-color: transparent;
-}
-
-
-#ticks {
-  position: relative; 
-  top: -300px; 
-  left: 2px;
-  width: 596px; 
-  height: 300px; 
-  z-index: 1;
-  margin-bottom: -300px;
-  font-size: 10px;
-  font-family: "fira-sans-2", Verdana, sans-serif;
-}
-
-#ticks .tick {
-  position: relative; 
-  border-bottom: 1px dotted #C4C4C4; 
-  width: 600px;
-}
-
-#ticks .tick p {
-  position: absolute; 
-  left: -5em; 
-  top: -0.8em; 
-  margin: 0 0 0 0.5em;
+.buttonContSmnall:hover span:after {
+        opacity: 1;
+        right: 0;
 }*/
