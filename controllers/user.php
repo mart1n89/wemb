@@ -14,6 +14,7 @@ class User extends Controller {
         }
         
         $this->view->js = array('user/js/default.js');
+        require 'controllers/login.php';
     }
     
     public function index(){
@@ -22,6 +23,13 @@ class User extends Controller {
     }
     
     public function create(){
+        
+        if (!Login::validateEmail(filter_input(INPUT_POST, 'email')))
+        {
+            $this->view->msg = 'Es sind nur Hochschul-E-Mail-Adressen erlaubt.';
+            $this->view->render('user/index');
+            exit;
+        }
         
         $data = array();
         $data['userName'] = filter_input(INPUT_POST, 'userName');
@@ -54,6 +62,14 @@ class User extends Controller {
     }
     
     public function editSave(){
+        
+        if (!Login::validateEmail(filter_input(INPUT_POST, 'email')))
+        {
+            $this->view->msg = 'Es sind nur Hochschul-E-Mail-Adressen erlaubt.';
+            $this->view->render('user/index');
+            exit;
+        }
+        
         if ($this->model->userExists(filter_input(INPUT_POST, 'userName')) && filter_input(INPUT_POST, 'userName') == Session::get('oldUser')) {
             $this->model->saveEdit(filter_input_array(INPUT_POST));
             $this->view->msg = filter_input(INPUT_POST, 'userName') . ' wurde bearbeitet.';        
