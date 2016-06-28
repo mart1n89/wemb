@@ -51,17 +51,18 @@ class Login extends Controller {
         $mail->addAddress('christoph-patrick.petersen@stud.fh-flensburg.de ', 'Christoph Patrick Petersen');
         $mail->addAddress('felix.ruhser@stud.fh-flensburg.de', 'Felix Ruhser');
         $mail->addAddress('daniel.stelzer@stud.fh-flensburg.de', 'Daniel Stelzer');
-        $mail->addAddress('thomas.mueller@wi.fh-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
+        //$mail->addAddress('thomas.mueller@wi.fh-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
         
         $mail->Subject = 'Testimeter Registrierung eingegangen (projekt2015b)';
         $mail->Body    = $stringHtml;
         $mail->AltBody = $string;
         
         if(!$mail->send()) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            $this->view->msg = 'Mailer Error: '  . $mail->ErrorInfo;
+            $this->view->render('login/register');
         } else {
-            echo 'Message has been sent';
+            $this->view->msg = 'Email wurde erfolgreich versendet.';
+            $this->view->render('login/register');
         }       
     }
 }
