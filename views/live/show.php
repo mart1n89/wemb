@@ -1,5 +1,5 @@
 <?php
-echo '<h1>Live:' . $this->currentCode . '</h1>';
+echo '<h2>Live:' . $this->currentCode . '</h2>';
 $codeNo = json_encode($this->currentCode);
 ?>
 <body onload="init()">
@@ -33,15 +33,16 @@ $codeNo = json_encode($this->currentCode);
                         $('#area').append('</table>');
                     }
                     questionID = results[i].questionID;
-                    $('#area').append('</br><p><b>Frage: ' + results[i]['questionText'] + '</b></p><table>');
+                    $('#area').append('</br><h3>Frage: ' + results[i]['questionText'] + '</h3><table>');
                 }
                 if (results[i].clicks > 0){
                     rate = wWidth / base *  results[i].clicks;
                 } else {
                     rate = 0;
                 }
-                $('#area').append('<tr><td>' + results[i].answerText + '<td><div style="width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
-            }
+                $('#area').append('<tr><td style="width:20vw; text-align:right; display:table-cell; vertical-align:middle">' + results[i].answerText + '<td style="display:table-cell; vertical-align:middle"><div style="color:silver; width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
+                
+            } 
             $('#area').append('</table>');
         }
     </script>
