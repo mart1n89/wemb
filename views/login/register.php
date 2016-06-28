@@ -1,3 +1,7 @@
+<?php
+    if (isset($this->msg)) { echo $this->msg;} 
+?>
+
 <h2>Registrierung</h2>
 
 <form action="register" method="post">
