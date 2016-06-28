@@ -27,6 +27,9 @@
     ?>
     <?php
     echo '<h3>Ergebnisse</h3>';
+    if (sizeof($this->allResults) == 0){
+        echo '<div id="textBlock">Es liegen derzeit noch keine Resultate vor.</div>';
+    } else {
     echo '<table class="tdConf">';
     echo '<thead>';
     echo '<th>Thema</th>';
@@ -42,5 +45,6 @@
     }
     echo '</table>';
     echo '<a class="buttonContBig" style="margin-left:4.5vw; margin-top:1vh;" href="result">Archiv</a>';
+    }
     ?> 
 <?php endif; ?> 
