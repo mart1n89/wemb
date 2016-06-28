@@ -146,7 +146,7 @@ $topic = json_encode($this->quiz);
             $.post('../xhrEditQuiz', {'topic': topic, 'data': data, 'topicID' : topicID});
             $('#area').empty();
             $('#save').empty();
-            $('#area').append('<a class="buttonContBig" href="../../quiz">Zurueck</a></br>');
+            $('#area').append('<a class="buttonContBig" href="../../quiz">Zurück</a></br>');
         }
     }
 </script>
