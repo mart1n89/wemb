@@ -40,17 +40,10 @@ class Login extends Controller {
         $mail = new PHPMailer();
         
         $mail->isSMTP();
-        //$mail->Host = "mail.stud.fh-flensburg.de";
-        $mail->Host = "193.174.250.201";
-        //$mail->Host = "tls://193.174.250.201:25";
-        //$mail->SMTPAuth = true;
-        //$mail->Username = "";
-        //$mail->Password = "";
+        $mail->Host = "mail.stud.fh-flensburg.de";
         $mail->Port = 25;
-        //$mail->SMTPAutoTLS = true;
         $mail->CharSet = 'UTF-8';
         
-        //$mail->setFrom('martin.kleinod@stud.fh-flensburg.de', 'Headcrash & Co');
         $mail->setFrom('helpdesk@wi.fh-flensburg.de', 'Headcrash & Co');
         $mail->addAddress('martin.kleinod@stud.fh-flensburg.de', 'Martin Kleinod');
         $mail->addAddress('moritz.heeg@stud.fh-flensburg.de', 'Moritz Heeg');
@@ -58,7 +51,7 @@ class Login extends Controller {
         $mail->addAddress('christoph-patrick.petersen@stud.fh-flensburg.de ', 'Christoph Patrick Petersen');
         $mail->addAddress('felix.ruhser@stud.fh-flensburg.de', 'Felix Ruhser');
         $mail->addAddress('daniel.stelzer@stud.fh-flensburg.de', 'Daniel Stelzer');
-        $mail->addAddress('mueller@hs-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
+        $mail->addAddress('thomas.mueller@wi.fh-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
         
         $mail->Subject = 'Testimeter Registrierung eingegangen (projekt2015b)';
         $mail->Body    = $stringHtml;
