@@ -16,7 +16,7 @@
         echo '</thead>';
         foreach ($this->currentLive as $key => $value) {
             echo '<tr>';
-            echo '<td>' . utf8_encode($value['topicName']) . '</td>';
+            echo '<td>' . $value['topicName'] . '</td>';
             echo '<td>' . $value['codeNo'] . '</td>';
             echo '<td>' . '<a href="live/show/' . $value['codeNo'] . '"><input type="button" class="buttonLive"></center></a>' . '</td>';
             echo '<td>' . '<a href="live/close/' . $value['codeNo'] . '"><center><input type="button" class="buttonStop"></center></a>' . '</td>';
@@ -38,7 +38,8 @@
     echo '</thead>';
     foreach ($this->allResults as $key => $value) {
         echo '<tr>';
-        echo '<td>' . utf8_encode($value['topicName']) . '</td>';
+        $bla =  $value['topicName'];
+        echo '<td>' . $bla . '</td>';
         echo '<td>' . $value['end'] . '</td>';
         echo '<td>' . '<a href="result/show/' . $value['sessionID'] . '"><center><input type="button" class="buttonResults"></center></a>' . '</td>';
         echo '</tr>';

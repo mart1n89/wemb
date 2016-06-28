@@ -106,7 +106,7 @@ function saveTopic(){
         }
         if (answerCount < 2){
             alertCounter++;
-            alert('Es muessen mindestens 2 Antworten für eine Frage vorhanden sein.');
+            alert('Es muessen mindestens 2 Antworten fuer eine Frage vorhanden sein.');
         }
         questions[question] = answers;   
     }
