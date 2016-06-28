@@ -63,7 +63,7 @@ class User_Model extends Model {
     public function saveEdit($user){
         
         if (!isset($user['role'])) {
-            $role = "owner";
+            $role = "default";
         } else {
             $role = $user['role'];
         }
