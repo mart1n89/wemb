@@ -8,8 +8,8 @@ foreach ($this->results as $key => $value) {
             echo '</table></div></br>';
         }
         $questionID = $value['questionID'];
-        utf8_encode($value['questionText']);
-        echo '<h3>Frage: ' . utf8_encode($value['questionText']) .'</h3>';
+        $value['questionText'];
+        echo '<h3>Frage: ' . $value['questionText'] .'</h3>';
         echo '<div class="chart"><table>';
     }
     //echo $value['answerText']. ' ' . $value['clicks'].'</br>';

@@ -1,7 +1,7 @@
 <h2>Quiz anpassen</h2>
 <div style="font-size:1.2em">
 <p>Legen Sie hier ihr Quiz an. Stellen Sie beliebig viele Fragen zu einem vermittelten Thema und markieren mit dem Radio-Button die richtige Antwort.</p>
-<p>Sonderzeichen wie "[", ";" oder "<" sind nicht erlaubt. Bitte verwenden Sie keine Umlaute (ä, ö, ü). </p></br>
+<p>Sonderzeichen wie "[", ";" oder "<" sind nicht erlaubt. </p></br>
 </div>
     <?php
 $topic = json_encode($this->quiz);
@@ -122,7 +122,7 @@ $topic = json_encode($this->quiz);
                 answers.push(full_answer);
                 if (answerCount < 2){
                     alertCounter++;
-                    alert('Es muessen mindestens 2 Antworten für eine Frage vorhanden sein.');
+                    alert('Es muessen mindestens 2 Antworten fuer eine Frage vorhanden sein.');
                 }
             }
             questions[question] = answers;
@@ -146,7 +146,7 @@ $topic = json_encode($this->quiz);
             $.post('../xhrEditQuiz', {'topic': topic, 'data': data, 'topicID' : topicID});
             $('#area').empty();
             $('#save').empty();
-            $('#area').append('<a class="buttonContBig" href="../../quiz">Zurueck</a></br>');
+            $('#area').append('<a class="buttonContBig" href="../../quiz">Zurück</a></br>');
         }
     }
 </script>

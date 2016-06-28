@@ -38,7 +38,12 @@
                     if($value['role'] == "admin") { echo "Administrator"; }
                 echo '</td>';
                 echo '<td><a href="' . URL .  'user/edit/' . $value['userID'] . '"><center><input type="button" class="buttonEdit"></center></a></td>';
-                echo '<td><a href="' . URL . 'user/delete/' . $value['userID'] . '"><center><input type="button" id="' . $value['userName'] . '" onclick="return confirmDelete(this.id)" class="buttonDelete"></center></a></td>';
+                if (Session::get('role') == 'owner') {
+                    echo '<td><a href="' . URL . 'user/delete/' . $value['userID'] . '"><center><input type="button" id="' . $value['userName'] . '" onclick="return confirmDelete(this.id)" class="buttonDelete"></center></a></td>';
+                }
+                if (Session::get('role') == 'admin' and $value['role'] == 'default') {
+                    echo '<td><a href="' . URL . 'user/delete/' . $value['userID'] . '"><center><input type="button" id="' . $value['userName'] . '" onclick="return confirmDelete(this.id)" class="buttonDelete"></center></a></td>';
+                }
                 echo '</tr>';
             }
             echo '</table>';

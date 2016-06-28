@@ -27,6 +27,7 @@ class User extends Controller {
         if (!Login::validateEmail(filter_input(INPUT_POST, 'email')))
         {
             $this->view->msg = 'Es sind nur Hochschul-E-Mail-Adressen erlaubt.';
+            $this->view->userList = $this->model->userList();
             $this->view->render('user/index');
             exit;
         }
