@@ -1,5 +1,5 @@
 <h2>H&auml;ufig gestellte Fragen</h2>
-<div id="textBlock">
+<div id="textBlock" style="font-size: 1.2em;">
     
     <p><b>F&uuml;r wen ist Testimeter nutzbar?</b></p>
     <p>Testimeter ist f&uuml;r alle Angeh&ouml;rigen der Hochschule Flensburg nach Beantragung eines Nutzeraccounts beim Administrator (aktuell Herr Prof. M&uuml;ller) zug&auml;nglich.</p>
