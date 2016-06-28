@@ -40,7 +40,7 @@ $codeNo = json_encode($this->currentCode);
                 } else {
                     rate = 0;
                 }
-                $('#area').append('<tr><td style="width:20vw; text-align:right; display:table-cell; vertical-align:middle">' + results[i].answerText + '<td style="display:table-cell; vertical-align:middle"><div style="color:silver; width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
+                $('#area').append('<tr><td class="tdResults" style="width:20vw">' + results[i].answerText + '<td class="tdResults"><div style=" width: '  + rate + 'px;">' + results[i].clicks + '</div></td></tr>');
                 
             } 
             $('#area').append('</table>');
