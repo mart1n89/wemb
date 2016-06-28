@@ -17,7 +17,7 @@ foreach ($this->results as $key => $value) {
     } else {
         $rate = 0;
     }
-    echo '<tr><td class="tdResults" style="width:20vw">'. $value['answerText']. '</td><td class="tdResults"><div style="color:silver; width: ' .$rate. 'px;">' . $value['clicks'] . '</div></td></tr>';
+    echo '<tr><td class="tdResults" style="width:20vw">'. $value['answerText']. '</td><td class="tdResults"><div style=" width: ' .$rate. 'px;">' . $value['clicks'] . '</div></td></tr>';
 } 
 echo '</table></div>';
 ?>
