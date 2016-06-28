@@ -13,9 +13,9 @@
     </p>
     <p><b>Wie konfiguriere ich den Timer richtig?</b></p>
     <p>
-        Jeder Nutzer hat einen individuell konfigurierbaren „User-Timer“. Zus&auml;tzlich besteht die M&ouml;glichkeit, pro Fragerunde einen sog. „Session-Timer“ zu setzen, 
-        der nur f&uuml;r die Fragerunde besteht. Sollten Sie keinen „Session-Timer“ vergeben, so w&auml;hlt das System Ihren „User-Timer“ f&uuml;r die Fragerunde aus.
+        Jeder Nutzer hat einen individuell konfigurierbaren User-Timer. Zus&auml;tzlich besteht die M&ouml;glichkeit, pro Fragerunde einen sog. Session-Timer zu setzen, 
+        der nur f&uuml;r die Fragerunde besteht. Sollten Sie keinen Session-Timer vergeben, so w&auml;hlt das System Ihren User-Timer f&uuml;r die Fragerunde aus.
     </p>
     <p><b>Wie ist Testimeter erreichbar?</b></p>
-    <p>Testimeter ist im WLAN „eduroam“ der Hochschule Flensburg und außerhalb der Hochschule &uuml;ber VPN zug&auml;nglich. Ein externer Zugriff ist nicht m&ouml;glich.</p>
+    <p>Testimeter ist im WLAN eduroam der Hochschule Flensburg und außerhalb der Hochschule &uuml;ber VPN zug&auml;nglich. Ein externer Zugriff ist nicht m&ouml;glich.</p>
 </div>
