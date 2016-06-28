@@ -106,7 +106,7 @@ function saveTopic(){
         }
         if (answerCount < 2){
             alertCounter++;
-            alert('Es müssen mindestens 2 Antworten für eine Frage vorhanden sein.');
+            alert('Es muessen mindestens 2 Antworten für eine Frage vorhanden sein.');
         }
         questions[question] = answers;   
     }
@@ -129,7 +129,7 @@ function saveTopic(){
         $.post('xhrAddQuiz', {'topic': topic ,'data' : data});
         $('#area').empty();
         $('#save').empty();
-        $('#area').append('<a class="buttonContBig" href="../../quiz">Zurück</a></br>');
+        $('#area').append('<a class="buttonContBig" href="../../quiz">Zurueck</a></br>');
     }
     //$('#area').append('<form action="quiz" method="get"><input type="submit" value="Back" name="Submit" id="frm1_submit" /></form>');
 }
