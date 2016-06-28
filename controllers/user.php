@@ -7,7 +7,7 @@ class User extends Controller {
         $logged = Session::get('loggedIn');
         $role = Session::get('role');
         
-        if ($logged == false || $role != 'owner') {
+        if ($logged == false || $role == 'default') {
             Session::destroy();
             header('location: ../login');
             exit;
