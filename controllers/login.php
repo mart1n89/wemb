@@ -24,7 +24,7 @@ class Login extends Controller {
     
     function register() {
                 
-        $string = "Folgender Benutzer hat eine Registrierung beantragt : \r\n";
+        $string = "Folgender Benutzer hat eine Registrierung beantragt ... \r\n\r\n";
         $string .= "Benutzer: " . filter_input(INPUT_POST, 'userName') . "\r\n";
         $string .= "Nachname: " . filter_input(INPUT_POST, 'lastName') . "\r\n";
         $string .= "Vorname: " . filter_input(INPUT_POST, 'firstName') . "\r\n";
@@ -46,15 +46,16 @@ class Login extends Controller {
         $mail->Port = 25;
         $mail->CharSet = 'UTF-8';
         
-        $mail->setFrom('martin.kleinod@stud.fh-flensburg.de', 'Martin Kleinod');
+        $mail->setFrom('martin.kleinod@stud.fh-flensburg.de', 'Headcrash & Co');
         $mail->addAddress('martin.kleinod@stud.fh-flensburg.de', 'Martin Kleinod');
         $mail->addAddress('moritz.heeg@stud.fh-flensburg.de', 'Moritz Heeg');
         $mail->addAddress('jan.conrad@stud.fh-flensburg.de ', 'Jan Conrad');
         $mail->addAddress('christoph-patrick.petersen@stud.fh-flensburg.de ', 'Christoph Patrick Petersen');
         $mail->addAddress('felix.ruhser@stud.fh-flensburg.de', 'Felix Ruhser');
-        $mail->addAddress('daniel.stelzer@stud.fh-flensburg.de ', 'Daniel Stelzer');
+        $mail->addAddress('daniel.stelzer@stud.fh-flensburg.de', 'Daniel Stelzer');
+        $mail->addAddress('mueller@hs-flensburg.de', 'Prof. Dipl.-Kfm. Thomas Müller');
         
-        $mail->Subject = 'Testimeter';
+        $mail->Subject = 'Testimeter Registrierung eingegangen (projekt2015b)';
         $mail->Body    = $stringHtml;
         $mail->AltBody = $string;
         
