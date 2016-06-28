@@ -17,5 +17,5 @@
         der nur f&uuml;r die Fragerunde besteht. Sollten Sie keinen Session-Timer vergeben, so w&auml;hlt das System Ihren User-Timer f&uuml;r die Fragerunde aus.
     </p>
     <p><b>Wie ist Testimeter erreichbar?</b></p>
-    <p>Testimeter ist im WLAN eduroam der Hochschule Flensburg und außerhalb der Hochschule &uuml;ber VPN zug&auml;nglich. Ein externer Zugriff ist nicht m&ouml;glich.</p>
+    <p>Testimeter ist im WLAN eduroam der Hochschule Flensburg und ausserhalb der Hochschule &uuml;ber VPN zug&auml;nglich. Ein externer Zugriff ist nicht m&ouml;glich.</p>
 </div>
