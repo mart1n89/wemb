@@ -39,9 +39,9 @@ div #textBlock{
     border-top-left-radius: 1vh;
     border-top-right-radius: 1vh;
     border-bottom: 0.5vh solid orange;
-    background: url(images/FL_foerde3_scaled.png);
-    background-position: 50% 62%;
-    padding:3vh 3.5vw 3vh 3.5vw;
+    background: url(images/FL_foerde_scaled.png);
+    background-position: 42% 30%;
+    padding:3vh 3.5vw 7vh 3.5vw;
     width: 92.0vw;
 }
 
@@ -50,8 +50,7 @@ div #textBlock{
     padding: 3vh 3.5vw 3vh 3.5vw;
     width: 92vw;
     height: auto;
-    min-height: 15vw;
-        
+    min-height: 35vh;
 }
 
 #footer {
@@ -268,7 +267,8 @@ hr{
     text-align:right; 
     display:table-cell; 
     vertical-align:middle;
-    border-spacing: 2vw 0.7vh;
+    padding-right:2vw;
+
 }
 
 #div{
