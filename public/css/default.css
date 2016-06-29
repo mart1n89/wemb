@@ -50,8 +50,7 @@ div #textBlock{
     padding: 3vh 3.5vw 3vh 3.5vw;
     width: 92vw;
     height: auto;
-    min-height: 15vw;
-        
+    min-height: 35vh;
 }
 
 #footer {
