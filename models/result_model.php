@@ -15,7 +15,7 @@ class Result_Model extends Model {
     }   
     
     public function show($id){
-        $st = $this->db->prepare('SELECT r.questionID, r.answerID, a.answerText, q.questionText, r.clicks FROM result r INNER JOIN question q ON q.questionID = r.questionID INNER JOIN answer a ON a.answerID = r.answerID WHERE r.sessionID = :session');
+        $st = $this->db->prepare('SELECT r.questionID, r.answerID, a.answerText, q.questionText, r.clicks, t.topicName FROM result r INNER JOIN question q ON q.questionID = r.questionID INNER JOIN answer a ON a.answerID = r.answerID INNER JOIN session s ON s.sessionID = r.sessionID INNER JOIN topic t ON t.topicID = s.topicID WHERE r.sessionID = :session');
         $st->execute(array(':session' => $id));
         return $st->fetchAll();
     }

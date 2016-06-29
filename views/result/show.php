@@ -2,7 +2,12 @@
 <?php
 $questionID = 0;
 $base = 10;
+$topic = 0;
 foreach ($this->results as $key => $value) {
+    if ($topic === 0){
+        echo '<h2>'.$value['topicName'].'</h2>';
+        $topic = 1;
+    }
     if ($value['questionID'] !== $questionID) {
         if ($questionID != 0){
             echo '</table></div></br>';
