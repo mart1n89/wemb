@@ -26,9 +26,14 @@ $codeNo = json_encode($this->currentCode);
             wWidth = window.innerWidth;
             $('#area').empty();
             var questionID = 0;
+            var topic = 0;
             var base = 50;
             var rate;
             for (i = 0; i < results.length; i++){
+                if (topic === 0){
+                    $('#area').append('<h2>' + results[i].topicName + '</h2>');
+                    topic = 1;
+                }
                 if(questionID !== results[i].questionID){
                     if (questionID !== 0){
                         $('#area').append('</table>');

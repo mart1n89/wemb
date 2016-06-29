@@ -29,7 +29,7 @@ class Live_Model extends Model {
 
     public function xhrShow(){
         $id = $_POST['currentCode'];
-        $st = $this->db->prepare('SELECT q.questionID, q.questionText, a.answerID, a.answerText, r.clicks FROM session s INNER JOIN result r ON r.sessionID = s.sessionID INNER JOIN question q ON r.questionID = q.questionID INNER JOIN answer a ON a.answerID = r.answerID WHERE s.codeNo = :codeNo AND isActive = 1;');
+        $st = $this->db->prepare('SELECT q.questionID, q.questionText, a.answerID, a.answerText, r.clicks, t.topicName FROM session s INNER JOIN result r ON r.sessionID = s.sessionID INNER JOIN question q ON r.questionID = q.questionID INNER JOIN answer a ON a.answerID = r.answerID INNER JOIN topic t ON t.topicID = s.topicID WHERE s.codeNo = :codeNo AND isActive = 1;');
         $st->execute(array(':codeNo' => $id));
         $st->setFetchMode(PDO::FETCH_ASSOC);
         $arr = $st->fetchAll();
