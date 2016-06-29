@@ -40,8 +40,8 @@ div #textBlock{
     border-top-right-radius: 1vh;
     border-bottom: 0.5vh solid orange;
     background: url(images/FL_foerde_scaled.png);
-    background-position: 42% 39%;
-    padding:3vh 3.5vw 3vh 3.5vw;
+    background-position: 42% 30%;
+    padding:3vh 3.5vw 7vh 3.5vw;
     width: 92.0vw;
 }
 
