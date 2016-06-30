@@ -65,7 +65,7 @@ class User_Model extends Model {
     public function saveEdit($user){
         
         if (!isset($user['role'])) {
-            $role = "default";
+            $role = Session::get('oldRole');
         } else {
             $role = $user['role'];
         }
