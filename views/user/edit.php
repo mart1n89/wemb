@@ -1,6 +1,7 @@
 <?php 
     $user = $this->user; 
     SESSION::set('oldUser', $user['userName']);
+    SESSION::set('oldRole', $user['role']);
     echo '<h2>Benutzer &auml;ndern</h2>';
 ?>
 
