@@ -53,6 +53,8 @@ class User_Model extends Model {
     }
     
     public function delete($id){
+        //$st_quiz = $this->db->('DELETE quiz ')
+        
         $st = $this->db->prepare('DELETE FROM user WHERE userID = :id AND role != :role');
         $st->execute(array(
             ':id' => $id,
